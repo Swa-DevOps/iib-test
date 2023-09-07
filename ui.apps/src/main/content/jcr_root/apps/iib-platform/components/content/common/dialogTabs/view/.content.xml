@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="View"
+    sling:resourceType="granite/ui/components/foundation/container">
+    <layout
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+    <items jcr:primaryType="nt:unstructured">
+        <columns
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/container">
+            <items jcr:primaryType="nt:unstructured">
+                <viewType
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/form/select"
+                    fieldLabel="View Type"
+                    name="./viewType"
+                    value="">
+                    <items jcr:primaryType="nt:unstructured">
+                        <default
+                            jcr:primaryType="nt:unstructured"
+                            text="Default"
+                            value=""/>
+                    </items>
+                </viewType>
+                <disableComponent
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                    defaultChecked="{Boolean}false"
+                    name="./disableComponent"
+                    text="Disable Component"
+                    uncheckedValue="{Boolean}false"
+                    value="{Boolean}true"/>
+                <customStyleClass
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                    class="field-class"
+                    fieldLabel="Custom Style Class"
+                    name="./customStyleClass"/>
+                <hideOnMobile
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                    defaultChecked="{Boolean}false"
+                    name="./hideOnMobile"
+                    text="Hide on Mobile"
+                    uncheckedValue="{Boolean}false"
+                    value="{Boolean}true"/>
+                <hideOnTablet
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                    defaultChecked="{Boolean}false"
+                    name="./hideOnTablet"
+                    text="Hide on Tablet"
+                    uncheckedValue="{Boolean}false"
+                    value="{Boolean}true"/>
+            </items>
+        </columns>
+    </items>
+</jcr:root>

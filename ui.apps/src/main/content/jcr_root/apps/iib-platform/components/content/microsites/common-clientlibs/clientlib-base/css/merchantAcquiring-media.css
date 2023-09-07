@@ -1,0 +1,167 @@
+@media screen and (max-width: 1366px) {
+#channelBlock .fieldBox {
+	width: 60%;
+}
+#channelBlock .formBox .eachchannelBox .fieldBox {
+	width: 60%;
+}
+p.fieldText {
+	width: 52%;
+	padding: 30px 50px 0 0px;
+}
+}
+ @media screen and (max-width: 1280px) {
+p, input, textarea, button, a, li, label, .cc, .placeholder {
+	font-size: 1.7rem;
+}
+h1 {
+	font-size: 3.6em;
+}
+.fieldBox {
+	width: 50%;
+}
+#channelBlock .fieldBox {
+	width: 70%;
+}
+#channelBlock .radioFloat .fieldBox {
+	padding: 30px 10px 20px 10px;
+}
+#channelBlock .formBox .eachchannelBox .fieldBox {
+	width: 72%;
+}
+p.fieldText {
+	width: 62%;
+	padding: 30px 50px 0 0px;
+}
+}
+@media screen and (max-width: 1023px) {
+p, input, textarea, button, a, li, label, .cc, .placeholder {
+	font-size: 1.5rem;
+}
+p.fieldText {
+	width: 82%;
+}
+#channelBlock .formBox .eachchannelBox .fieldBox {
+	width: 92%;
+}
+#aadharCardreg .fieldBox, .fieldBox {
+	width: 100%;
+	padding-right: 0;
+	padding-left: 0;
+}
+#channelBlock .fieldBox {
+	width: 80%;
+}
+#channelBlock .radioFloat {
+	width: 60%;
+}
+}
+@media screen and (max-width: 767px) {
+#channelBlock .fieldBox {
+	width: 100%;
+}
+#channelBlock .radioFloat .fieldBox {
+	width: 50%;
+}
+h1 {
+	font-size: 2rem;
+}
+h2 {
+	font-size: 1.5rem;
+}
+.placeholder, input {
+	text-align: center;
+	width: 100%;
+}
+.phone span {
+	display: none;
+}
+.tnCPopup .container ol {
+	margin-left: 12px;
+}
+.selectBox .selectedValue {font-size:1.5rem; text-align:center;}
+.radioBox {margin:0 auto; width:149px; padding-top:0; float:none;}
+.radioAlign {text-align:center;}
+.radioAlign .fontDefault {position:relative; left:auto; top:0; text-align:center;}
+.radioAlign .radioBox .radio {width:54px; margin-left: 10px;}
+
+}
+ @media screen and (max-width: 640px) {
+
+}
+ @media screen and (max-width: 480px) {
+.logo img {
+	width: 144px;
+	padding-top: 5px;
+}
+.container {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.btn {
+	padding: 15px 50px;
+	font-size: 1.5rem;
+}
+a.btn {
+	padding: 20px 50px;
+	margin-right: 10px;
+}
+.captchaBox .inputBox, .catchaContainer, .ScrollBox {
+	width: 100%;
+}
+.ScrollBox {
+	overflow-y: scroll;
+	height: 310px;
+}
+.ScrollBox p {
+	font-size: 1.5rem;
+}
+.headData h3 {
+	font-size: 1.3rem;
+}
+.radioAadhaar {
+	padding-left: 0;
+}
+.orLabel {
+	width: 100%;
+	clear: both;
+}
+.twoField a.btn {
+	font-size: 11px;
+}
+#channelBlock .radioFloat {
+	width: 80%;
+}
+}
+/* Height Specific*/
+@media screen and (max-width: 320px) {
+#channelBlockForm .twoField .inputBox {
+	width: 100%;
+}
+#channelBlock .fieldBox a.btn {
+	width: 46%;
+}
+#channelBlock .radioFloat {
+	width: 100%;
+}
+.ScrollBox {
+	height: 200px;
+}
+.uploadBtn .otp {
+	clear: both;
+	width: 100%;
+	float: none;
+}
+.uploadBtn label.btn {
+	text-align: center;
+	position: relative;
+	margin-top: 10px;
+	margin: 10px auto;
+	width: 65px;
+	float: none;
+	display: block;
+}
+
+#generalPopup .descText {font-size:12px;} 
+
+}

@@ -1,0 +1,12 @@
+<div data-sly-test="${wcmmode.edit}">
+   Configure Breadcrumb Component
+</div>
+
+<sly data-sly-test="${!properties.disableComponent}">
+   <sly data-sly-use.model="com.iib.platform.common.models.BreadcrumbModel">
+      <div class="topbreadcrum"  data-sly-list="${model.breadcrumbList}">
+      		<a href="${item.title == pageProperties.jcr:title ? '' : item.PageUrl}"><span class="${item.title == pageProperties.jcr:title ? 'customBreadCrumb' : ''}">${item.title}</span></a>${item.title == pageProperties.jcr:title ? '' : '/'}
+		</div>
+   </sly>
+      <img class="topbreadcrumLogo"  src="/content/dam/iibPlatform/enachpl/images/logo.jpg" alt="Welcome to Enach-PL"/>
+</sly>

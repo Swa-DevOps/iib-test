@@ -1,0 +1,29 @@
+<template data-sly-template.body="${ @ page}">
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+	 data-sly-call="${clientlib.all @ categories='indus-smart.pageLoader'}"/>
+	 
+    <body class="${wcmmode.edit ? 'author-mode' : 'home blog'}">
+ 		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WS9ZR5X" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
+
+    	<sly data-sly-test="${wcmmode.edit}">
+        	<div class="container-fluid">
+        </sly>
+
+		<div data-sly-resource="${'nav-par' @ resourceType='/libs/foundation/components/iparsys'}"></div>
+		<div id="sitewrap">
+        	<div id="body" class="pagewidth clearfix">
+				<div class="se-pre-con" style="display: block;"></div>
+                <sly data-sly-use.header="header.html" data-sly-call="${header.header @ page = page}"/>
+                <sly data-sly-include="content.html"/>
+                <sly data-sly-use.footer="footer.html" data-sly-call="${footer.footer @ page = page}"/>
+			</div>
+		</div>
+
+        <sly data-sly-test="${wcmmode.edit}">
+	    	</div>
+        </sly>
+    </body>
+</template> 

@@ -1,0 +1,335 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Medium.woff2') format('woff2'),
+        url('../fonts/Montserrat-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-ExtraLight.woff2') format('woff2'),
+        url('../fonts/Montserrat-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-MediumItalic.woff2') format('woff2'),
+        url('../fonts/Montserrat-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Vonnes-BoldCond_Rupee';
+    src: url('../fonts/Vonnes-BoldCondRupee.woff2') format('woff2'),
+        url('../fonts/Vonnes-BoldCondRupee.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-ExtraBold.woff2') format('woff2'),
+        url('../fonts/Montserrat-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-ExtraBoldItalic.woff2') format('woff2'),
+        url('../fonts/Montserrat-ExtraBoldItalic.woff') format('woff');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-SemiBold.woff2') format('woff2'),
+        url('../fonts/Montserrat-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-ExtraLightItalic.woff2') format('woff2'),
+        url('../fonts/Montserrat-ExtraLightItalic.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Vonnes-BookCond_Rupee';
+    src: url('../fonts/Vonnes-BookCondRupee.woff2') format('woff2'),
+        url('../fonts/Vonnes-BookCondRupee.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Regular.woff2') format('woff2'),
+        url('../fonts/Montserrat-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-BlackItalic.woff2') format('woff2'),
+        url('../fonts/Montserrat-BlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Thin.woff2') format('woff2'),
+        url('../fonts/Montserrat-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Vonnes-Light_Rupee';
+    src: url('../fonts/Vonnes-LightRupee.woff2') format('woff2'),
+        url('../fonts/Vonnes-LightRupee.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Black.woff2') format('woff2'),
+        url('../fonts/Montserrat-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Vonnes';
+    src: url('../fonts/Vonnes-Exbold.woff2') format('woff2'),
+        url('../fonts/Vonnes-Exbold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-ThinItalic.woff2') format('woff2'),
+        url('../fonts/Montserrat-ThinItalic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Bold.woff2') format('woff2'),
+        url('../fonts/Montserrat-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Italic.woff2') format('woff2'),
+        url('../fonts/Montserrat-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-LightItalic.woff2') format('woff2'),
+        url('../fonts/Montserrat-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Vonnes-BoldComp_Rupee';
+    src: url('../fonts/Vonnes-BoldCompRupee.woff2') format('woff2'),
+        url('../fonts/Vonnes-BoldCompRupee.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Light.woff2') format('woff2'),
+        url('../fonts/Montserrat-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Vonnes-MediumCond_Rupee';
+    src: url('../fonts/Vonnes-MediumCondRupee.woff2') format('woff2'),
+        url('../fonts/Vonnes-MediumCondRupee.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-SemiBoldItalic.woff2') format('woff2'),
+        url('../fonts/Montserrat-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-BoldItalic.woff2') format('woff2'),
+        url('../fonts/Montserrat-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Vonnes BoldComp';
+    src: url('../fonts/Vonnes-BoldComp.woff2') format('woff2'),
+        url('../fonts/Vonnes-BoldComp.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Vonnes BoldCond';
+    src: url('../fonts/Vonnes-BoldCond.woff2') format('woff2'),
+        url('../fonts/Vonnes-BoldCond.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Vonnes';
+    src: url('../fonts/Vonnes-BlackItalic.woff2') format('woff2'),
+        url('../fonts/Vonnes-BlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Vonnes MediumExt';
+    src: url('../fonts/Vonnes-MediumExt.woff2') format('woff2'),
+        url('../fonts/Vonnes-MediumExt.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Vonnes LightComp';
+    src: url('../fonts/Vonnes-LightComp.woff2') format('woff2'),
+        url('../fonts/Vonnes-LightComp.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Vonnes BookComp';
+    src: url('../fonts/Vonnes-BookComp.woff2') format('woff2'),
+        url('../fonts/Vonnes-BookComp.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Vonnes BookExt';
+    src: url('../fonts/Vonnes-BookExt.woff2') format('woff2'),
+        url('../fonts/Vonnes-BookExt.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Vonnes BlackComp';
+    src: url('../fonts/Vonnes-BlackComp.woff2') format('woff2'),
+        url('../fonts/Vonnes-BlackComp.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Vonnes BoldExt';
+    src: url('../fonts/Vonnes-BoldExt.woff2') format('woff2'),
+        url('../fonts/Vonnes-BoldExt.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Univers';
+    src: url('../fonts/Univers-UltraCondensed.woff2') format('woff2'),
+        url('../fonts/Univers-UltraCondensed.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Vonnes Exbold';
+    src: url('../fonts/Vonnes-ExboldItalic.woff2') format('woff2'),
+        url('../fonts/Vonnes-ExboldItalic.woff') format('woff');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Vonnes MediumCond';
+    src: url('../fonts/Vonnes-MediumCond.woff2') format('woff2'),
+        url('../fonts/Vonnes-MediumCond.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Vonnes BookCond';
+    src: url('../fonts/Vonnes-BookCond.woff2') format('woff2'),
+        url('../fonts/Vonnes-BookCond.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Vonnes ExboldExt';
+    src: url('../fonts/Vonnes-ExboldExtItalic.woff2') format('woff2'),
+        url('../fonts/Vonnes-ExboldExtItalic.woff') format('woff');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Vonnes LightExt';
+    src: url('../fonts/Vonnes-LightExt.woff2') format('woff2'),
+        url('../fonts/Vonnes-LightExt.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Vonnes BlackExt';
+    src: url('../fonts/Vonnes-BlackExt.woff2') format('woff2'),
+        url('../fonts/Vonnes-BlackExt.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Vonnes ExboldComp';
+    src: url('../fonts/Vonnes-ExboldCompItalic.woff2') format('woff2'),
+        url('../fonts/Vonnes-ExboldCompItalic.woff') format('woff');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Vonnes MediumComp';
+    src: url('../fonts/Vonnes-MediumComp.woff2') format('woff2'),
+        url('../fonts/Vonnes-MediumComp.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}

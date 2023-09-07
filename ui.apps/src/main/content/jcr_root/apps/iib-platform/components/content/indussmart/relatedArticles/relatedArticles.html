@@ -1,0 +1,101 @@
+<div data-sly-test="${wcmmode.edit}">
+   Configure Related Articles Component
+</div>
+
+<sly data-sly-test="${!properties.disableComponent}">
+   <sly data-sly-use.model="com.iib.platform.indussmart.models.RelatedArticlesModel">
+   
+   <sly data-sly-test="${model.viewType=='default'}">
+	      <section class="full-section equity-sec-two">
+	         <div class="container">
+	            <div>
+	               <div class="row justify-content-center align-items-center">
+	                  <div class="col-lg-2 col-md-3 col-sm-12 no-padding-lr">
+	                     <h4 class="h3-text">${model.heading}</h4>
+	                  </div>
+	                  <div class="col-lg-10 col-md-9 col-sm-12 sixty-padding-lr">
+	                     <div class="card-deck">
+	                        <div class="owl-carousel articleOne" data-sly-list="${model.articlesList}">
+	                           <sly data-sly-test="${item.title}">
+	                              <div class="item">
+	                                 <div class="card">
+	                                    <div class="red-rop"><img src="${item.tagImagePath}"></div>
+	                                    <img class="card-img-top" src="${item.thumbnailImagePath}" alt="Card image cap">
+	                                    <div class="card-body">
+	                                       <a href="${item.pageUrl}"><h3 class="card-title">${item.title}</h3></a>
+	                                    </div>
+	                                    <div class="card-footer text-center">
+	                                       <ul class="list-inline justify-content-center">
+	                                          <li class="list-inline-item">
+	                                             <a class="social-link" href="javascript:;"> ${item.formattedDate}</a>
+	                                          </li>
+	                                          <!-- <li class="list-inline-item">
+	                                             <a class="social-link" href="javascript:;"><i class="fa fa-hourglass-half"></i> ${item.readingTime}</a>
+	                                          </li> -->
+	                                          <li class="list-inline-item">
+	                                             <div class="socialShare">
+													<a class="social-link socialBox pointer" href="javascript:;"><i class="fa fa-share-alt"></i> ${model.shareText}</a>
+												</div>
+	                                          </li>
+	                                       </ul>
+	                                    </div>
+	                                 </div>
+	                              </div>
+	                           </sly>
+	                        </div>
+	                     </div>
+	                  </div>
+	               </div>
+	            </div>
+	         </div>
+	      </section>
+      </sly>
+      
+      <sly data-sly-test="${model.viewType=='plan'}">
+	      <section class="full-section plan-sec-two">
+	         <div class="container">
+		         <div>
+		            <div class="row align-items-center">
+		               <div class="col-lg-12 col-md-12 col-sm-12 no-padding-lr text-center">
+		                  <h4 class="h3-text  wow fadeInUp" data-wow-delay="0.1s">${model.heading}</h4>
+		               </div>
+		            </div>
+		         </div>
+		         <div>
+		            <div class="row justify-content-center">
+		               <div class="col-lg-9 col-md-12 col-sm-12 no-padding-lr">
+		                  <div class="card-deck" data-sly-list="${model.articlesList}">
+		                   <sly data-sly-test="${item.title}">
+			                     <div class="card">
+			                        <div class="red-rop  wow fadeInUp" data-wow-delay="0.1s"><img src="${item.tagImagePath}"></div>
+			                        <img class="card-img-top  wow fadeInUp" data-wow-delay="0.1s" src="${item.thumbnailImagePath}" alt="Card image cap">
+			                        <div class="card-body">
+			                           <a href="${item.pageUrl}"><h3 class="card-title wow fadeInUp" data-wow-delay="0.1s">${item.title}</h3></a>
+			                        </div>
+			                        <div class="card-footer text-center">
+			                           <ul class="list-inline justify-content-center">
+			                              <li class="list-inline-item">
+			                                 <a class="social-link  wow fadeInUp" data-wow-delay="0.1s" href="javascript:;"> ${item.formattedDate}</a>
+			                              </li>
+			                              <!-- <li class="list-inline-item">
+			                                 <a class="social-link  wow fadeInUp" data-wow-delay="0.1s" href="javascript:;"><i class="fa fa-hourglass-half"></i> ${item.readingTime}</a>
+			                              </li> -->
+			                              <li class="list-inline-item">
+			                                 <div class="socialShare">
+												<a class="social-link socialBox pointer" href="javascript:;"><i class="fa fa-share-alt"></i> ${model.shareText}</a>
+											</div>
+			                              </li>
+			                           </ul>
+			                        </div>
+			                     </div>
+		                     </sly>
+		                  </div>
+		               </div>
+		            </div>
+		         </div>
+	         </div>
+	      </section>	      
+      </sly>
+      
+   </sly>
+</sly>

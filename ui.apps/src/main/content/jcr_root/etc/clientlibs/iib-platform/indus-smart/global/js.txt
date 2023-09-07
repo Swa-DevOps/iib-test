@@ -1,0 +1,6 @@
+#base=js
+
+jquery.min.js
+jquery-migrate.min.js
+morph-accordion.js
+search.js

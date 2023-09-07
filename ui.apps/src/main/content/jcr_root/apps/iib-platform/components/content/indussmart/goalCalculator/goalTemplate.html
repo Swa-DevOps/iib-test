@@ -1,0 +1,167 @@
+<template data-sly-template.goalTemplate="${ @ model }">
+   <div class="tab-pane fade show active" id="goal" role="tabpanel" aria-labelledby="goal-tab">
+      <div class="row">
+         <div class="col-md-12 col-sm-12">
+            <div class="goal-form">
+               <form class="article-form form-first">
+                  <div class="calc-style select-style">
+                     <h4 class="text-h4">
+                        ${properties.goalCalculatorDescription}
+                     </h4>
+                     <br>
+                     <div class="article-content">
+                        How much should I start investing to have
+                        <div class="input-box rp"><input  name="costofgoals" formatNumber maxlength="14" class="form-input cgoals" value="${properties.cogValue}" placeholder="${properties.costOfGoalPlaceholder}"></div>
+                        in next
+                        <div class="form-select">
+                           <div>
+                              <select class='selectAdaptive years' name="years">
+                                 <sly  data-sly-list="${model.yearNoItems}">
+                                     <option data-sly-attribute.selected="${properties.defaultYear == item.yearNo}">${item.yearNo}</option>
+                                 </sly>
+                              </select>
+                           </div>
+                        </div>
+                        years with my investments growing at
+                        <div class="form-select">
+                           <div>
+                              <select class='selectAdaptive rate' name="rate">
+                                 <sly data-sly-list="${model.rateItems}">
+                                    <option data-sly-attribute.selected="${properties.defaultRate == item.rate}">${item.rate}%</option>
+                                 </sly>
+                              </select>
+                           </div>
+                        </div>
+                        annually?
+                     </div>
+                  </div>
+                  <div class="calc-style select-style">
+                     <a id="calulate" href="javascript:;" class="button calc-btn btn-orange-animate text-uppercase">${properties.goalButtonText}</a>
+                  </div>
+               </form>
+            </div>
+         </div>
+         <div class="col-md-12 col-sm-12">
+            <br><br><br>
+            <!-- open this box after calculate first step  -->
+            <div id="goalresult" class="result-wrapper">
+               <div>
+                  <div class="row predictionAndOneTimeDiv">
+                     <div class="col-md-12">
+                        <div class="calc-result-msg">
+                           <div class="calc-flex flex-item">
+                              <div class="flex-img">
+                                 <div class="bg-calc4"></div>
+                              </div>
+                              <div class="result-box box-background">
+                                 <form class="article-form">
+                                    <div class="article-content">
+                                       To achieve your goal by
+                                       <div class="input-box">
+                                          <div>
+                                          	<input class="form-input year-next" id="realyears" readonly>
+                                             <!-- <select class='selectAdaptive year-next' id="realyears">
+                                                <sly data-sly-list="${model.yearItems}">
+                                                   <option>${item.year}</option>
+                                                </sly>
+
+                                             </select> -->
+                        					,
+                                          </div>
+
+                                       </div>
+                                       You can invest
+                                       <div class="input-box rp"><input readonly class="form-input sip" id="sip" placeholder="${properties.sipGoalPlaceholder}"></div>
+                                       monthly for next
+                                       <div class="input-box">
+                                          <div>
+                                          	<input class="form-input sipyears" id="sipyears" readonly>
+                                             <!-- <select class='selectAdaptive sipyears' id="sipyears">
+                                                <sly data-sly-list="${model.yearNoItems}">
+                                                   <option>${item.yearNo}</option>
+                                                </sly>
+                                             </select> -->
+                                          </div>
+                                       </div>
+                                       years.
+                                    </div>
+                                 </form>
+                              </div>
+                           </div>
+                           <div class="calc-flex flex-item"><span class="or-text">or</span></div>
+                           <div class="calc-flex flex-item">
+                              <div class="flex-img">
+                                 <div class="bg-calc5"></div>
+                              </div>
+                              <div class="result-box box-background">
+                                 <form class="article-form">
+                                    <div class="article-content">
+                                       Make a one-time investment of
+                                       <div class="input-box rp"><input readonly class="form-input oti" id="oti" placeholder="${properties.lumpsumSipPlaceholder}"></div>
+                                       and stay invested for
+                                       <div class="input-box">
+                                          <div>
+                                          	<input class="form-input otiyears" id="otiyears" readonly>
+                                             <!-- <select class='selectAdaptive otiyears' id="otiyears">
+                                                <sly data-sly-list="${model.yearNoItems}">
+                                                   <option>${item.yearNo}</option>
+                                                </sly>
+                                             </select> -->
+                                          </div>
+                                       </div>
+                                       years.
+                                    </div>
+                                 </form>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <br><br><br><br>
+               <div class="result-box box-background goalDoYouKnow">
+                  <form class="article-form">
+                     <div class="article-flex-box">
+                        <div class="article-item article-flex">
+                           <div class="article-img">
+                              <div class="bg-calc3"></div>
+                           </div>
+                           <div class="article-content">
+                              <h6 class="text-uppercase"><strong>Do you Know?</strong></h6>
+                              <h3 class="text-underline"><ins>SIPs are a great way to make regular investments</ins></h3>
+                              <div class="article-content">
+                                 If you start your monthly SIP today, your total investment amount will be
+                                 <div class="input-box rp"><input readonly class="form-input sipTotalInvestment" placeholder="${properties.sipGoalPlaceholder}"></div>
+                                 , However, if you delay investing by
+                                 <div class="form-select">
+                                    <div>
+                                       <select class='selectAdaptive delayYears'>
+                                          <sly data-sly-list="${model.delayYearItems}"> 
+                                             <option data-sly-attribute.selected="${properties.defaultDelayMonths == item.delayYear}">${item.delayYear}</option>
+                                          </sly>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 , then you will end up investing
+                                 <div class="input-box rp"><input readonly id="predictionGoal" class="form-input" placeholder="${properties.predictionSipPlaceholder}"></div>
+                                 to reach the same Goal!
+                              </div>
+                           </div>
+                        </div>
+                        <div class="article-item article-flex">
+                           <div class="article-content content-right">The smart<br>decision is to<br>
+                              <a class="text-uppercase" href="${model.goalInvestUrl}" target="${model.openInNewWindowGoal == 'true' ? '_blank' : ''}">Start Investing</a><br>today!
+                           </div>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+               <div class="result-box">
+                  <p class="text-left" style="font-size: 11px;">${properties.goalNoteText}</p>
+               </div>
+            </div>
+            <!-- end the article -->
+         </div>
+      </div>
+   </div>
+</template>

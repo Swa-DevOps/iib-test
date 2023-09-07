@@ -1,0 +1,93 @@
+
+@media screen and (max-width: 1280px) {
+  p, input, textarea, button, a, li, label, .cc, .placeholder {font-size: 1.7rem;}
+  h1 {
+    font-size: 3.6em;
+  }
+
+
+  .fieldBox {
+    width: 50%;
+  }
+
+}
+@media screen and (max-width: 1023px) {
+	 p, input, textarea, button, a, li, label, .cc, .placeholder {font-size: 1.5rem;}
+
+  #aadharCardreg .fieldBox, .fieldBox {
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+@media screen and (max-width: 767px) {  
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .placeholder, input {
+    text-align: center;
+    width: 100%;
+  }
+
+  .phone span {
+    display: none;
+  }
+  .tnCPopup .container ol {margin-left:12px;}
+
+}
+@media screen and (max-width: 640px) {
+.thankYouStyle header{position:relative}
+}
+@media screen and (max-width: 480px) {
+    p, input, textarea, button, a, li, label, .cc, .placeholder {font-size: 1.4rem;}
+  .logo img {
+    width: 144px;
+    padding-top: 5px;
+  }
+
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .btn {
+    padding: 15px 50px;
+    font-size: 1.5rem;
+  }
+
+  #aadharCardreg #holderDetails1 .inputBox, #aadharCardreg #holderDetails2 .inputBox {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  a.btn {
+    padding: 20px 50px;
+    margin-right: 10px;
+  }
+
+ .captchaBox .inputBox, .catchaContainer, .ScrollBox  {width:100%;} 
+ .ScrollBox {overflow-y:scroll; height: 310px;}
+.ScrollBox p {font-size:1.5rem;}
+.thankYouStyle header{position:relative}
+.headData h3 {font-size:1.3rem;}
+
+#aadharCardreg .fieldBox, .fieldBox {width:100%;}
+.orLabel, .step1 .fieldBox p {font-size:16px;}
+#aadhaarStatus .radioBox {float:left; width:100%;}
+.radioAadhaar {padding-left:0;}
+.orLabel {width:100%; clear:both;}
+
+}
+/* Height Specific*/
+@media screen and (max-width: 320px) {
+    p, input, textarea, button, a, li, label, .cc, .placeholder {font-size: 1.2rem;}
+	.ScrollBox {height:200px;}
+.uploadBtn .otp {clear:both; width:100%; float:none;}
+.uploadBtn label.btn {text-align:center; position:relative; margin-top:10px; margin:10px auto; width:65px; float:none; display: block;}
+
+
+}

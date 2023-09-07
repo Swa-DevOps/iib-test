@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:description="Article Detail Component Dialog"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Article Detail Component"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/layouts/tabs"
+            type="nav"/>
+        <items jcr:primaryType="nt:unstructured">
+            <config
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Configurations"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <sectionHeading
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                allowBlank="true"
+                                autoDelete="{Boolean}true"
+                                fieldLabel="Section Heading"
+                                name="./sectionHeading"/>
+                            <tabItems
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/multifield"
+                                class="full-width"
+                                eaem-nested=""
+                                fieldLabel="Tabs">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/form/fieldset"
+                                    acs-commons-nested=""
+                                    name="./tabItems">
+                                    <layout
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                                        method="absolute"/>
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <heading
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                    allowBlank="true"
+                                                    autoDelete="{Boolean}true"
+                                                    fieldLabel="Heading"
+                                                    name="./heading"/>
+                                                <bodyType
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/select"
+                                                    fieldDescription="Select Item Body Type"
+                                                    fieldLabel="Item Body Type"
+                                                    name="./bodyType">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <option1
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Text"
+                                                            value="text"/>
+                                                        <option2
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Other Component"
+                                                            value="other"/>
+                                                    </items>
+                                                </bodyType>
+                                                <bodyText
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                    allowBlank="true"
+                                                    autoDelete="{Boolean}true"
+                                                    fieldLabel="Item Body Text"
+                                                    name="./bodyText"/>
+                                            </items>
+                                        </column>
+                                    </items>
+                                </field>
+                            </tabItems>
+                        </items>
+                    </column>
+                </items>
+            </config>
+            <view
+                jcr:primaryType="nt:unstructured"
+                jcr:title="View"
+                sling:resourceType="granite/ui/components/foundation/include"
+                path="iib-platform/components/content/common/dialogTabs/view"/>
+        </items>
+    </content>
+</jcr:root>

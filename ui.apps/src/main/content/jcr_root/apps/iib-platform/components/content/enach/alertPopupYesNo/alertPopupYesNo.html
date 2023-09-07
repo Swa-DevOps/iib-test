@@ -1,0 +1,67 @@
+<div data-sly-test="${wcmmode.edit}">
+   Configure Alert Popup Component
+</div>
+
+<div id="alertBoxYesNo" style="display: none">
+    <div class="white_content" >
+       <div class="pop-content">
+
+           <div class="proceed-div">
+			<div class="left-proceed">
+            <img src="/content/dam/iibPlatform/enach/images/not-log.png"/> 
+        </div>
+        <div class="right-proceed">
+			 <h2 id="alertMessage1">Please click OK to proceed with cancellation of Mandate(s)</h2>
+          </h2>
+        </div>
+        </div>
+          <div class="pop-btn">
+
+             <button type="button" class="pop-overlay-btn hvr-btn alertBtn">OK</button>
+
+              <button type="button" class="pop-overlay-btn hvr-btn alertCancleBtn">Cancel</button> 
+          </div>
+     <!--     <div class="proceed-div">
+			<div class="left-proceed">
+            <img src="/content/dam/iibPlatform/enach/images/not-log.png"/> 
+        </div>
+        <div class="right-proceed">
+
+        </div>
+
+          </div>-->
+       </div>
+    </div>
+    <div id="fade" class="black_overlay"></div>
+</div>
+
+
+
+
+<div id="alertBoxOTP" style="display: none">
+    <div class="white_content" >
+       <div class="pop-content">
+
+           <div class="proceed-div">
+			<div class="left-proceed">
+            <img src="/content/dam/iibPlatform/enach/images/not-log.png"/> 
+        </div>
+        <div class="right-proceed">
+			 <h2 id="alertMessageOtp">Please Enter the OTP send on Registered Mobile Number (RMN)</h2>
+          </h2>
+        </div>
+        </div>
+          <div class="pop-btn">
+
+		     <input  class="input100 otpverify" type="text" id="cancelotp" name="cancelotp" min="6" maxlength="6" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+			 <br>
+             <h4 id="opterror" style="display: none">Please enter Valid OTP </h3>
+
+             <button type="button" class="pop-overlay-btn hvr-btn alertBtnVO">Proceed</button>
+              <button type="button" class="pop-overlay-btn hvr-btn alertCancleOTPBtn">Cancel</button> 
+          </div>
+
+       </div>
+    </div>
+    <div id="fade" class="black_overlay"></div>
+</div>

@@ -1,0 +1,10 @@
+.grid-item-box {
+    padding-left: .25rem;
+    padding-right: .25rem;
+}
+
+@media (min-width:0px) and (max-width:831px){
+    .grid-row { flex-wrap: wrap !important; }
+    .grid-item-box { margin-bottom: 20px; }
+    .grid-row .grid-item-box:last-child { margin-bottom: 0px; }
+}

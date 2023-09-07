@@ -1,0 +1,223 @@
+/*-------- paln layout start ------
+---------------------------------*/
+
+
+/* paln section one */
+
+.plan-sec-one .hd-plan {
+    width: 500px;
+    margin: 0 auto 25px;
+    display: table;
+    position: relative;
+}
+
+.plan-sec-one .hd-plan::after {
+    content: "";
+    /*background: url(/content/dam/iibPlatform/indusSmart/images/arrow.png) -98px -11px;*/
+    width: 8px;
+    height: 30px;
+    position: absolute;
+    right: -20px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    color: #000;
+}
+
+.plan-sec-one .hd-plan span {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.text-st {
+    font-family: 'Univers';
+    color: #fe6241;
+    font-size: 92px;
+    line-height: 106px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.hd-text02 {
+    font-size: 24px;
+    line-height: 26px;
+    font-weight: 500;
+}
+
+.plan-sec-one .card-title {
+    text-align: center;
+    line-height: 12px;
+    color: #fe6646;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.plan-sec-one .card {
+    border: none;
+}
+
+.plan-sec-one .card-deck {
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+
+.plan-sec-one .card-footer {
+    background-color: #fff;
+    padding-top: 0px;
+}
+
+
+.plan-sec-one .card-img-top {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border: 1px solid #ccc;
+}
+
+@media (max-width:568px) {
+    .plan-sec-one .hd-plan {
+        width: 100%;
+    }
+    .plan-sec-one .hd-plan span {
+        display: table-row-group;
+    }
+    .plan-sec-one .hd-plan::after {
+        display: none;
+    }
+    .hd-plan span {
+        display: table-row-group;
+        vertical-align: middle;
+    }
+    .plan-sec-one .card {
+        margin-bottom: 50px;
+    }
+    .plan-sec-one .card-deck {
+        padding: 0 10%;
+    }
+}
+
+
+/* plan section two start */
+
+.equity-sec-two .red-rop {
+    position: absolute;
+    left: -11px;
+    top: 13px;
+}
+
+.equity-sec-two {
+    background-image: url(/content/dam/iibPlatform/indusSmart/images/bg-plan.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 40px;
+}
+
+.equity-sec-two .h3-text {
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 48px;
+    margin-top: 40px;
+}
+
+.equity-sec-two .card-title {
+    font-family: 'Univers';
+    text-align: center;
+    font-size: 28px;
+    line-height: 32px;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding-bottom: 15px;
+    max-height: 45px;
+}
+
+.equity-sec-two .card-footer .social-link {
+    font-size: 11px;
+}
+
+.socialShare a {
+    position: relative;
+}
+
+.plan-sec-two {
+    background-image: url(/content/dam/iibPlatform/indusSmart/images/bg-plan.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 40px;
+}
+
+.plan-sec-two .card-deck {
+    margin-top: 40px;
+    margin-bottom: 90px;
+}
+
+.plan-sec-two .card {
+    border-radius: 0;
+}
+
+.plan-sec-two .card-title {
+    font-family: 'Univers';
+    text-align: center;
+    font-size: 28px;
+    line-height: 32px;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding-bottom: 15px;
+}
+
+.plan-sec-two .card-footer .social-link {
+    font-size: 11px;
+}
+
+.plan-sec-two .card-img-top {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.plan-sec-two .card-deck .card-footer {
+    border: none;
+    background-color: #fff;
+}
+
+.plan-sec-two .red-rop {
+    position: absolute;
+    left: -11px;
+    top: 13px;
+}
+
+@media (max-width:568px) {
+    .plan-sec-two .card-title {
+        padding-bottom: 0;
+    }
+    .plan-sec-two .card-body {
+        padding-bottom: 0;
+    }
+    .hd-plan {
+        width: 100%;
+        padding: 0 30px;
+    }
+    .plan-sec-two .card {
+        margin-bottom: 50px;
+    }
+    .plan-sec-two .card-deck {
+        padding: 0 10%;
+    }
+}
+
+@media (max-width:480px) {
+    .hd-text02 {
+        font-size: 4vw;
+        line-height: 20px;
+    }
+    .h4-text {
+        font-size: 3vw;
+    }
+    .text-st {
+        font-size: 18vw;
+    }
+    .plan-sec-two .card-title {
+        font-size: 7vw;
+    }
+}

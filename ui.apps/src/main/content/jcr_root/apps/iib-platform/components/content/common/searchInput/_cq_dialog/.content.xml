@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:description="Search Input Component Dialog"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Search Input Component"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container"
+        formName="searchinput">
+        <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/layouts/tabs"
+            type="nav"/>
+        <items jcr:primaryType="nt:unstructured">
+            <config
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Configurations"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <columns
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <searchContentType
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/select"
+                                fieldLabel="Search Content Type"
+                                name="./searchContentType">
+                                <datasource
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="re-platform/components/content/common/datasources/searchCategoriesDS"
+                                    channel="${requestPathInfo.suffix}"/>
+                            </searchContentType>
+                            <searchResultPage
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                fieldLabel="Search Result Page"
+                                name="./searchResultPage"
+                                rootPath="/content/"/>
+                            <enableAutoSuggest
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                id="enableAutoSuggest"
+                                name="./enableAutoSuggest"
+                                text="Enable Auto Suggest"
+                                value="{Boolean}true"/>
+                            <autoSuggestMinCharCount
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/numberfield"
+                                fieldLabel="Auto Suggest Min Char Count"
+                                id="autoSuggestMinCharCount"
+                                name="./autoSuggestMinCharCount"/>
+                            <autoSuggestMaxResultCount
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/numberfield"
+                                fieldLabel="Auto Suggest Max Result Count"
+                                id="autoSuggestMaxResultCount"
+                                name="./autoSuggestMaxResultCount"/>
+                            <searchLabelText
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Search Label Text"
+                                id="searchLabelText"
+                                name="./searchLabelText"/>
+                            <searchPlaceholder
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Search Placeholder "
+                                id="placeholderText"
+                                name="./searchPlaceholder"/>
+                            <searchLogoClass
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Search Logo Class"
+                                id="searchLogoClass"
+                                name="./searchLogoClass"/>
+                            <searchLogoImage
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                autoStart="{Boolean}false"
+                                class="cq-droptarget"
+                                fieldLabel="Search Logo Class"
+                                fileNameParameter="./fileName"
+                                fileReferenceParameter="./searchLogoImage"
+                                mimeTypes="[image]"
+                                multiple="{Boolean}false"
+                                name="./file"
+                                title="Upload Image Asset"
+                                uploadUrl="${suffix.path}"
+                                useHTML5="{Boolean}true"/>
+                            <logoImageAltText
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Search Logo Image Alt Text"
+                                fieldLabel="Image Alt Text"
+                                id="imageAltText"
+                                name="./logoImageAltText"/>
+                            <ctaLabel
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="CTA Label"
+                                id="ctaLabel"
+                                name="./ctaLabel"/>
+                        </items>
+                    </columns>
+                </items>
+            </config>
+            <view
+                jcr:primaryType="nt:unstructured"
+                jcr:title="View"
+                sling:resourceType="granite/ui/components/foundation/include"
+                path="iib-platform/components/content/common/dialogTabs/view"/>
+        </items>
+    </content>
+</jcr:root>

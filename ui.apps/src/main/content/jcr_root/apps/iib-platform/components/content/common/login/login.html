@@ -1,0 +1,9 @@
+<div data-sly-test="${wcmmode.edit}">
+	Configure Login Component
+</div>
+
+<sly data-sly-use.model="com.iib.platform.common.models.LoginModel">
+
+	<a class="investnow-header" href="${model.loginUrl}" target="${model.openInNewWindow == 'true' ? '_blank' : ''}">${model.loginButtonText}</a>
+
+</sly>

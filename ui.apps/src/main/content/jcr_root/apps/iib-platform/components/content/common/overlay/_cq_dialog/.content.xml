@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:description="Overlay Component Dialog"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Overlay Component"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <layout
+            jcr:primaryType="nt:unstructured"
+            type="nav"/>
+        <items jcr:primaryType="nt:unstructured">
+            <config
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Configurations"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <columns
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <sectionHeading
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Section Heading"
+                                name="./sectionHeading"/>
+                            <opacity
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/numberfield"
+                                fieldLabel="Opacity"
+                                name="./opacity"/>
+                            <closeIconClass
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Close Icon Class"
+                                name="./closeIconClass"/>
+                            <includeComponent
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/select"
+                                defaultValue="login"
+                                fieldDescription="Select the component to be included in the Overlay"
+                                fieldLabel="Include Component"
+                                name="./includeComponent">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <option1
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Login"
+                                        value="login"/>
+                                    <option2
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Other"
+                                        value="other"/>
+                                </items>
+                            </includeComponent>
+                        </items>
+                    </columns>
+                </items>
+            </config>
+            <view
+                jcr:primaryType="nt:unstructured"
+                jcr:title="View"
+                sling:resourceType="granite/ui/components/foundation/include"
+                path="iib-platform/components/content/common/dialogTabs/view"/>
+        </items>
+    </content>
+</jcr:root>

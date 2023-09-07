@@ -1,0 +1,103 @@
+<div data-sly-test="${wcmmode.edit}">
+   Configure Login Component
+</div>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"/>
+
+<sly data-sly-use.model="com.iib.platform.enach.models.LoginModel">
+   <div class="innerwork_wrap">
+      <div class="bannerinner">
+         <img src="${model.srcPath}" width="1003" height="213" title="${model.hoverText}">
+         <div class="bannertxt welcomeright">&nbsp;
+         </div>
+      </div>
+
+      <div class="inner_wrap">
+         <div class="about2boxInner">
+            <div class="pagingwrap"><a href="${model.backButtonUrl}"><i class="fas fa-angle-left"></i> ${model.backButtonText}</a></div>
+            <div class="headingLine"></div>
+            <div class="simpletxt">
+               <p id="headingLine">${model.subHeading}</p>
+            </div>
+            <div class="formboxcenter">
+               <form class="Otp100-form loginForm" autocomplete="off">
+                  <span class="Otp100-form-title">${model.loginTitle}</span>
+                  <div class="wrap-input100">
+                     <label class = "input50" type="text" name="">+91</label>
+                     <input class="inputMobile100 mobile" type="text" name="" maxlength="10" style="padding-left : 28px;"placeholder="${model.numberPlaceholder}" autocomplete="off">
+                  </div>
+                  <div class="wrap-input100 Otp" hidden>
+                     <input id="otpverify" class="input100 otpverify" type="password" name="" maxlength="6" placeholder="${model.otpPlaceholder}" autocomplete="off">
+                  </div>
+                  <div class="container-login100-form-btn">
+                     <button type="button" class="form-btn hvr-btn otpSms">
+                     ${model.proceedButtonText}
+                     </button>
+                  </div>
+                  <div class="OtptextBox resendTimerBox" style="display:none">
+                     Resend OTP<div class="resendTimer" id="resendTimer">02 : 00</div>
+                  </div>
+                  <div class="OtptextBox resendViaSms" style="display:none">
+                     <a href="javascript:void(0)" id="sendOtpText" class="sendotpblk">${model.sendOTPSmsText}</a> 
+                  </div>
+                 <!-- <div class="OtptextBox resendViaCall" style="display:none">
+                     <a href="javascript:void(0)" id="sendOtpCall" class="sendotpblk">${model.sendOTPCallText}</a>
+                  </div> -->
+                  <!-- <div class="wrap-input100 Dob" hidden>
+                     <input class="input100 dobVerify" type="date" name="" placeholder="Enter DOB" >
+                  </div> -->
+
+
+               </form>
+
+                <form class="Otp100-form dobForm" hidden autocomplete="off">
+					<span class="Otp100-form-title">Mobile Number linked to multiple accounts with different DOB . User to enter DOB to proceed
+</span>
+
+                <div class="wrap-input100 Dob">
+                    <!-- <input class="input100" id="date-input" type="date" placeholder="Enter DOB" >
+                     <input class="input100" id="date-input" type="date" onkeypress="return false">-->
+					<input onkeypress="return false" placeholder="YYYY-MM-DD" type="text" name="date-input" id="date-input" class="input100 enachofferCal" autocomplete="off">	
+                  </div>
+
+                <!--  <div class="fieldbox">
+                          <div class="fieldboxleft startDateLabel">Enter DOB <small>*</small></div>
+                          <div class="fieldboxright">
+                             <input type="text" name="DOB" id="DOB" class="enachofferInput enachofferCal startDate">
+                          </div>
+                          <div class="clr"></div>
+                       </div> -->
+
+                  <div class="container-login100-form-btn">
+                     <button type="button" class="form-btn hvr-btn dobBtn">
+                     ${model.proceedButtonText}
+                     </button>	
+                  </div>
+               </form>
+
+			<form class="Otp100-form custdealForm" id="cutomerdeal" hidden>
+				<span id ="custDealTitle" class="Otp100-form-title">Select Your Account Number</span>
+
+                <div class="wrap-input100 custSelect" hidden>
+					<select id ="custaccnumber" onkeypress="return false" class="input100"  >
+
+                    </select>
+
+                  </div>
+                  <div class="container-login100-form-btn" hidden>
+                     <button type="button" class="form-btn hvr-btn dealFetchBtn">
+                     ${model.proceedButtonText}
+                  </button>	
+                  </div>
+            </form>		
+
+
+            </div>
+         </div>
+      </div>
+   </div>
+</sly>
+
+<script src="https://www.google.com/recaptcha/api.js?render=6LcZqO0UAAAAADGD7vdKR-xXSwnfGFNxmC34yNi-"></script>
+
+<sly data-sly-call="${clientlib.all @ categories='enach.login'}"/>

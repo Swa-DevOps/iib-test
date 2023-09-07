@@ -1,0 +1,56 @@
+<div data-sly-test="${wcmmode.edit}">
+   Configure FAQ Component
+</div>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.all @ categories='indus-smart.accordian'}"/>
+<sly data-sly-test="${wcmmode.edit}"> 
+	<sly data-sly-call="${clientlib.css @ categories='indus-smart.faq-open'}"/> 
+</sly>
+
+<sly data-sly-test="${!properties.disableComponent}">
+    <sly data-sly-use.model="com.iib.platform.indussmart.models.FAQModel">
+    
+        <section class="full-section plan-sec-one faq-override-list">
+           <div class="container">
+              <div>
+                 <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 no-padding-lr">
+                       <div class="accordion-widget-container">
+                          <div class="accordion-widget accordion-widget-default accordion-widget-blue accordion-widget-light accordion-widget-zoom-out" data-sly-list="${model.accordionItems}">
+                             <div class="accordion-widget-wrapper accordion-widget-arrow" id="accordion-widget-right-arrow">
+                                <input type="radio" id="accordion-widget-${itemList.count}" name="accordion-widget" checked="${itemList.count==1 ? 'checked' : ''}" class="accordion-widget-input">
+                                <label for="accordion-widget-${itemList.count}" class="accordion-widget-label">${item.sectionHeading}</label>
+                                <div class="accordion-widget-section">
+                                   <div class="accordion-widget-section-content">
+                                      <div class="grid-container">
+                                         <sly data-sly-test="${item.subsectionTitle || item.subsectionDescription}">
+                                            <div class="grid-row flex-nowrap">
+                                               <div class="grid-item">
+                                                  <sly data-sly-test="${item.subsectionTitle}"><h3>${item.subsectionTitle}</h3></sly>
+                                                  <p>${item.subsectionDescription}</p>
+                                               </div>
+                                            </div>
+                                         </sly>
+                                         <div data-sly-resource="${@path=item.parsysId, resourceType='iib-platform/components/content/common/text'}"></div>
+                                         
+                                        <!--  <div class="grid-row flex-nowrap" data-sly-list.grid="${item.subLinks}">
+                                            <div class="grid-item-box">
+                                               <sly data-sly-test="${grid.title}"><h4>${grid.title}</h4></sly>
+                                               <p>${grid.description}</p>
+                                            </div>
+                                         </div> -->
+                                      </div>
+                                   </div>
+                                </div>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </section>
+    
+    </sly>
+</sly>

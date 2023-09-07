@@ -1,0 +1,213 @@
+@media only screen and (max-width:1440px) {}
+@media only screen and (max-width:1366px) {
+.main {
+	max-width: 900px;
+}
+.content-wrapper .main {	max-width: 900px;}
+	.header .banner .banner-txt {    top: 140px;}
+	.header .banner .banner-txt h1 {    font-size: 7em;}
+	.header .banner .banner-txt h2 {    font-size: 2.8em;}
+	.content-wrapper .main .intro p {font-size: 2.2em;}.content-wrapper .main .intro p.sub-title {    font-size: 1.6em;}.header .banner {     height: 256px;}.header .logo img {width: 250px;}
+/*.row p.add-btm { bottom:-34px;}*/
+}
+@media only screen and (max-width:1280px) {
+.main {
+	max-width: 900px;
+}
+.content-wrapper .main {	max-width: 900px;}
+	.header .banner .banner-txt {    top: 140px;}
+	.header .banner .banner-txt h1 {    font-size: 7em;}
+	.header .banner .banner-txt h2 {    font-size: 2.8em;}
+	.content-wrapper .main .intro p {font-size: 2.2em;}.content-wrapper .main .intro p.sub-title {    font-size: 1.6em;}
+	.header .banner {     height: 256px;}
+	.header .logo img {width: 250px;}
+
+}
+@media only screen and (max-width:1024px) {
+.main {	max-width: 900px;}
+.content-wrapper .main {	max-width: 900px;}
+	.header .banner .banner-txt {    top: 117px;}
+	.header .banner .banner-txt h1 {    font-size: 7em;}
+	.header .banner .banner-txt h2 {    font-size: 2.8em;}
+	.content-wrapper .main .intro p {font-size: 2.6em;}.content-wrapper .main .intro p.sub-title {    font-size: 1.6em;}.header .banner {     height: 198px;}
+.row p.add-btm {bottom:-34px}
+}
+ @media only screen and (max-width: 900px) {
+body {
+	background-image: url(/content/dam/indusind/life-a-high-life/mob-bg.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	-webkit-text-stroke: 1px transparent;
+	background-position: 0 -120px;
+}
+.main {	text-align: center;}
+.row {	display: block;}
+.content-wrapper .main {	width: 96%;}
+.inputWrap {	display: block;	text-align: center;	margin-bottom: 30px;}
+#one .inputWrap input, #three .inputWrap input, #four .inputWrap input, #five .inputWrap input {	width: 92%;}
+.errorMsg {	left: 45px;}
+.header .banner .banner-txt {	top: 283px;	width: 100%;}
+.header .banner .banner-txt h1 {	font-size: 6em;}
+.header .banner .banner-txt h2 {	font-size: 2.4em;}
+.content-wrapper .main .intro p {	font-size: 2.6em;}
+.content-wrapper .main .intro p.sub-title {	font-size: 1.6em;	padding: 8px 37px 0;}
+.formDiv label.chk span {	width: 100%;	font-size: 1.4em;	padding-left: 3%;}
+.button-wrap-flex {	flex-wrap: wrap;	/*justify-content: space-around;*/	padding: 0 40px;}
+.copyright {	padding: 20px 0 0 0;width: 100%;margin: 20px 0 0 0;}
+.header .logo {	text-align: center;	padding: 15px 0 0 0;}
+.header .logo img {	width: 32%;	float: none;}
+.content-wrapper .main .formDiv .disclaimer {	padding: 0 42px;}
+.formDiv label {	width: 100%}
+.pop-up .btn-wrp input {    width: 150px;}
+.btn {border-radius: 25px;}
+}
+@media only screen and (max-width:823px) {
+        .pop-up .input-wrp input#otp {
+	text-align:center;
+    padding: 7px 0;
+	background:#f7e388;
+}
+    .pop-up .wrapper p.errorotpNum{margin-left:62px}
+
+}
+
+@media only screen and (max-width:812px) {
+body {	background-image: url(/content/dam/indusind/life-a-high-life/mob-bg.png);	background-size: 100%;	background-repeat: no-repeat;	-webkit-text-stroke: 1px transparent;	background-position: 0 -100px;	}
+.header .logo img {	width: 32%;}
+.header .banner .banner-txt {	top: 297px;	width: 100%;}
+.header .banner .banner-txt h1 {	font-size: 6em;}
+.header .banner .banner-txt h2 {	font-size: 2.4em;}
+.content-wrapper {	padding: 2% 0 0 0;}
+.content-wrapper .main .intro p {	font-size: 2.6em;}
+.content-wrapper .main .intro p.sub-title {	font-size: 1.6em;}
+.content-wrapper .main .formDiv .disclaimer {	padding: 0 18px 0 40px;}
+.header .banner {     height: 340px;}
+.popup-box {    width: 80%;}
+.pop-up p{font-size: 1.8em;}
+.btn-wrp, .btn-wrp .button-wrap-flex{float: left;width: 100%;text-align: center;}
+.btn-wrp p.error{float: left;width: 100%;text-align: center; transform:none; position:relative;left: 0; top:5px;}
+button.submit {    margin:0 auto;}
+.row p.error {left:45px;}
+
+disclaimer p.error {
+    top: 	26px;
+}
+}
+@media only screen and (max-width:800px) {
+
+}
+
+@media only screen and (max-width:768px) {
+/*body{background-position: 0 -55px;}*/
+body {	background-position: 0 -87px;	background-size: 100%;}
+/*.header .logo img {    width: 32%;}*/
+.header .banner .banner-txt {	top: 283px;}
+.header .banner .banner-txt h1 {	font-size: 6em;}
+.header .banner .banner-txt h2 {	font-size: 2.4em;}
+.content-wrapper .main .intro p {	font-size: 2.6em;}
+.content-wrapper .main .intro p.sub-title {	font-size: 1.6em;}
+button {	font-size: 1.8em;}
+.header .banner {     height: 340px;}.pop-up {width: 70%;}
+button.submit {
+    margin: 10px auto;
+}
+}
+@media only screen and (max-width:736px) {
+}
+@media only screen and (max-width:736px){
+}
+ @media only screen and (max-width:640px) {.errorMsg {    left: 30px;}
+}
+ @media only screen and (max-width:667px) {
+.pop-up p{font-size: 1.6em;padding: 30px 20px;}
+.header .banner .banner-txt {	top: 240px;}
+.content-wrapper {	padding: 8% 0 0 0}
+.header .banner .banner-txt h1 {	font-size: 6em;}
+.header .banner .banner-txt h2 {	font-size: 2.5em;}
+.header .banner {	height: 250px;}
+.header .logo img {	width: 40%;}
+.row p.error {left:40px;}
+}
+ @media only screen and (max-width:568px) {	
+ .disclaimer p.error{ float:left; position:relative;left: 123px; top:8px;}
+	/* .btn-wrp p.error{width:100%;left: 184px;}*/
+
+.header .banner .banner-txt {	top: 200px;}
+.content-wrapper .main .intro p.sub-title {	padding: 8px 31px 0;}
+.content-wrapper {	padding: 10% 0 0 0;}
+.header .logo img {	width: 42%;}
+.header .logo {	padding: 10px 0 0 0;}
+.content-wrapper {	padding: 2% 0 0 0}
+.content-wrapper .main .intro p {	font-size: 2.4em;}
+.content-wrapper .main .intro p.sub-title {	font-size: 1.6em;}
+.header .banner .banner-txt h1 {	font-size: 5.5em;}
+.header .banner .banner-txt h2 {	font-size: 2.2em;}
+button {	font-size: 1.8em;}
+.checkmark {    height: 16px;    width: 16px;}
+.pop-up .input-wrp {width:100%;	}
+.pop-up .wrapper > p {font-size: 1.8em; padding:15px 20px;}
+}
+ @media only screen and (max-width:414px) {.formDiv label.chk span {	width: 100%;	font-size: 1.4em;	padding-left: 4%;}
+ body {	background-position: 0 -25px;}
+.content-wrapper .main .formDiv .disclaimer {	padding: 0 27px;}
+.row p.error {left:30px}
+
+}
+ @media only screen and (max-width:414px) {
+    .pop-up .input-wrp input#otp {
+	text-align:center;
+    padding: 7px 0;
+	background:#f7e388;
+}
+#live-life-high-validate-otp {
+    padding: 6px 0px;
+    border-radius: -2px;
+    border-radius: 19px;
+    width: 130px;
+    font-size: 1.4em;
+    font-family: font-family: BebasNeue-Bold;
+}
+.pop-up .wrapper p.errorotpNum{margin-top:54px;}
+.pop-up .wrapper p.error{margin-left: 54px;}
+.pop-up .thank-wrp .thank {    font-size: 1rem; line-height:20px;}
+.pop-up p {padding:5px 0;}
+
+}
+ @media only screen and (max-width:375px) {
+body {	background-position: 0 -14px;	background-size: contain;}
+.content-wrapper .main .intro p.sub-title {	padding: 8px 14px 0;}
+.header .logo img {	width: 57%;}
+.header .banner {	height: 230px;}
+.header .banner .banner-txt h1 {	font-size: 5em;}
+.header .banner .banner-txt h2 {	font-size: 2em;}
+.header .banner .banner-txt {	top: 186px;}
+.content-wrapper .main .intro p {	font-size: 1.8em;}
+.content-wrapper .main .intro p.sub-title {	font-size: 1.4em;}
+button {	padding: 10px 10px;	margin: 8px 0;	letter-spacing: 0.01em;	font-weight: normal;	border-radius: 20px;	font-size: 1.4em;}
+
+.content-wrapper .main .formDiv {	padding: 25px 0 0 0;}
+.content-wrapper .main .formDiv .disclaimer {	margin: 20px 0 0 0;}
+.formDiv label.chk span {	font-size: 1.4em;	padding-left: 5%;}
+.pop-up .thank-wrp .thank {line-height: 20px;}
+.pop-up .wrapper p.errorotpNum{margin-top:60;margin-left:43px}
+}
+ @media only screen and (max-width:360px) {
+.content-wrapper {	padding: 4% 0 0 0;}
+button {	padding: 10px 10px;	margin: 8px 0;	letter-spacing: 0;	font-weight: normal;	border-radius: 20px;}
+.pop-up {width: 80%;}
+.pop-up .wrapper p.errorotpNum{margin-top:60;margin-left:54px}
+}
+ @media only screen and (max-width:320px) {
+body {
+	background-position: 0 0;	background-size: contain;}
+.header .logo img {	width: 57%;}
+.content-wrapper {	padding: 15% 0 0 0;}
+.header .banner .banner-txt {	top: 150px;}
+.header .banner .banner-txt h1 {	font-size: 4.6em;}
+.header .banner .banner-txt h2 {	font-size: 1.6em;	letter-spacing: 0em;}
+.header .banner {	height: 150px;}
+/*button {padding: 10px 10px;margin: 8px 0;letter-spacing: 0.01em;font-weight: normal;border-radius: 10px;font-size: 1.6em;}*/
+.row p.add-btm {bottom:-34px}
+
+.pop-up .wrapper p.errorotpNum{margin-top:60; margin-left:40;}
+}

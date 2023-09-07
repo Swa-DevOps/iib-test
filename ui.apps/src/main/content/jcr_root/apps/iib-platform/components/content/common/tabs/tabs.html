@@ -1,0 +1,28 @@
+<div data-sly-test="${wcmmode.edit}">
+	Configure Tabs Component
+</div>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.all @ categories='iib-platform.tabs'}"/>
+<sly data-sly-test="${!properties.disableComponent}">
+<sly data-sly-use.model="com.iib.platform.models.common.TabsModel">
+	<div id="tabs-${properties.randomNumber}" class="tabs row ${properties.customStyleClass}">
+    	<h3>${model.sectionHeading}</h3>
+		<ul class="nav nav-tabs" data-sly-list="${model.tabItemList}">
+  			<li class="nav-item">
+    			<a class="nav-link ${itemList.count == 1 ? 'active' : ''}" data-toggle="tab" href="#tab-${itemList.count}">${item.heading}</a>
+  			</li>
+		</ul>
+		<div class="tab-content" data-sly-list="${model.tabItemList}">
+  			<div class="tab-pane container ${itemList.count == 1 ? 'active' : ''}" id="tab-${itemList.count}">
+				<sly data-sly-test="${item.bodyType == 'text'}">
+					<p>${item.bodyText}</p>
+               	</sly>
+           	    <sly data-sly-test="${item.bodyType == 'other'}">
+                   <sly data-sly-resource="${@path=item.parsysId, resourceType='wcm/foundation/components/parsys'}"></sly> 
+                </sly>
+            </div>
+		</div>
+  	</div>
+</sly>
+</sly>

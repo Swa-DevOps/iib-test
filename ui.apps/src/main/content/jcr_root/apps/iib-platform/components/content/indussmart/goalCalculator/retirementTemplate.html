@@ -1,0 +1,172 @@
+<template data-sly-template.retirementTemplate="${ @ model }">
+   <div class="tab-pane fade ${wcmmode.edit ? 'show active' : ''}" id="retirement" role="tabpanel" aria-labelledby="retirement-tab">
+      <div class="row">
+         <div class="col-md-12 col-sm-12">
+            <div class="goal-form">
+               <form class="article-form form-first">
+                  <div class="calc-style select-style">
+                     <h4 class="text-h4">
+                        ${properties.retirementDescription}
+                     </h4>
+                     <br>
+                     <div class="article-content">
+                        My current age is
+                        <div class="form-select sm">
+                           <div>
+                              <select class='selectAdaptive currentAge' data-sly-list="${model.currentAgeItems}">
+                                    <option data-sly-attribute.selected="${properties.defaultAge == item.currentAge}">${item.currentAge}</option>
+                              </select>
+                           </div>
+                        </div>
+                        years and my monthly expense today is
+                        <div class="input-box rp">
+                            <input class="form-input monthlyExpense" formatNumber maxlength="14" value="${properties.defaultMonthlyExpense}" placeholder="${properties.monthlyExpensesPlaceholder}">. </div>
+                        I wish to retire at an age of
+                        <div class="form-select sm lifeValueDiv" data-lifeExpectancy="${properties.fixedLifeValue}">
+                           <div>
+                              <select class='selectAdaptive retirementAge' data-sly-list="${model.retirementAgeItems}">
+                                    <option data-sly-attribute.selected="${properties.defaultRetirementAge == item.retirementAge}">${item.retirementAge}</option>
+                              </select>
+                           </div>
+                        </div>
+                        years and live a comfortable life for at least
+                        <div class="form-select sm">
+                           <div> 
+                              <select class='selectAdaptive yearsAfterRetirement' data-sly-list="${model.yearsAfterRetirementItems}">
+                                    <option data-sly-attribute.selected="${item.yearsAfterRetirement==properties.fixedValueforRet}">${item.yearsAfterRetirement}</option>
+                              </select>
+                           </div>
+                        </div>
+                        years after retirement. How can I plan for my retirement assuming my investments grow at
+                        <div class="form-select sm">
+                           <div>
+                              <select class='selectAdaptive growthRate' data-sly-list="${model.retRateItems}">
+                            	<option data-sly-attribute.selected="${properties.defaultRateRetirement == item.retRate}">${item.retRate}%</option>
+                              </select>
+
+                           </div>
+
+                        </div>
+                        ?
+                     </div>
+                  </div>
+                  <div class="calc-style select-style">
+                     <a id="retirementLogic" href="javascript:;" class="button calc-btn btn-orange-animate text-uppercase">${properties.retButtonText}</a>
+                  </div>
+               </form>
+            </div>
+         </div>
+         <div class="col-md-12 col-sm-12">
+            <br><br><br>
+            <!-- open this box after calculate first step  -->
+            <div id="retirementresult" class="result-wrapper">
+               <div>
+                  <div class="row retirementHiddenBox">
+                     <div class="col-md-12">
+                        <div class="calc-result-msg">
+                           <div class="calc-flex flex-item">
+                              <div class="flex-img">
+                                 <div class="bg-calc4"></div>
+                              </div>
+                              <div class="result-box box-background">
+                                 <form class="article-form">
+                                    <div class="article-content">
+                                       <div class="input-box">
+                                          <div>
+                                          	<input class="form-input retirementYr" readonly>
+                                            <!--  <select class='selectAdaptive retirementYr' data-sly-list="${model.retYearItems}">
+                                                   <option>${item.retYear}</option>
+                                             </select> -->
+                                          </div>
+                                       </div>
+                                       years from now You will need a retirement fund of
+                                       <div class="input-box rp"><input readonly id="totalRetirement" class="form-input lg" placeholder="${properties.retirementCorpusPlaceholder}"></div>
+                                       . Invest
+                                       <div class="input-box rp"><input readonly id="retirementSip" class="form-input lg" placeholder="${properties.sipPlaceholder}"></div>
+                                       monthly for next
+                                       <div class="input-box">
+                                          <div>
+                                          	 <input class="form-input retirementNo" readonly>
+                                             <!-- <select class='selectAdaptive retirementNo' data-sly-list="${model.yearsToRetirementItems}">
+                                                   <option>${item.yearsToRetirement}</option>
+                                             </select> -->
+                                          </div>
+                                       </div>
+                                       years.
+                                    </div>
+                                 </form>
+                              </div>
+                           </div>
+                           <div class="calc-flex flex-item"><span class="or-text">or</span></div>
+                           <div class="calc-flex flex-item">
+                              <div class="flex-img">
+                                 <div class="bg-calc5"></div>
+                              </div>
+                              <div class="result-box box-background">
+                                 <form class="article-form">
+                                    <div class="article-content">
+                                       Make a one-time investment of
+                                       <div class="input-box rp"><input readonly id="retirementOneTime" class="form-input lg" placeholder="${properties.oneTimePlaceholder}"></div>
+                                       and stay invested for
+                                       <div class="input-box">
+                                          <div>
+                                          <input class="form-input oneTimeYear" readonly>
+                                            <!--  <select class='selectAdaptive oneTimeYear' data-sly-list="${model.yearsToRetirementItems}">
+                                                   <option>${item.yearsToRetirement}</option>
+                                             </select> -->
+                                          </div>
+                                       </div>
+                                       years.
+                                    </div>
+                                 </form>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <br><br><br>
+               <div class="result-box box-background retirementDoYouKnow">
+                  <form class="article-form">
+                     <div class="article-flex-box">
+                        <div class="article-item article-flex">
+                           <div class="article-img">
+                              <div class="bg-calc3"></div>
+                           </div>
+                           <div class="article-content">
+                              <h6 class="text-uppercase"><strong>Do you Know?</strong></h6>
+                              <h3 class="text-underline"><ins>SIPs are a great way to make regular investments</ins></h3>
+                              <div class="article-content">
+                                 If you start your monthly SIP today, your total investment amount will be
+                                 <div class="input-box rp"><input readonly id="predictionInvestment" class="form-input lg" placeholder="${properties.retirementCorpusPlaceholder}"></div>
+                                 However, if you start saving for retirement after
+                                 <div class="form-select sm">
+                                    <div>
+                                       <select class='selectAdaptive predictionAge' data-sly-list="${model.predictionAgeItems}">
+                                             <option data-sly-attribute.selected="${item.predictionAge==properties.defaultPredictionAge}">${item.predictionAge}</option> 
+                                       </select>
+                                    </div>
+                                 </div>
+                                 years, then you will end up investing
+                                 <div class="input-box rp"><input readonly id="predictionRet" class="form-input lg" placeholder="${properties.predictionRetPlaceholder}"></div>
+                                 for the same retirement fund!
+                              </div>
+                           </div>
+                        </div>
+                        <div class="article-item article-flex">
+                           <div class="article-content content-right">The smart<br>decision is to<br>
+                              <a class="text-uppercase" href="${model.retirementInvestUrl}" target="${model.openInNewWindowGoalRet == 'true' ? '_blank' : ''}">Start Investing</a><br>today!
+                           </div>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+               <div class="result-box">
+                  <p class="text-left" style="font-size: 11px;">${properties.retirementNoteText}</p>
+               </div>
+            </div>
+            <!-- end the article -->
+         </div>
+      </div>
+   </div>
+</template>

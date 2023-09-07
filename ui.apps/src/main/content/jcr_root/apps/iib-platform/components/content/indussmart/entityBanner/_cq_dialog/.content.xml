@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:description="Entity Banner Component Dialog"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Entity Banner Component"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/layouts/tabs"/>
+        <items jcr:primaryType="nt:unstructured">
+            <bodyConfig
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Banner Config"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <columns
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <sectionheading
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                allowBlank="true"
+                                autoDelete="{Boolean}true"
+                                fieldLabel="Section Heading"
+                                name="./sectionHeading"/>
+                            <scrollImage
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                autoStart="{Boolean}false"
+                                class="cq-droptarget"
+                                fieldLabel="Scroll Icon Image"
+                                fileNameParameter="./fileName"
+                                fileReferenceParameter="./imagePath"
+                                mimeTypes="[image]"
+                                multiple="{Boolean}false"
+                                name="./file"
+                                title="Upload Image Asset"
+                                uploadUrl="${suffix.path}"
+                                useHTML5="{Boolean}true"/>
+                            <imageAltText
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                allowBlank="true"
+                                autoDelete="{Boolean}true"
+                                fieldLabel="Image Alt Text"
+                                name="./imageAltText"/>
+                            <scrollToNext
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                defaultChecked="{Boolean}false"
+                                name="./scrollToNext"
+                                text="Scroll to Next Section"
+                                uncheckedValue="{Boolean}false"
+                                value="{Boolean}true"/>
+                            <bannerSectionItems
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/multifield"
+                                fieldLabel="Entity Banner Items">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/form/fieldset"
+                                    acs-commons-nested=""
+                                    name="./tabItems">
+                                    <layout
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                                        method="absolute"/>
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <title
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                    allowBlank="true"
+                                                    autoDelete="{Boolean}true"
+                                                    fieldLabel="Title"
+                                                    name="./title"/>
+                                                <summary
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                    allowBlank="true"
+                                                    autoDelete="{Boolean}true"
+                                                    fieldLabel="Summary"
+                                                    name="./summary"/>
+                                                <ctaText
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                    allowBlank="true"
+                                                    autoDelete="{Boolean}true"
+                                                    fieldLabel="CTA Text"
+                                                    name="./ctaText"/>
+                                                <ctaUrl
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                                    fieldDescription="Url for the Button Redirect"
+                                                    fieldLabel="Cta URL"
+                                                    name="./ctaUrl"
+                                                    rootPath="/content/indusind"/>
+                                                <openInNewWindow
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                                    defaultChecked="{Boolean}false"
+                                                    name="./openInNewWindow"
+                                                    text="Open in New Window"
+                                                    uncheckedValue="{Boolean}false"
+                                                    value="{Boolean}true"/>
+                                            </items>
+                                        </column>
+                                    </items>
+                                </field>
+                            </bannerSectionItems>
+                            <bannerList
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/multifield"
+                                class="full-width"
+                                eaem-nested=""
+                                fieldLabel="Banner Video Items">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/form/fieldset"
+                                    acs-commons-nested=""
+                                    name="./bannerListItems">
+                                    <layout
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                                        method="absolute"/>
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <backgroundImagePath
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                                    fieldDescription="Background Image"
+                                                    fieldLabel="Background Image"
+                                                    name="./backgroundImagePath"
+                                                    rootPath="/content/dam"/>
+                                                <backgroundImageAltText
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                    class="imageField"
+                                                    fieldLabel="Background Image Alt Text"
+                                                    name="./backgroundImageAltText"/>
+                                                <heading
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                    fieldDescription="Heading for the Banner"
+                                                    fieldLabel="Banner Heading"
+                                                    name="./heading"/>
+                                                <videoIconImage
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                                    fieldDescription="Icon Image for video"
+                                                    fieldLabel="Icon Image"
+                                                    name="./videoIconImage"
+                                                    rootPath="/content/dam"/>
+                                                <backgroundVideo
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                                    fieldDescription="Background Video for the Banner"
+                                                    fieldLabel="Background Video"
+                                                    name="./backgroundVideoPath"
+                                                    rootPath="/content/dam"/>
+                                            </items>
+                                        </column>
+                                    </items>
+                                </field>
+                            </bannerList>
+                        </items>
+                    </columns>
+                </items>
+            </bodyConfig>
+            <view
+                jcr:primaryType="nt:unstructured"
+                jcr:title="View"
+                sling:resourceType="granite/ui/components/foundation/include"
+                path="iib-platform/components/content/common/dialogTabs/view"/>
+        </items>
+    </content>
+</jcr:root>

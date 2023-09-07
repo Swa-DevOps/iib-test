@@ -1,0 +1,58 @@
+<div data-sly-test="${wcmmode.edit}">
+   Configure Login Component
+</div>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"/>
+
+<sly data-sly-use.model="com.iib.platform.cfdenach.models.LoginModel">
+   <div class="innerwork_wrap">
+      <div class="bannerinner">
+         <img src="${model.srcPath}" width="1003" height="213" title="${model.hoverText}">
+         <div class="bannertxt welcomeright">&nbsp;
+         </div>
+      </div>
+
+      <div class="inner_wrap">
+         <div class="about2boxInner">
+            <div class="pagingwrap"><a href="${model.backButtonUrl}"><i class="fas fa-angle-left"></i> ${model.backButtonText}</a></div>
+            <div class="headingLine"></div>
+            <div class="simpletxt">
+               <p id="headingLine">${model.subHeading}</p>
+            </div>
+            <div class="formboxcenter">
+
+                <form class="Otp100-form dobForm" >
+					<span class="Otp100-form-title">Select Your Customer Code/Customer Name</span>
+
+                <div class="wrap-input100 Dob">
+
+				<!--	<input onkeypress="return false" placeholder="YYYY-MM-DD" type="text" name="date-input" id="date-input" class="input100 enachofferCal">-->	
+					<select onkeypress="return false" class="input100">
+                          <option value="CUS001">CUS001/A B Malik</option>
+                          <option value="CUS021">CUS021/A B Malik</option>
+                          <option value="CUS031">CUS031/D B Malik</option>
+                          <option value="CUS041">CUS041/B Malik</option>
+                        </select>
+					<br><br>
+
+                        <select onkeypress="return false" class="input100" >
+                          <option value="DEAL01">DEAL001933</option>
+                          <option value="DEAL02">DEAL001345</option>
+                          <option value="DEAL03">DEAL001444</option>
+                          <option value="DEAL04">DEAL001934</option>
+                        </select>
+ </div>
+
+                  <div class="container-login100-form-btn">
+                     <button type="button" class="form-btn hvr-btn dobBtn">
+                     ${model.proceedButtonText}
+                     </button>	
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+</sly>
+
+<sly data-sly-call="${clientlib.all @ categories='cfd-enach.login'}"/>

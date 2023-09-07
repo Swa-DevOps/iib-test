@@ -1,0 +1,25 @@
+<div data-sly-test="${wcmmode.edit}">
+	Configure Breadcrumb Component
+</div>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.all @ categories='indusSmart.plan'}"/>
+<sly data-sly-test="${!properties.disableComponent}">
+<sly data-sly-use.model="com.iib.platform.common.models.BreadcrumbModel">
+    <div id="breadcrumb-${model.component.randomNumber}">
+         <section class="full-section">
+             <div class="container-fluid">
+                 <div class="row">
+                     <div class="col-lg-12 col-md-12 col-sm-12">
+                         <nav aria-label="breadcrumb">
+                             <ol class="breadcrumb justify-content-left" data-sly-list="${model.breadcrumbList}">
+                                 <li class="breadcrumb-item ${item.title == pageProperties.jcr:title ? 'active' : ''}" aria-current="${item.title == pageProperties.jcr:title ? 'page' : ''}"><a href="${item.title == pageProperties.jcr:title ? '' : item.PageUrl }">${item.title}</a></li>
+                             </ol>
+                         </nav>
+                     </div>
+                 </div>
+             </div>
+         </section>
+     </div>
+</sly>
+</sly>

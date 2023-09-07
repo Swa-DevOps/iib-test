@@ -1,0 +1,24 @@
+<template data-sly-template.head="${ @ page }" data-sly-use.headlibRenderer="headlibs.html">
+	<head>
+       <title>${properties.pageTitle || page.title}</title>
+        <meta name="description" content="${page.seoDescription|| page.description}"/>
+        <meta name="keywords" content="${page.seoKeywords || properties.subtitle}"/>	
+
+        <meta charset="ISO-8859-1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<meta name="google-site-verification" content="IygTH7a4odD93YMw7NZetOb8dfgnpC-7IDVvcf2BTXE" />
+        <link rel="shortcut icon" href="${page.favIcon}">
+<meta name="google-site-verification" content="IygTH7a4odD93YMw7NZetOb8dfgnpC-7IDVvcf2BTXE" />
+        <sly data-sly-include="customheaderlibs.html"></sly>
+        <sly data-sly-call="${headlibRenderer.headlibs @designPath = page.designPath}"></sly>
+
+        ${page.customMetaTags @context='html'}
+        <script>${page.headScript @context = 'unsafe'} </script>   
+        <script>
+           history.pushState(null, null, location.href);
+    	  window.onpopstate = function () {
+         history.go(1);
+    		};
+		</script>
+    </head>
+</template>

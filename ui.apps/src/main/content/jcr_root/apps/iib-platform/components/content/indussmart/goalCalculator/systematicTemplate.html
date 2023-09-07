@@ -1,0 +1,139 @@
+<template data-sly-template.systematicTemplate="${ @ model }">
+   <div class="tab-pane fade ${wcmmode.edit ? 'show active' : ''}" id="systematic" role="tabpanel" aria-labelledby="systematic-tab">
+      <div class="row">
+         <div class="col-md-12 col-sm-12">
+            <div class="goal-form">
+               <form class="article-form form-first">
+                  <div class="calc-style select-style">
+                     <h4 class="text-h4">
+                        ${properties.systematiclInvestmentsDescription}
+                     </h4>
+                     <br>
+                     <div class="article-content">
+                        I am planning to start investing
+                        <div class="input-box rp increasedPercent" data-increasedPercent="${properties.increasedPercent}"><input class="form-input" value="${properties.defaultAmount}" formatNumber maxlength="14" id="principal" placeholder="${properties.monthlyInvestmentPlaceholder}"></div>
+                        monthly for next
+                        <div class="form-select">
+                           <div>
+                              <select class='selectAdaptive' id="principalyears">
+                                 <sly data-sly-list="${model.sipYearNoItems}">
+                                    <option data-sly-attribute.selected="${properties.defaultYearSip == item.sipYearNo}">${item.sipYearNo}</option>
+                                 </sly>
+                              </select>
+                           </div>
+                        </div>
+                        years, and also make a one-time upfront investment of
+                            <div class="input-box rp"><input class="form-input" formatNumberw0 maxlength="14" value="${properties.defaultLumpsum}" id="lumpsum" placeholder="${properties.lumpsumPlaceholder}"></div>
+                        today. Assuming my investment grows at
+                        <div class="form-select">
+                           <div>
+                              <select class='selectAdaptive' id="principalrate">
+                                 <sly data-sly-list="${model.sipRateItems}">
+                                    <option data-sly-attribute.selected="${properties.defaultRateSip == item.sipRate}">${item.sipRate}%</option>
+                                 </sly>
+                              </select>
+                           </div>
+                        </div>
+                        annually, how much wealth will I generate?
+                     </div>
+                  </div>
+                  <br>
+                  <div class="calc-style select-style">
+                     <a id="calulateprincipal" href="javascript:;" class="button calc-btn btn-orange-animate text-uppercase">${properties.sipButtonText}</a>
+                  </div>
+               </form>
+            </div>
+         </div>
+         <div class="col-md-12 col-sm-12">
+            <br><br><br>
+            <br>
+            <!-- open this box after calculate first step  -->
+            <div id="systmeticresult" class="result-wrapper">
+               <div>
+                  <div class="row systematicHiddenBox">
+                     <div class="col-md-12">
+                        <div class="calc-result-msg sys-result">
+                           <div class="calc-flex flex-item">
+                              <div class="flex-img flex-after-img">
+                                 <div class="bg-calc1"></div>
+                              </div>
+                           </div>
+                           <div class="calc-flex flex-item">
+                              <div class="result-box box-background">
+                                 <form class="article-form">
+                                    <div class="article-content">
+                                       By the year
+                                       <div class="input-box">
+                                          <div>
+                                          	<input class="form-input" id="lumpsumyears" readonly>	
+                                             <!-- <select class='selectAdaptive' id="lumpsumyears">
+                                                <sly data-sly-list="${model.sipYearItems}">
+                                                   <option>${item.sipYear}</option>
+                                                </sly>
+                                             </select> -->
+                                          </div>
+                                       </div>
+                                       , you will invest
+                                       <div class="input-box rp"><input readonly class="form-input lg" id="totalInvstAsString" placeholder="${properties.investmetPlaceholder}"></div>
+                                       and get an expected return of
+                                       <div class="input-box rp"><input readonly class="form-input lg" id="lumptab2" placeholder="${properties.returnPlaceholder}">.</div>
+                                    </div>
+                                 </form>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <br><br><br>
+               <div class="result-box box-background sipDoYouKnow">
+                  <form class="article-form">
+                     <div class="article-flex-box">
+                        <div class="article-item article-flex">
+                           <div class="article-img">
+                              <div class="bg-calc3"></div>
+                           </div>
+                           <div class="article-content">
+                              <h6 class="text-uppercase"><strong>Do you Know?</strong></h6>
+                              <h3 class="text-underline"><ins>SIPs are a great way to make regular investments</ins></h3>
+                              <div class="article-content">
+                                 If you increase your monthly SIP amount by
+                                 <div class="form-select sm">
+                                 	<!-- <input id="predictionAmountInput" class="form-input" placeholder="${properties.sipIncreasedPlaceholder}"> -->
+                                 	<select class='selectAdaptive predictionRate' data-sly-list="${model.predictionRateItems}">
+                                          <option data-sly-attribute.selected="${properties.defaultPredictionRate == item.predRate}">${item.predRate}%</option> 
+                                     </select>
+                                 </div>
+                                 and stay invested for
+                                 <div class="form-select sm">
+                                    <div>
+                                       <select class='selectAdaptive investYears'>
+                                          <sly data-sly-list="${model.sipInvestedYearItems}">
+                                             <option data-sly-attribute.selected="${properties.defaultInvestedYears == item.sipInvestedYear}">${item.sipInvestedYear}</option> 
+                                          </sly>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 years more, then you will get
+                                 <div class="input-box rp"><input readonly id="sipPrediction" class="form-input lg" placeholder="${properties.predictionPlaceholder}"></div>
+                                 more over your current return.
+                              </div>
+                           </div>
+                        </div>
+                        <div class="article-item article-flex">
+                           <div class="article-content content-right">
+                              <a class="text-uppercase" href="${model.sipInvestUrl}" target="${model.openInNewWindowSip == 'true' ? '_blank' : ''}">Start Investing</a><br>today!
+                           </div>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+               <div class="result-box">
+                  <p class="text-left" style="font-size: 11px;">${properties.sipNoteText}</p>
+               </div>
+            </div>
+            <!-- end the article -->
+         </div>
+      </div>
+   </div>
+</template>

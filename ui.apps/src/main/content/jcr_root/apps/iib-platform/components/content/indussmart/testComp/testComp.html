@@ -1,0 +1,26 @@
+<div data-sly-test="${wcmmode.edit}">
+   Configure Help Me Component
+</div>
+
+<button type="button" id="myButton">Get Data</button>
+
+<script type="text/javascript">
+   $("#myButton").click(function() {
+   	//get the form data and then serialize that
+   	dataString = $("#form1").serialize();
+   	$.ajax({
+   		type : "POST",
+   		url : "/bin/digioCreateMandate",
+   		data : {
+   			ifsc : 'UTIB0001'
+   		},
+   		success : function(data) {
+   			alert("success");
+   			console.log(JSON.parse(data));
+   		},
+   		error : function(error) {
+   			console.log("Something really bad happened " + error);
+   		}
+   	});
+   });
+</script>

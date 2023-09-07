@@ -1,0 +1,22 @@
+<div data-sly-test="${wcmmode.edit}">
+	Configure List of Links Component
+</div>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call = "${clientlib.all @ categories='indus-smart.header'}"/>
+
+<sly data-sly-test="${!properties.disableComponent}">
+    <sly data-sly-use.model="com.iib.platform.common.models.ListOfLinksModel">
+        <ul class="list-inline" data-sly-list="${model.listItems}">
+            <li class="list-inline-item">
+            	<sly data-sly-test="${item.linkType=='link'}">
+                	<a class="" href="${item.url}" target="${item.openInNewWindow == 'true' ? '_blank' : ''}"> ${item.text} </a> 
+                </sly>
+                <sly data-sly-test="${item.linkType=='cta' || item.linkType=='socialLink'}">
+                <a class="${item.linkType=='cta' ? 'social-link help' : 'social-link'}" href="${item.url}" target="${item.openInNewWindow == 'true' ? '_blank' : ''}"> 
+                	<sly data-sly-test="${item.linkType=='socialLink'}"> <i class="fa fa-${item.socialLinkType}"></i> </sly>
+                <sly data-sly-test="${item.linkType=='cta' || item.linkType=='link'}">${item.text}</sly></a> </sly>
+            </li>
+        </ul>
+    </sly>
+</sly>

@@ -1,0 +1,18 @@
+<div data-sly-test="${wcmmode.edit}">
+    Configure CTA Component
+</div>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.all @ categories='re-platform.cta'}"/>
+
+<sly data-sly-use.model="com.re.aem.web.platform.models.common.CTAModel">
+
+    <div id="cta-${model.component.randomNumber}" class="cta text-${model.align} ${model.component.customStyleClass}">
+		<sly data-sly-list="${model.ctaList}"> 
+			<a class="custom-btn bor ${item.iconClass} ${item.iconType}" href="${item.url}" target="${item.openInNewWindow == 'true' ? '_blank' : ''}">
+				${item.text}
+			</a>
+	    </sly>
+	</div>
+
+</sly>

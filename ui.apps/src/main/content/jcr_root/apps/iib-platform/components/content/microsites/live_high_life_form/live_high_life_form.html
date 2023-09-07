@@ -1,0 +1,188 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+	 data-sly-call="${clientlib.css @ categories='live-a-high-life'}"/>
+
+
+
+<link href="https://fonts.googleapis.com/css?family=Barlow:400,500,600,700,800,900&display=swap" rel="stylesheet" />
+
+
+<div class="wrapper">
+  <div class="header">
+    <div class="logo"><img src="/content/dam/indusind/life-a-high-life/indusind-logo.png"  alt="indusind" /></div>
+    <!--logo-->
+
+    <div class="banner">
+      <div class="main">
+        <div class="banner-txt">
+		  <h1>${properties.heading}</h1>
+          <h2>${properties.subHeading}</h2>
+        </div>
+        <!--banner-txt--> </div>
+      <!--<img src="images/banner-bg.jpg" />--></div>
+  </div>
+  <!--header-->
+  <div class="content-wrapper">
+    <div class="main">
+      <div class="intro">
+        <p><strong>${properties.formHeading}</strong></p>
+        <p class="sub-title">${properties.formSubHeading}</p>
+      </div>
+      <!--intro-->
+      <div class="formDiv">
+        <form action="javascript:;" id="ccLead"  autocomplete="off">
+          <div class="row" id="one">
+            <div class="inputWrap input-wrp">
+              <input type="text" class="letters-only" name="first-name" id="first-name" placeholder="${properties.firstName}" autocomplete="off" required>
+              <p class="error"></p>
+            </div>
+            <!--inputWrap-->
+            <div class="inputWrap input-wrp">
+              <input type="text" class="letters-only" name="middle-name" id="middle-name" placeholder="${properties.midName}" autocomplete="off">
+              <p class="error"></p>
+            </div>
+            <!--inputWrap-->
+            <div class="inputWrap input-wrp">
+              <input type="text" class="letters-only" name="last-name" id="last-name" placeholder="${properties.lastName}" autocomplete="off" required>
+              <p class="error"></p>
+            </div>
+            <!--inputWrap--> 
+          </div>
+          <!--row one-->
+          <div class="row" id="two">
+            <div class="inputWrap input-wrp">
+              <input class="datepicker dateofbirth validGroup" id="datepicker" name="datepicker"  type="text"  autocomplete="off"  maxlength="10" placeholder="${properties.dob}"/>
+              <p class="error dateError"></p>
+            </div>
+            <!--inputWrap-->
+            <div class="inputWrap input-wrp">
+              <input type="tel" class="num-only" name="mobile" id="mobile" placeholder="${properties.mobileNumber}" maxlength="10" autocomplete="off" required>
+              <p class="error"></p>
+              <!--<p class="add-btm"></p>--> 
+            </div>
+            <!--inputWrap-->
+            <div class="inputWrap input-wrp">
+              <input type="email" name="email" id="email" placeholder="${properties.emailId}" autocomplete="off" required>
+              <p class="error"></p>
+            </div>
+            <!--inputWrap-->
+            <div class="inputWrap input-wrp">
+              <input type="text" name="pan" id="pan" placeholder="${properties.pan}" maxlength="10" >
+              <p class="error"></p>
+            </div>
+            <!--inputWrap--> 
+          </div>
+          <!--row two-->
+          <div class="row" id="three">
+            <div class="inputWrap input-wrp">
+              <input type="text" name="address1" id="address1" placeholder="${properties.addressLine1}" autocomplete="off">
+              <p class="error"></p>
+            </div>
+            <!--inputWrap-->
+            <div class="inputWrap input-wrp">
+              <input type="text" name="address2" id="address2" placeholder="${properties.addressLine2}" autocomplete="off">
+              <p class="error"></p>
+            </div>
+            <!--inputWrap--> 
+          </div>
+          <!--row three-->
+          <div class="row" id="four">
+            <div class="inputWrap input-wrp">
+              <input type="tel" class="num-only" name="pin-code" id="pin-code" placeholder="${properties.pinCode}" maxlength="6" required autocomplete="off">
+              <p class="error"></p>
+            </div>
+            <!--inputWrap-->
+            <div class="inputWrap input-wrp"> 
+              <!-- <input type="text" data-type="state" maxlength="25" data-label="true" onblur="checkValidation(this,'state')" id="state" placeholder="${properties.state}" name="state">-->
+              <select id="state-dropdown" name="state" placeholder="${properties.state}" required>
+              <option value="">${properties.state}</option>
+              </select>
+              <!--<span class="errorMsg">please select state</span>--> 
+              <span class="errorMsg"></span>
+              <p class="error"></p>
+            </div>
+            <!--inputWrap-->
+            <div class="inputWrap input-wrp"> 
+              <!--<input type="text" data-type="city" maxlength="25" data-label="true" onblur="checkValidation(this,'city')" id="city" placeholder="city" name="city">-->
+              <select id="city-dropdown" name="city" placeholder="${properties.city}" required>
+                <option value="">${properties.city}</option>
+              </select>
+              <p class="error"></p>
+            </div>
+            <!--inputWrap--> 
+          </div>
+          <!--row four-->
+          <div class="row" id="five"> 
+            <!--inputWrap-->
+            <div class="inputWrap input-wrp">
+              <select name="field" id="employment-type" placeholder="${properties.employmentType}">
+                <option value="">${properties.employmentType}</option>
+                <option value="Salaried">Salaried</option>
+                <option value="Self-employed">Self-employed</option>
+              </select>
+              <p class="error"></p>
+            </div>
+            <div class="inputWrap input-wrp">
+              <input type="text" data-type="select" maxlength="25" data-label="true" id="company-name" placeholder="${properties.companyName}" name="select" required>
+              <p class="error"></p>
+            </div>
+
+            <!--inputWrap-->
+            <div class="inputWrap input-wrp">
+              <select name="field" id="monthly-income" placeholder="${properties.monthlyIncome}">
+                <option value="">${properties.monthlyIncome}</option>
+                <option value="50Kto1L">50K =< 1Lakh </option>
+                <option value="1Lto5L">1Lakh =< 5Lakhs </option>
+                <option value="5Lto10L">5Lakhs =< 10Lakhs </option>
+                <option value="10LandAbove">10Lakhs =< above </option>
+              </select>
+              <p class="error"></p>
+            </div>
+          </div>
+          <!--row five-->
+          <div class="disclaimer checkBox">
+            <label class="chk"> 
+              <!--<input name="chktnc" type="checkbox" id="chktnc">
+         <div class="checkmark"></div>-->
+              <span>${properties.termConditions}</span> </label>
+            <p class="error">Please select rules and regulations</p>
+          </div>
+
+          <!--disclamer-->
+          <div class="btn-wrp">
+            <div class="button-wrap-flex">
+              <button type="submit" class="submit" id="live-life-high-generate-otp">${properties.submitButton}</button>
+              <p class="error">${properties.errorMsg}</p>
+              <div class="copyright">${properties.copyRights}</div>
+            </div>
+          </div>
+          <!--button-wrap-->
+        </form>
+      </div>
+      <div class="overlay"></div>
+      <div class="pop-up"> <span class="cancel">✖</span>
+        <div class="thank-wrp">
+          <p class="thank">${properties.thankYouMsg1}</p>
+          <p class="thank">${properties.thankYouMsg2}</p>
+        </div>
+        <div class="wrapper otpBox">
+          <p>${properties.popupHeading}</p>
+          <div class="input-wrp">
+            <input type="tel" class="num-only" name="otp" id="otp" placeholder="${properties.otpPlaceHolder}" maxlength="6" required autocomplete="off">
+            <p class="error errorotpNum"></p>
+          </div>
+          <div class="btn-wrp">
+            <input class="btn validate"  type="submit" id="live-life-high-validate-otp" value="${properties.otpButtonSubmit}">
+            <input class="btn resend" type="submit" id="live-life-high-resend-otp"  value="${properties.resendContent}">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--formDiv--> 
+    <!--main--> 
+  </div>
+  <!--content-wrapper-->
+
+</div>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+	 data-sly-call="${clientlib.js @ categories='live-a-high-life'}"/>

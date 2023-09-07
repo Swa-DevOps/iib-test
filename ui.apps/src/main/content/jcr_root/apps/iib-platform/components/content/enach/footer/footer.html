@@ -1,0 +1,10 @@
+
+<div data-sly-test="${wcmmode.edit}">
+   Configure Footer Component
+</div>
+
+
+<sly data-sly-test=${properties.refrencecomponent} data-sly-resource="${'refercomponent' @ resourceType='foundation/components/reference'}"></sly>
+<div class="footerpage" data-sly-test=${!properties.refrencecomponent}>${properties.footer @context = 'html'}</div>
+
+

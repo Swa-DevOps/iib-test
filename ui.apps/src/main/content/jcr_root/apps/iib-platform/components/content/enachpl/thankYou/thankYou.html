@@ -1,0 +1,112 @@
+<div data-sly-test="${wcmmode.edit}">
+   Configure ENach PL Thank You Component
+</div>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+	data-sly-call="${clientlib.css @ categories='enachpl.thankYou'}"/>
+
+<div class="innerwork_wrap">
+   <div class="inner_wrap">
+      <!--<div class="about2boxInner">
+         <div class="pagingwrap"><a href="${properties.backButtonUrl}"><i class="fas fa-angle-left"></i> ${properties.backButtonText}</a></div>
+         <div data-sly-resource="${'enachPLBreadCrumb' @ resourceType = 'iib-platform/components/content/enachpl/eNachPLbreadcrumb'}"></div>
+      </div>-->
+      <div class="borderboxcenter">
+         <div class="textcenter sucessbox">
+            <div class="sucessimg"><span><i class="fas fa-check"></i></span></div>
+            <h2 class="redcolor">${properties.thankYouTitle}</h2>
+            <h4>${properties.thankYouMessage}</h4>
+            <div class="sucessbox-details">
+				 <div class="formbox">
+                  <div class="fieldbox">
+                     <div class="fieldboxHeading hed_p20">Mandate Summary</div>
+                     <div class="clr"></div>
+                  </div>
+                  <div class="fieldbox">
+                     <div class="fieldboxleft">Name</div>
+                     <div class="fieldboxrightthy" id="userName"></div>
+                     <div class="clr"></div>
+                  </div>
+
+                  <div class="fieldbox">
+                     <div class="fieldboxleft">Account type</div>
+                     <div class="fieldboxrightthy" id="bankAccountType">
+                     </div>
+                     <div class="clr"></div>
+                  </div>
+				<div class="fieldbox">
+                     <div class="fieldboxleft">Account number</div>
+                     <div class="fieldboxrightthy" id="Other_bank_account_number"></div>
+                     <div class="clr"></div>
+                  </div>
+                  <div class="fieldbox">
+                     <div class="fieldboxleft">Bank</div>
+                     <div class="fieldboxrightthy" id="repaymentBankName"></div>
+                     <div class="clr"></div>
+                  </div>
+
+
+                  <div class="fieldbox">
+                     <div class="fieldboxleft">Start date</div>
+                     <div class="fieldboxrightthy" id="startDate"></div>
+                     <div class="clr"></div>
+                  </div>
+                  <div class="fieldbox">
+                     <div class="fieldboxleft">Amount</div>
+                    <div class="fieldboxrightthy">
+                        <p id="EMI_amount"></p>
+                     </div>
+                     <div class="clr"></div>
+                  </div>
+                  <div class="fieldbox">
+                     <div class="fieldboxleft">SI Amount</div>
+                    <div class="fieldboxrightthy">
+                        <p id="SI_amount"></p>
+                     </div>
+                     <div class="clr"></div>
+                  </div>
+                  <div class="fieldbox">
+                     <div class="fieldboxleft">Frequency</div>
+                     <div class="fieldboxrightthy" id="freqDropdown"></div>
+                     <div class="clr"></div>
+                  </div>
+				 <div class="fieldbox">
+                     <div class="fieldboxleft">Purpose of mandate</div>
+                     <div class="fieldboxrightthy" id="purposeOfMandate"></div>
+                     <div class="clr"></div>
+                  </div>	
+                  <div class="fieldbox">
+                     <div class="fieldboxleft">Corporate name</div>
+                     <div class="fieldboxrightthy" id="corporateName"></div>
+                     <div class="clr"></div>
+                  </div>
+                  <div class="fieldbox">
+                     <div class="fieldboxleft">Utility number</div>
+                     <div class="fieldboxrightthy" id="utilityNumber"></div>
+                     <div class="clr"></div>
+                  </div>
+
+				<div class="fieldbox">
+                     <div class="fieldboxleft">Reference number</div>
+                     <div class="fieldboxrightthy" id="loanNumber"></div>
+                     <div class="clr"></div>
+                  </div>
+               </div>
+
+                <h4>Your E-Mandate registration is successfully completed. Your reference ID for EMandate
+				registration is <span id="mandateRef">XXXX.</span></h4>
+               <h5>In case of any issues/ query related to E-mandate registration you may
+write to xxxxxx@xxxx.xx or call xxxxxxxxxxxxx</h5>
+
+            </div>
+            <div class="mrgtp">
+                <div data-sly-resource="${'footerLogo' @ resourceType = 'iib-platform/components/content/enachpl/footerLogo'}"></div>
+                <!--<img src="${properties.srcPath}" width="120" height="29">--></div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<div data-sly-test="${!wcmmode.edit}">
+   <sly data-sly-call="${clientlib.js @ categories='enachpl.thankYou'}"/>
+</div>

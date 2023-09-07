@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:description="Equity Fund Detail"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Equity Fund Detail"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/layouts/tabs"
+            type="nav"/>
+        <items jcr:primaryType="nt:unstructured">
+            <config
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Configurations"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <tagHeading
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                allowBlank="true"
+                                autoDelete="{Boolean}true"
+                                fieldLabel="Tag Heading"
+                                name="./tagHeading"/>
+                            <heading
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                allowBlank="true"
+                                autoDelete="{Boolean}true"
+                                fieldLabel="Heading"
+                                name="./heading"/>
+                            <ctaItems
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/multifield"
+                                class="full-width"
+                                eaem-nested=""
+                                fieldLabel="CTA Buttons">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/form/fieldset"
+                                    acs-commons-nested=""
+                                    name="./ctaItems">
+                                    <layout
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                                        method="absolute"/>
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <type
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/select"
+                                                    defaultValue="link"
+                                                    fieldLabel="CTA Type - Link or Button"
+                                                    name="./type"
+                                                    required="{Boolean}false">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <link
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Link"
+                                                            value="process-link"/>
+                                                        <button
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Button"
+                                                            value="button orange-flat-btn"/>
+                                                    </items>
+                                                </type>
+                                                <text
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                    fieldLabel="text"
+                                                    name="./text"
+                                                    required="{Boolean}false"/>
+                                                <url
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                                    fieldLabel="CTA Link"
+                                                    name="./url"
+                                                    rootPath="/content/indusind"/>
+                                                <openInNewWindow
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                                    defaultChecked="{Boolean}false"
+                                                    name="./openInNewWindow"
+                                                    text="CTA - Open in New Window"
+                                                    uncheckedValue="{Boolean}false"
+                                                    value="{Boolean}true"/>
+                                            </items>
+                                        </column>
+                                    </items>
+                                </field>
+                            </ctaItems>
+                        </items>
+                    </column>
+                </items>
+            </config>
+            <view
+                jcr:primaryType="nt:unstructured"
+                jcr:title="View"
+                sling:resourceType="granite/ui/components/foundation/include"
+                path="iib-platform/components/content/common/dialogTabs/view"/>
+        </items>
+    </content>
+</jcr:root>

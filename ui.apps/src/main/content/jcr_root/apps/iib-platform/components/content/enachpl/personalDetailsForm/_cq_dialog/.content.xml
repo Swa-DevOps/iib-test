@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:description="Personal Details Form Dialog"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Personal Details Form"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/layouts/tabs"
+            type="nav"/>
+        <items jcr:primaryType="nt:unstructured">
+            <config
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Configurations"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <backHeading
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                allowBlank="true"
+                                autoDelete="{Boolean}true"
+                                fieldLabel="Back Heading"
+                                name="./backHeading"/>
+                            <personalDetailHeading
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                allowBlank="true"
+                                autoDelete="{Boolean}true"
+                                fieldLabel="Personal Detail Heading"
+                                name="./personalDetailHeading"/>
+                            <repaymentDetails
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                allowBlank="true"
+                                autoDelete="{Boolean}true"
+                                fieldLabel="Repayment Details Heading"
+                                name="./repaymentDetails"/>
+                            <bankNameHeading
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                allowBlank="true"
+                                autoDelete="{Boolean}true"
+                                fieldLabel="Bank Name Heading"
+                                name="./bankNameHeading"/>
+                            <repaymentAccountNumberHeading
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                allowBlank="true"
+                                autoDelete="{Boolean}true"
+                                fieldLabel="Repayment Account Number"
+                                name="./repaymentAccountNumberHeading"/>
+                            <bankIFSCcodeHeading
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                allowBlank="true"
+                                autoDelete="{Boolean}true"
+                                fieldLabel="BANK IFSC Code"
+                                name="./bankIFSCcodeHeading"/>
+                            <confirmIFSCcodeHeading
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                allowBlank="true"
+                                autoDelete="{Boolean}true"
+                                fieldLabel="Confirm IFSC code  Number"
+                                name="./confirmIFSCcodeHeading"/>
+                            <transferFrequencyHeading
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                allowBlank="true"
+                                autoDelete="{Boolean}true"
+                                fieldLabel="Transfer Frequency"
+                                name="./transferFrequencyHeading"/>
+                            <amountToTransferHeading
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                allowBlank="true"
+                                autoDelete="{Boolean}true"
+                                fieldLabel="Amount To Transfer"
+                                name="./amountToTransferHeading"/>
+                            <adhoc
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                allowBlank="true"
+                                autoDelete="{Boolean}true"
+                                fieldLabel="Adhoc Frequency"
+                                name="./adhoc"/>
+                            <monthly
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                allowBlank="true"
+                                autoDelete="{Boolean}true"
+                                fieldLabel="Monthly Frequency"
+                                name="./monthly"/>
+                        </items>
+                    </column>
+                </items>
+            </config>
+            <creditConfig
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Basic Configurations"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <basicDetails
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                allowBlank="true"
+                                autoDelete="{Boolean}true"
+                                fieldLabel="Basic Details Heading"
+                                name="./basicDetails"/>
+                            <userName
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                allowBlank="true"
+                                autoDelete="{Boolean}true"
+                                fieldLabel="User Name"
+                                name="./userName"/>
+                            <aadhaarVirtualID
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                allowBlank="true"
+                                autoDelete="{Boolean}true"
+                                fieldLabel=" Aadhaar Number"
+                                name="./aadhaarVirtualId"/>
+                            <loanAccountNumberHeading
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                allowBlank="true"
+                                autoDelete="{Boolean}true"
+                                fieldLabel="Loan Account Number"
+                                name="./loanAccountNumberHeading"/>
+                            <accountType
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                allowBlank="true"
+                                autoDelete="{Boolean}true"
+                                fieldLabel="Account Type"
+                                name="./accountType"/>
+                            <emiAmount
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                allowBlank="true"
+                                autoDelete="{Boolean}true"
+                                fieldLabel="EMI Amount"
+                                name="./emiAmount"/>
+                            <siAmount
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                allowBlank="true"
+                                autoDelete="{Boolean}true"
+                                fieldLabel="SI Amount"
+                                name="./siAmount"/>
+                            <startDate
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                allowBlank="true"
+                                autoDelete="{Boolean}true"
+                                fieldLabel="Start Date"
+                                name="./startDate"/>
+                            <emiNote1
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                allowBlank="true"
+                                autoDelete="{Boolean}true"
+                                fieldLabel="EMI Note 1"
+                                name="./emiNote1"/>
+                            <emiNote2
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                allowBlank="true"
+                                autoDelete="{Boolean}true"
+                                fieldLabel="EMI Note 2"
+                                name="./emiNote2"/>
+                        </items>
+                    </column>
+                </items>
+            </creditConfig>
+            <contentData
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Dynamic Data"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <termCondHeading
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                allowBlank="true"
+                                autoDelete="{Boolean}true"
+                                fieldLabel="Term Condition Statement"
+                                name="./termCondHeading"/>
+                            <checkbox1
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                allowBlank="true"
+                                autoDelete="{Boolean}true"
+                                fieldLabel="Checkbox1"
+                                name="./checkbox1"/>
+                            <checkbox2
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                allowBlank="true"
+                                autoDelete="{Boolean}true"
+                                fieldLabel="Checkbox2"
+                                name="./checkbox2"/>
+                            <proceedtoPay
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                allowBlank="true"
+                                autoDelete="{Boolean}true"
+                                fieldLabel="Proceed Button"
+                                name="./proceedtoPay"/>
+                            <cancel
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                allowBlank="true"
+                                autoDelete="{Boolean}true"
+                                fieldLabel="Cancel"
+                                name="./cancel"/>
+                        </items>
+                    </column>
+                </items>
+            </contentData>
+            <view
+                jcr:primaryType="nt:unstructured"
+                jcr:title="View"
+                sling:resourceType="granite/ui/components/foundation/include"
+                path="iib-platform/components/content/common/dialogTabs/view"/>
+        </items>
+    </content>
+</jcr:root>

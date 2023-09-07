@@ -1,0 +1,23 @@
+<div data-sly-test="${wcmmode.edit}">
+	Configure List of Teasers Component
+</div>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"/>
+<sly data-sly-test="${!properties.disableComponent}">
+<sly data-sly-use.model="com.iib.platform.common.models.ListOfTeasersModel">
+
+   <div class="card-deck" data-sly-list="${model.teaserItems}">
+      <div class="card wow fadeInUp" data-wow-delay="0.2s">
+         <a href="${item.ctaLink}"> 
+	         <div class="card-body">
+	            <h5 class="card-title text-uppcase">${item.title}</h5>
+	         </div>
+	         <img class="card-img-top" src="${item.imagePath}" alt=${item.imageAltText}>
+         </a>
+         <div class="card-footer text-center">
+            <a href="${item.ctaLink}" class="hyperlink" target="${item.ctaOpenInNewWindow == 'true' ? '_blank' : ''}">${item.ctaText}</a>
+         </div>
+      </div>
+   </div>
+</sly>
+</sly>

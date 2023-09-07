@@ -1,0 +1,206 @@
+<div data-sly-test="${wcmmode.edit}">
+   Configure Create E-nach Form Component
+</div>
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"/>
+<sly data-sly-use.formModel="com.iib.platform.cfdenach.models.CFDEnachssoModelImpl">
+   <div data-sly-test="${formModel.getCFDEnachSession.status == 'success'}" class="innerwork_wrap">
+      <div class="inner_wrap">
+         <div class="about2boxInner">
+            <div class="pagingwrap"><a href="${model.backButtonUrl}"><i class="fas fa-angle-left"></i> ${properties.backHeading}</a></div>
+            <div class="tablebox ccode mobilever" >
+               <!--<img src="${properties.imagePath}" class="enachofferimg">-->
+            </div>
+            <div class="headingLine">
+               <div class="title">${properties.eNachHeading}</div>
+               <div class="page_logo"><img src="/content/dam/iibPlatform/cfdenach/images/indus-logo.png" class="d-inline-block"> </div>
+            </div>
+            <div class="nach_details_wrap">
+               <div class="cointaner_details inputonlytxt">
+                  <form class="formbox" id="createform" autocomplete="off">
+                     <div class="fieldbox">
+                        <div class="fieldboxHeadingwoborder">Your Deal No to be used for CFD</div>
+                        <div class="clr"></div>
+                     </div>
+                     <div class="fieldbox">
+                        <div class="fieldboxleft creditAccountLabel">${properties.creditAccountHeading}<small>*</small></div>
+                        <div class="fieldboxright" id="accountNo">${formModel.getCFDEnachSession.accountno}</div>
+                        <div class="clr"></div>
+                     </div>
+                     <div class="fieldbox">
+                        <div class="fieldboxleft customerEmailLabel">Registered Email ID</div>
+                        <div class="fieldboxright" id="customerEmail">${formModel.getCFDEnachSession.email}</div>
+                        <div class="fieldboxleft customerEmailLabel"><small>We will use this Email for all correspondence</small></div>
+                        <div class="clr"></div>
+                     </div>
+                     <div class="tablebox ccode desktopver" >
+                        <!--<img src="${properties.imagePath}" class="enachofferimg">-->
+                     </div>
+                     <div class="fieldbox">
+                        <div class="fieldboxHeading1">
+                           ${properties.debitDetails} <span data-sly-test="${formModel.getCFDEnachSession.clickedit == 'yes'}" id="editMode"><a href="#" id="editA">Click To Edit </a></span><!--<span><i class="fas fa-exclamation"></i></span>-->
+                        </div>
+                        <div class="clr"></div>
+                     </div>
+                     <!--W/o Edit Section start-->
+                     <div id="woeditSection" class="fieldbox">
+                        <div class="fieldbox">
+
+                           <div class="fieldboxleft customerNameLabel">${properties.accNameHeading}<small>*</small></div>
+                           <div class="fieldboxright" id="customerName">${formModel.getCFDEnachSession.accdetcustname}</div>
+                           <div class="clr"></div>
+                        </div>
+                        <div class="fieldbox">
+                           <div class="fieldboxleft bankNameLabel">${properties.bankNameHeading}<small>*</small></div>
+                           <div class="fieldboxright" id="destinationBank">${formModel.getCFDEnachSession.accdetcustbank}</div>
+                           <div class="clr"></div>
+                        </div>
+                        <div class="fieldbox">
+                           <div class="fieldboxleft ifscLabel">${properties.bankIFSCcodeHeading}<small>*</small></div>
+                           <div class="fieldboxright" id="destinationBankId">${formModel.getCFDEnachSession.accdetcustifsc}</div>
+                           <div class="clr"></div>
+                        </div>
+                        <div class="fieldbox">
+                           <div class="fieldboxleft accountNumberLabel">${properties.accountNumber}<small>*</small></div>
+                           <div class="fieldboxright" id="accountNumber">${formModel.getCFDEnachSession.accdetcustacc}</div>
+                           <div class="clr"></div>
+                        </div>
+                     </div>
+                     <!--W/o Edit Section end-->
+                     <div id="editSection" class="fieldbox" style="display:none">
+                        <!--Edit Section start-->
+                        <div class="fieldbox">
+                           <div class="fieldboxleft customerNameLabel">${properties.accNameHeading}<small>*</small></div>
+                           <div class="fieldboxright"><input style="text-transform: uppercase;" type="text" name="ecustomerName" class="enachofferInput ecustomerName" autocomplete="off"></div>
+                           <div class="clr"></div>
+                        </div>
+                        <div class="fieldbox">
+                           <div class="fieldboxleft bankNameLabel">${properties.bankNameHeading}<small>*</small></div>
+                           <div class="fieldboxright"><input style="text-transform: uppercase;" type="text" id="awesomeHu" name="edestinationBank" class="enachofferInput ebankName"></div>
+                           <!-- <div class="bankLabel"><small>Currently ICICI Bank, HDFC Bank, AXIS Bank ,YES Bank, Kotak Mahindra Bank are available</small></div>-->
+                           <div class="clr"></div>
+                        </div>
+                        <div class="fieldbox">
+                           <div class="fieldboxleft ifscLabel">${properties.bankIFSCcodeHeading}<small>*</small></div>
+                           <div class="fieldboxright"><input autocomplete="off" style="text-transform: uppercase;" type="text" name="edestinationBankId" maxlength="11" class="enachofferInput" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : ((event.charCode >= 48 && event.charCode <= 57)||(event.charCode >= 65 && event.charCode <= 90)||(event.charCode >= 97 && event.charCode <= 122))"></div>
+                           <div class="clr"></div>
+                        </div>
+                        <div class="fieldbox">
+                           <div class="fieldboxleft accountNumberLabel">${properties.accountNumber}<small>*</small></div>
+                           <div class="fieldboxright"><input autocomplete="off" type="text" id="eaccountNumber" maxlength="34" name="eaccountNumber" class="enachofferInput eaccountNumber" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : ((event.charCode >= 48 && event.charCode <= 57)||(event.charCode >= 65 && event.charCode <= 90)||(event.charCode >= 97 && event.charCode <= 122))"></div>
+                           <div class="clr"></div>
+                        </div>
+                     </div>
+                     <!--Edit Section end-->
+                     <div class="fieldbox">
+                        <div class="fieldboxHeading">Details of Recurring transfer</div>
+                        <input type="hidden" id="custMob" name="custMob" value="${formModel.getCFDEnachSession.mobileno}">
+                        <input type="hidden" id="custcif" name="custcid" value="${formModel.getCFDEnachSession.cifid}">
+                        <input type="hidden" id="sessiond" name="sessiond" value="${formModel.getCFDEnachSession.session}">
+                        <input type="hidden" id="redirect" name="redirect" value="${formModel.getCFDEnachSession.redirectURL}">
+                        <input type="hidden" id="appid" name="redirect" value="${formModel.getCFDEnachSession.appid}">
+                         <div class="clr"></div>
+                     </div>
+                     <div class="fieldbox">
+                        <div class="fieldboxleft ">${properties.emiamountToTransferHeading}<small>*</small></div>
+                        <div class="fieldboxright" id="emi_maximum_amount">${formModel.getCFDEnachSession.emiamount}</div>
+                        <div class="clr"></div>
+                     </div>
+                  <div class="fieldbox">
+                        <div class="fieldboxleft maximumAmountLabel">${properties.amountToTransferHeading}<small>*</small></div>
+                        <div class="fieldboxright" id="maximum_amount">${formModel.getCFDEnachSession.smiamount}</div>
+                        <div class="clr"></div>
+                        </div> 
+                     <div class="fieldbox">
+                        <div class="fieldboxleft transferFreqLabel">${properties.transferFrequencyHeading}<small>*</small></div>
+                        <div class="fieldboxright" id="transferFrequency">${formModel.getCFDEnachSession.frequency}</div>
+                        <div class="clr"></div>
+                     </div>
+                     <div class="fieldbox">
+                        <div class="fieldboxleft startDateLabel">${properties.startDate}<small>*</small></div>
+                        <div class="fieldboxright" id="sidate">${formModel.getCFDEnachSession.startdate}</div>
+                        <div class="clr"></div>
+                     </div>
+                     <div data-sly-test="${formModel.getCFDEnachSession.enddate == '01-01-1900'}" class="fieldbox">
+                        <div class="fieldboxleft">Select For</div>
+                        <div class="fieldboxleft">
+                           <label for="ucancel">
+                           <input type="checkbox" name="untilCancel" id="ucancel" class=" enachofferCal untilcancel" checked><small> ${properties.untilCancel}</small></label>
+                        </div>
+                        <div class="clr"></div>
+                     </div
+
+                     <div data-sly-test="${formModel.getCFDEnachSession.enddate != '01-01-1900'}" class="fieldbox">
+                        <div class="fieldboxleft endDateLabel">${properties.endDate}<small>*</small></div>
+                        <div class="fieldboxright" id="eidate">${formModel.getCFDEnachSession.enddate}</div>
+                        <div class="clr"></div>
+                     </div>
+
+                     <div class="fieldbox">
+                        <div class="fieldboxHeading">
+                           Referral Code (for branch staff only) <!--<span><i class="fas fa-exclamation"></i>--></span>
+                        </div>
+                        <div class="clr"></div>
+                     </div>
+                     <div class="fieldbox">
+                        <div class="fieldboxleft referralCodeLabel">${properties.referralCode}</div>
+                        <div class="fieldboxright"><input style="text-transform: uppercase;" type="text" name="" class="enachofferInput" value="${formModel.getCFDEnachSession.refno}">
+                        </div>
+                        <div class="clr"></div>
+                     </div>
+                     <div class="tablebox ccode desktopver" >
+                        <!-- <img src="${properties.imagePath}" class="enachofferimg">-->
+                     </div>
+                  </form>
+                  <div class="clear"></div>
+               </div>
+               <div class="cointaner_details inputonlytxt" style="border-bottom:none;">
+                  <div class="formbox">
+                     <div class="fieldbox">
+                        <div>
+                           <input name="" type="submit" class="btnonlybox confirmbutton" value="${properties.confirm}">
+                           <a href="${model.cancelButtonUrl}"><input name="" type="submit" class="btnonlybox cancelbutton" value="${properties.cancel}"></a>
+                        </div>
+                        <div class="clear"></div>
+                     </div>
+                     <div class="clear"></div>
+                  </div>
+                  <div class="clear"></div>
+               </div>
+               <div class="cointaner_details inputonlytxt" style="border-bottom:none;">
+                  <div class="formbox">
+                     <div class="fieldbox">
+                        <div class="fieldboxleft"><small>*</small>Mandatory Fields</div>
+                        <div class="clear"></div>
+                     </div>
+                     <div class="clear"></div>
+                  </div>
+                  <div class="clear"></div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+
+
+      <div data-sly-test="${formModel.getCFDEnachSession.status == 'unauthorize'}" class="innerwork_wrap">
+      <div class="inner_wrap">
+         <div class="about2boxInner">
+             </div>
+            <div class="headingLine">
+            </div>
+            <div class="nach_details_wrap">
+               <div class="cointaner_details inputonlytxt">
+
+                     <div class="fieldbox">
+                        <div class="">Session has been already expired !! Please contact Bank for further assistance</div>
+                        <div class="clr"></div>
+                     </div>
+				</div></div></div></div>
+
+
+
+
+
+</sly>
+<sly data-sly-call="${clientlib.js @ categories='cfd-enach.createSSOForm'}"/>

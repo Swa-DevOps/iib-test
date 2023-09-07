@@ -1,0 +1,32 @@
+<div data-sly-test="${wcmmode.edit}">
+   Configure Video Component
+</div>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+   data-sly-call="${clientlib.all @ categories='indus-smart.video'}"/>
+
+<sly data-sly-use.model="com.iib.platform.common.models.VideoModel">
+   <div id="video-${model.component.randomNumber}" class="video ${model.component.customStyleClass}" style="height:${model.component.customHeight}px">
+      
+      <!-- <section class="video-banner">
+         <div class="video-source">
+            <div class="video-box">
+               <video controls="false" autoplay="autoplay" loop="true">
+                  <source src="assets/videos/re.webm" type="video/webm">
+                  <source src="assets/videos/re.mp4" type="video/mp4">
+                  <source src="assets/videos/re.ogv" type="video/ogv">
+               </video>
+            </div>
+         </div>
+      </section> -->
+      
+      <section class="video-banner">
+         <div class="video-online">
+            <div class="video-box"> 
+               <iframe src="${properties.externalVideoLink}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+            </div>
+         </div>
+      </section>
+      
+   </div>
+</sly>

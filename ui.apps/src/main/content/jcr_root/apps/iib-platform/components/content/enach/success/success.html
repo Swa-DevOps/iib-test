@@ -1,0 +1,30 @@
+<div data-sly-test="${wcmmode.edit}">
+   Configure ENach Success Component
+</div>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
+	<div class="innerwork_wrap">
+	   <div class="inner_wrap">
+	      <div class="about2boxInner">
+	         <div class="pagingwrap"><a href=""><i class="fas fa-angle-left"></i> ${properties.backTextfield}</a></div>
+	      </div>
+	      <div class="borderboxcenter">
+	         <div class="textcenter sucessbox">
+	            <div class="sucessimg"><span><i class="fas fa-check"></i></span></div>
+	            <h3 class="redcolor">${properties.textArea}</h3>
+	            <h4>${properties.paraTextArea}</h4>
+	            <h3>Your Generated Interaction ID :: <span id="interactionSuccessId"> <span> </h3>
+	            <div><a href="/content/enach/welcome.html" class="homebtn">${properties.textfield}</a></div>
+	         </div>
+             <div class="textcenter cancelsucessbox" style="display:none">
+	            <div class="sucessimg"><span><i class="fas fa-check"></i></span></div>
+				 <h3>Your Reference Interaction ID :: <span id="interactionCancelId"> <span> </h3>
+                 <h3 class="redcolor" id="cancelsuccessMessage">${properties.canceltextArea}</h3>
+
+	            <h4 style="text-align:left;">${properties.cancelparatextArea @context = 'html'}</h4>
+	            <div><a href="/content/enach/welcome.html" class="homebtn">${properties.canceltextfield}</a></div>
+	         </div>
+	      </div>
+	   </div>
+	</div>
+<sly data-sly-call="${clientlib.js @ categories='enach.success'}"/>

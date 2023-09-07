@@ -1,0 +1,8 @@
+#base=js
+jquery-3.2.1.min.js
+aes.js
+jquery-birthday-picker.min.js
+jquery-ui.js
+jquery-birthday.js
+main.js
+live-life-high-api-call.js

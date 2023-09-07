@@ -1,0 +1,7 @@
+#base=js
+
+#angular.min.js
+jquery-3.2.1.min.js
+jquery-ui.js
+jquery.cookie-1.4.1.min.js
+clientlib.min.js

@@ -1,0 +1,63 @@
+<template data-sly-template.head="${ @ page }" data-sly-use.headlibRenderer="headlibs.html">
+	<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+		<title>${properties.pageTitle || page.title}</title>
+        <meta name="description" content="${page.seoDescription|| page.description}"/>
+        <meta name="keywords" content="${page.seoKeywords || properties.subtitle}"/>	
+
+    	<link rel="shortcut icon" href="${page.favIcon}">
+
+        <meta name="apple-touch-fullscreen" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+
+        <meta itemprop="name" content="${page.siteName}">
+        <meta itemprop="keywords" content="${page.keywords || properties.subtitle}">
+        <meta itemprop="description" content="${page.description}">
+        <meta itemprop="image" content="${page.teaserImage}">
+
+        <meta name="twitter:card" content="${page.description}">
+        <meta name="twitter:site" content="${page.url}">
+        <meta name="twitter:creator" content="${page.siteName}">
+        <meta name="twitter:title" content="${page.title}">
+        <meta name="twitter:description" content="${page.description}">
+        <meta name="twitter:image:src" content="${page.teaserImage}">
+
+       	<meta property="og:site_name" content="${page.siteName}" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="${page.title}" />
+        <meta property="og:url" content="${page.url}" />
+        <meta property="og:image" content="${page.teaserImage}" />
+        <meta property="og:description" content="${page.description}" />
+
+        <sly data-sly-use.pageURL="${'canonicalURL.js' @ data=listUse}"></sly>
+        <link rel="canonical" href="${properties.canonical||pageURL}"/>    
+        <sly data-sly-include="customheaderlibs.html"></sly>
+        <sly data-sly-call="${headlibRenderer.headlibs @designPath = page.designPath}"></sly>
+
+		<meta name="google-site-verification" content="IygTH7a4odD93YMw7NZetOb8dfgnpC-7IDVvcf2BTXE" />
+
+        ${page.customMetaTags @context='html'}
+        <script>${page.headScript @context = 'unsafe'} </script>
+
+        <!--Added for Notify Visitior -->
+        <script>var nv=nv||function(){(window.nv.q=window.nv.q||[]).push(arguments)};nv.l=new Date;var notify_visitors=notify_visitors||function(){         var e={initialize:!1,ab_overlay:!1,auth:{ bid_e:"731D86AD332569AC3003B92DA93A9525",bid:"7230",t:"420"}};         return e.data={bid_e:e.auth.bid_e,bid:e.auth.bid,t:e.auth.t,iFrame:window!==window.parent,trafficSource:document.referrer,link_referrer:document.referrer,pageUrl:document.location,path:location.pathname,domain:location.origin,gmOffset:60*(new Date).getTimezoneOffset()*-1,screenWidth:screen.width,screenHeight:screen.height,isPwa:window.matchMedia("(display-mode: standalone)").matches?1:0,cookieData:document.cookie},e.options=function(t){t&&"object"==typeof t?e.ab_overlay=t.ab_overlay:console.log("Not a valid option")},e.tokens=function(t){e.data.tokens=t&&"object"==typeof t?JSON.stringify(t):""},e.ruleData=function(t){e.data.ruleData=t&&"object"==typeof t?JSON.stringify(t):""},e.getParams=function(e){url=window.location.href.toLowerCase(),e=e.replace(/[\[\]]/g,"\\$&").toLowerCase();var t=new RegExp("[?&]"+e+"(=([^&#]*)|&|#|$)").exec(url);return t&&t[2]?decodeURIComponent(t[2].replace(/\+/g," ")):""},e.init=function(){if(e.auth&&!e.initialize&&(e.data.storage=e.browserStorage(),e.js_callback="nv_json1",!e.data.iFrame&&"noapi"!==e.getParams("nvcheck"))){var t="?";if(e.ab_overlay){var o=document.createElement("style"),n="body{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}",a=document.getElementsByTagName("head")[0];o.setAttribute("id","_nv_hm_hidden_element"),o.setAttribute("type","text/css"),o.styleSheet?o.styleSheet.cssText=n:o.appendChild(document.createTextNode(n)),a.appendChild(o),setTimeout(function(){var e=this.document.getElementById("_nv_hm_hidden_element");if(e)try{e.parentNode.removeChild(e)}catch(t){e.remove()}},2e3)}for(var i in e.data)e.data.hasOwnProperty(i)&&(t+=encodeURIComponent(i)+"="+encodeURIComponent(e.data[i])+"&");e.load("https://www.notifyvisitors.com/ext/v1/settings"+t),e.initialize=!0}},e.browserStorage=function(){var t={session:e.storage("sessionStorage"),local:e.storage("localStorage")};return JSON.stringify(t)},e.storage=function(e){var t={};return window[e].length>0&&Object.keys(window[e]).forEach(function(o){-1!==o.indexOf("_nv_")&&(t[o]=window[e][o])}),t},e.load=function(e){var t=document,o=t.createElement("script");o.src=e,o.type="text/javascript",t.body?t.body.appendChild(o):t.head.appendChild(o)},e}();  notify_visitors.options({             ab_overlay: true                         }); notify_visitors.init();     </script>
+		<link rel="manifest" href="https://bank.indusind.com/notifyvisitors_push/chrome/manifest.json">
+        <!-- Added for Notify Vistitor End-->
+
+        <!-- Google Tag Manager -->
+
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        
+        })(window,document,'script','dataLayer','GTM-WS9ZR5X');</script>
+
+		<!-- End Google Tag Manager -->
+    </head>
+</template>

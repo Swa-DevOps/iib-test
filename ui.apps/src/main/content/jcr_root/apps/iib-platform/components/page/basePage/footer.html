@@ -1,0 +1,5 @@
+<template data-sly-template.footer="${ @ page}">
+    <div data-sly-resource="${'footer-par' @ resourceType='/libs/foundation/components/iparsys'}"></div> 
+    <sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" data-sly-call="${clientlib.js @ categories='indus-smart.dependencies'}"/>
+    <sly data-sly-include="customfooterlibs.html"/>
+</template>

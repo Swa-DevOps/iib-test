@@ -1,0 +1,22 @@
+<div data-sly-test="${wcmmode.edit}">
+   Configure ENach Failure Component
+</div>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
+	<div class="innerwork_wrap">
+	   <div class="inner_wrap">
+	     <!-- <div class="about2boxInner">
+	         <div class="pagingwrap"><a href=""><i class="fas fa-angle-left"></i> ${properties.backTextfield}</a></div>
+	      </div>-->
+	      <div class="borderboxcenter">
+	         <div class="textcenter errorboxcenter">
+	            <div class="errorimg"><span><i class="fas fa-exclamation"></i></span></div>
+	            <h4>${properties.textArea}</h4>
+	           <!-- <h3>Your Generated Interaction ID : <span id="interactionFailId"> <span> </h3> -->
+	            <div><a href="/content/enach/welcome/login/create.html" class="hvr-btn">${properties.ctaText}</a></div>
+	            <div><a href="/content/enach/welcome.html" class="homebtn">${properties.textfield}</a></div>
+	         </div>
+	      </div>
+	   </div>
+	</div>
+<sly data-sly-call="${clientlib.js @ categories='enach.fail'}"/>

@@ -1,0 +1,104 @@
+<div data-sly-test="${wcmmode.edit}">Configure Manage E-NACH
+	Details Component</div>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" />
+
+<sly data-sly-use.model="com.iib.platform.cfdenach.models.ManageEnachModel">
+<div class="innerwork_wrap">
+	<div class="bannerinner1">
+		<img src="${properties.bannerImage}" width="1003" height="213"
+			class="hide480" title="${properties.altText}"> <img
+			src="${properties.bannerImageMobile}" width="480" height="213"
+			class="show480" title="${properties.altText}">
+		<div class="bannertxt">
+			<h1>${properties.bannerTitle}</h1>
+			<p>${properties.bannerDescription}</p>
+			<a class="hvr-btn" href="${model.buttonUrl}"><strong>${properties.buttonText}</strong></a>
+		</div>
+	</div>
+	<div class="about2boxInner">
+		<div class="pagingwrap">
+			<a href="${model.backButtonUrl}"><i class="fas fa-angle-left"></i>
+				${properties.backButtonText}</a>
+		</div>
+		<div class="headingLine">${properties.sectionHeading}</div>
+		<div class="simpletxt">
+			${properties.description @context="html"}
+		</div>
+		<div class="table_wrap formanageenach" id="flip-scrollnew">
+			<table width="100%" border="0" cellpadding="0" cellspacing="0">
+				<thead>
+					<tr>
+						<th width="7%" align="left" valign="middle">Bank Name</th>
+						<th width="9%" align="center" valign="middle">UMRN No.</th>
+						<th width="7%" align="center" valign="middle">Status</th>
+						<th width="8%" align="center" valign="middle">Start Date</th>
+						<th width="8%" align="center" valign="middle">End Date</th>
+						<th width="13%" align="center" valign="middle">Installment
+							Due Date</th>
+						<th width="7%" align="center" valign="middle">Frequency</th>
+						<th width="6%" align="center" valign="middle">Amount</th>
+						<!--<th width="8%" align="center" valign="middle">RD-Linked</th>-->
+						<th width="19%" align="left" valign="middle">Remarks</th>
+						<!--<th width="8%" align="center" valign="middle">&nbsp;</th>-->
+					</tr>
+				</thead>
+				<tbody id="mandateBody">
+				
+					<script id="mandateRows" type="text/x-handlebars-template">
+					{{#each this}}
+	               <tr class="dark" id="mandate_{{@key}}">
+	                  <td align="center"><a onclick="getMandateDetails({{json this}})" href="#">{{bankName}}</a></td>
+	                  <td align="center">{{umrn}}</td>
+	                  <td align="center">{{status}}</td>
+	                  <td align="center">{{startDate}}</td>
+	                  <td align="center">{{endDate}}</td>
+	                  <td align="center">-</td>
+                      <td align="center">{{freq}}</td>
+	                  <td align="center">{{amountHelper amount}}</td>
+	                 <!-- <td align="center">No</td> -->
+	                  <td align="left">
+	                     <div class="remark">-</div>
+	                  </td>
+	                 <!-- <td align="center"><a class="redbtnnew" href="#"><i class="fas fa-download"></i></a> &nbsp; <a class="redbtnnew cancelMandate" onclick="cancelMandate({{json this}})" href="#"><i class="fas fa-trash-alt"></i></a></td>-->
+	               </tr>
+					{{/each}}
+				</script>
+				
+				</tbody>
+			</table>
+            <div class="dark errorMsg" style="text-align:center; margin-top:10px;">
+                <h2>No data found..</h2>
+            </div>
+		</div>
+		<div class="manageenachmob_wrap">
+			<div class="btnbx">
+				<a href="a4-details.html#bank1">Federal Bank<span><i
+						class="fas fa-angle-right"></i></span></a>
+				<div class="remarktxt">Remark: Lorem ipsum dolor sit amet,
+					elit, sed do sitam.</div>
+			</div>
+			<div class="btnbx">
+				<a href="a4-details.html#bank2">Union Bank of India<span><i
+						class="fas fa-angle-right"></i></span></a>
+				<div class="remarktxt">Remark: Lorem ipsum dolor sit amet,
+					elit, sed do sitam.</div>
+			</div>
+			<div class="btnbx">
+				<a href="a4-details.html#bank3">State Bank of India<span><i
+						class="fas fa-angle-right"></i></span></a>
+				<div class="remarktxt">Remark: Lorem ipsum dolor sit amet,
+					elit, sed do sitam.</div>
+			</div>
+			<div class="btnbx">
+				<a href="a4-details.html#bank4">Standard Chartered Bank<span><i
+						class="fas fa-angle-right"></i></span></a>
+				<div class="remarktxt">Remark: Lorem ipsum dolor sit amet,
+					elit, sed do sitam.</div>
+			</div>
+		</div>
+	</div>
+</div>
+</sly>
+
+<sly data-sly-call="${clientlib.js @ categories='cfd-enach.manage'}" />

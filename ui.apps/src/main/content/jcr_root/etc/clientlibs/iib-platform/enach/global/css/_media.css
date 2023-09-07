@@ -1,0 +1,88 @@
+@media only screen and (max-width: 1003px) {
+.headerContainer{ width:100%; overflow:hidden;}
+.hder{ display:block;}
+.forexwidget{ display:none !important;}
+.about2box_cont .twobox{ width:100%; display:block;}
+.Benefits_of_wrap .cointener_ben .fourbox{ width:100%; padding-right:0px;}
+.Benefits_of_wrap .cointener_ben .fourbox:nth-child(2) .imgbox, .Benefits_of_wrap .cointener_ben .fourbox:nth-child(4) .imgbox{ float:right !important;}
+.Benefits_of_wrap .cointener_ben .fourbox:nth-child(2) .textbox, .Benefits_of_wrap .cointener_ben .fourbox:nth-child(4) .textbox{ float:left !important; text-align:right;}
+.formboxcenter{ width:40%;}
+.cointaner_details .formbox{ width:100%; }
+.forsingal{padding-bottom:10px; margin-bottom:20px; border-bottom:1px solid #cfcfcf;}
+.cointaner_details .tablebox{ width:50%; float:left;}
+.ccode{ position:relative; top:10px;}
+.enachofferReferral {position: absolute; top: 58%;}
+.enachofferReferral input{ border:1px solid #000; margin-left:18px; padding:0 5px;}
+
+.overlay-width1{width:0%; opacity:0;}
+.overlay-width{width:100%; opacity:0.6;}
+.formanageenach{ display:block;}
+.manageenachmob_wrap{ display:block;}
+.mobright{ display:inline-block; float:right;}
+#mobtrn{ display:none;}
+
+
+
+}
+
+@media only screen and (max-width: 767px) {
+
+.formboxcenter{ width:50%;}
+.bannerinner1 .bannertxt{ width:75%;}
+.cointaner_details .tablebox{ width:100%;}
+.ccode{ width:80% !important;}
+.borderboxcenter {width: 60%; padding: 30px 20px;}
+.pop-contentkk .fildbx{ color:#333;}
+
+.mobilever { display:block !important; margin-bottom:30px;}
+.desktopver { display:none !important;}
+}
+@media only screen and (max-width: 599px) {
+.bannerinner{ height:175px;}
+.bannerinner img{ height:175px; width:auto !important;}
+.welcomeright {width: 94% !important; top:35% !important;}
+.welcomeright h1{ font-size:20px !important;}
+.formboxcenter{ width:60%;}
+.hide480{ display:none;}
+.show480{ display:block;}
+.bannerinner1 .bannertxt h1{ font-size:22px;}
+.white_content{ width:95%;}
+.sucessbox h3{ line-height:24px;}
+.sucessbox h4{ line-height:19px;}
+.black_overlaynew {position: fixed; top: 0%; left: 0%; right: 0%; bottom: 0%; width: 100% !important; width: 100%; height: 100% !important; height:100%;background: url(/content/dam/iibPlatform/enach/images/bg-pop.png); z-index: 9999; }
+.white_contentnew {box-sizing: border-box; background:#ededed; display: block; position: relative; top: 10%; left: 0; right: 0; width: 95%;  height: auto; padding: 0px;margin: 0 auto; border:5px #ababab solid; z-index: 10001; overflow: hidden; }
+.white_contentnew h2{ display:block; font-size:18px; text-align:center; color:#af4843; margin:15px 0px;}
+.fieldboxleft1{ color:#000;}
+.hvr-btnw{-webkit-transform: perspective(1px) translateZ(0); transform: perspective(1px) translateZ(0); color:#fff; position:relative; text-transform: uppercase; background-color:#af4842; padding:8px 15px; display:inline-block; border:0px; }
+.hvr-btnw:before {content:""; position:absolute; z-index:-1; top:0; left:0; right:0; bottom:0; background:#7b332f; -webkit-transform:scaleY(0); transform:scaleY(0); -webkit-transform-origin:50% 100%; transform-origin:50% 100%; -webkit-transition-duration:0.3s;
+  transition-duration: 0.3s;}
+.closeb{ font-size:20px; display:inline-block; position:absolute; width:26px; height:26px; right:7px;}
+.closeb a{ color:#000;}
+
+}
+@media only screen and (max-width: 479px) {
+.Benefits_of_wrap .cointener_ben .fourbox .imgbox{ width:100%; margin-bottom:8px;}
+.Benefits_of_wrap .cointener_ben .fourbox .textbox{ float:none; width:100%; text-align:left !important;}
+.about2box_cont .twobox{ padding:20px 15px;}
+.bannerinner{ height:105px;}
+.bannerinner img{ height:105px; width:auto !important;}
+.welcomeright {width: 92% !important; top:35% !important;}
+.welcomeright h1{ font-size:16px !important; text-shadow: 0 0 12px #000;}
+.formboxcenter {width: 100%; box-sizing: border-box; padding:25px 15px; border:4px solid #af4842;}
+.OtptextBox a{ margin:0 8px;}
+.headingLine{ font-size:20px; padding-bottom:10px; margin-bottom:10px;}
+#flip-scrollnew tr td:nth-child(10){ width:180px !important;}
+.bannerinner1 .bannertxt{ width:90%;}
+.bannerinner1 .bannertxt h1{ font-size:20px;}
+.inputonlytxt .fieldboxleft { width:40%; font-size:13px;}
+.inputonlytxt .fieldboxright{ width:60%; font-size:13px;}
+.ccode{ width:100% !important;}
+.fieldboxright{ font-weight:bold;}
+.borderboxcenter {width: 100%; padding: 20px 15px; box-sizing:border-box;}
+.errorimg span, .sucessimg span{ width:100px; height:100px; line-height:100px;}
+.errorboxcenter h4{ line-height:24px;}
+.white_contentnew .pop-contentkk{ padding:5px;}
+.enachmob_slider .tabledata .singalclm .rowbox span{ width:45%;}
+.fildbx{ text-align:center;}
+.fildbx span{ display:block;}
+}

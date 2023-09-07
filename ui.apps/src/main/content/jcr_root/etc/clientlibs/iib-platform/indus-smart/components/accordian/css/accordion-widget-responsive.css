@@ -1,0 +1,41 @@
+/*
+    Description: 	Accordion Framework
+    Author: 		Insidelabdev
+    Version: 		2.0
+*/
+
+/*	--------------------------------------------------
+	:: MOBILE PORTRAIT DESIGN WIDTH BELOW 40EM
+	-------------------------------------------------- */
+    
+	@media only screen and (max-width:39.9375em) {
+		
+				       
+    }
+	
+/*	--------------------------------------------------
+	:: MOBILE LANDSCAPE DESIGN WIDTH 40EM
+	-------------------------------------------------- */
+
+	@media only screen and (min-width:40em) and (max-width:51.9375em) {
+
+	
+    }
+	
+/*	--------------------------------------------------
+	:: TABLET PORTRAIT DESIGN WIDTH 52EM
+	-------------------------------------------------- */
+
+	@media only screen and (min-width:52em) and (max-width:63.9375em) {
+		
+		
+    }
+	
+/*	--------------------------------------------------
+	:: TABLET LANDSCAPE DESIGN WIDTH 64EM
+	-------------------------------------------------- */
+	
+	@media only screen and (min-width:64em) and (max-width:74.9375em) {
+		
+		
+    }

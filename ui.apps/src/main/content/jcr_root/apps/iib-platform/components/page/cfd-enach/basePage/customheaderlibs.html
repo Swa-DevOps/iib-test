@@ -1,0 +1,10 @@
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html"/>
+
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800"  rel="stylesheet">
+<!--<link rel="stylesheet prefetch" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">-->
+    <link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/fontawesome.min.css">
+
+<sly data-sly-call="${clientLib.css @ categories = 'cfd-enach-global'}"/>
+<sly data-sly-call="${clientLib.js @ categories = 'cfd-enach-dependencies'}"/>
+<sly data-sly-call="${clientLib.js @ categories = 'cfd-enach-global'}"/>

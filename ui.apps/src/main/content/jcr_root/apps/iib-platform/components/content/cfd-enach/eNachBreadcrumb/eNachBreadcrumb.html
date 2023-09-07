@@ -1,0 +1,11 @@
+<div data-sly-test="${wcmmode.edit}">
+   Configure Breadcrumb Component
+</div>
+
+<sly data-sly-test="${!properties.disableComponent}">
+   <sly data-sly-use.model="com.iib.platform.common.models.BreadcrumbModel">
+      <div class="pagingwrap" data-sly-list="${model.breadcrumbList}">
+       		<a href="${item.PageUrl}"> <i class="fas fa-angle-left"></i> Back</a>
+      </div>
+   </sly>
+</sly>

@@ -1,0 +1,141 @@
+<div data-sly-test="${wcmmode.edit}">
+   Configure E-Nach Details Component
+</div>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" />
+
+<sly data-sly-use.model="com.iib.platform.enach.models.EnachDetailsModel">
+	<div class="innerwork_wrap">
+	   <div class="inner_wrap">
+	      <div class="about2boxInner">
+	         <div class="pagingwrap"><a href="${model.backButtonUrl}"><i class="fas fa-angle-left"></i> ${properties.backButtonText}</a></div>
+	         <div class="headingLine">${properties.sectionHeading}<span class="mobright"><i class="fas fa-angle-down"></i></span></div>
+	         <div class="nach_details_wrap">
+	            <div class="cointaner_details inputonlytxt">
+	               <div class="formbox" id="mobtrn">
+	                  <div class="fieldbox">
+	                     <div class="fieldboxleft ">Bank Name</div>
+	                     <div class="fieldboxright bankName">NA</div>
+	                     <div class="clr"></div>
+	                  </div>
+	                  <div class="fieldbox ">
+	                     <div class="fieldboxleft">From Account Number</div>
+	                     <div class="fieldboxright AcNo">NA</div>
+	                     <div class="clr"></div>
+	                  </div>
+	                  <div class="fieldbox ">
+	                     <div class="fieldboxleft">Status</div>
+	                     <div class="fieldboxright status">NA</div>
+	                     <div class="clr"></div>
+	                  </div>
+	                  <div class="fieldbox">
+	                     <div class="fieldboxleft">Start Date</div>
+	                     <div class="fieldboxright startdate">NA</div>
+	                     <div class="clr"></div>
+	                  </div>
+	                  <div class="fieldbox">
+	                     <div class="fieldboxleft">End Date</div>
+	                     <div class="fieldboxright endDate">NA</div>
+	                     <div class="clr"></div>
+	                  </div>
+	                  <div class="fieldbox">
+	                     <div class="fieldboxleft">Next Date</div>
+	                     <div class="fieldboxright nextDate">NA</div>
+	                     <div class="clr"></div>
+	                  </div>
+	                  <div class="fieldbox">
+	                     <div class="fieldboxleft">Amount</div>
+	                     <div class="fieldboxright amount">NA</div>
+	                     <div class="clr"></div>
+	                  </div>
+	                  <div class="fieldbox">
+	                     <div class="fieldboxleft ">UMRN Number</div>
+	                     <div class="fieldboxright umrn">NA</div>
+	                     <div class="clr"></div>
+	                  </div>
+	                  <div class="fieldbox">
+	                     <div class="fieldboxleft ">Frequency</div>
+	                     <div class="fieldboxright freq">NA</div>
+	                     <div class="clr"></div>
+	                  </div>
+	                 <!-- <div class="fieldbox">
+	                     <div class="fieldboxleft ">Total Number of Installments</div>
+	                     <div class="fieldboxright installmentNo">NA</div>
+	                     <div class="clr"></div>
+	                  </div>
+	                  <div class="fieldbox">
+	                     <div class="fieldboxleft ">Pending Installments</div>
+	                     <div class="fieldboxright pendingInstallments">NA</div>
+	                     <div class="clr"></div>
+	                  </div>
+	                  <div class="fieldbox">
+	                     <div class="fieldboxleft ">Skipped Installments</div>
+	                     <div class="fieldboxright skipped">NA</div>
+	                     <div class="clr"></div>
+	                  </div>
+	                  <div class="fieldbox">
+	                     <div class="fieldboxleft ">Successful Installments</div>
+	                     <div class="fieldboxright success">NA</div>
+	                     <div class="clr"></div>
+	                  </div>
+	                  <div class="fieldbox">
+	                     <div class="fieldboxleft ">RD Linked</div>
+	                     <div class="fieldboxright rdStatus">NA</div>
+	                     <div class="clr"></div>
+	                  </div> -->
+	                  <div class="fieldbox">
+	                     <div class="fieldboxleft ">To Account</div>
+	                     <div class="fieldboxright toAccount">NA</div>
+	                     <div class="clr"></div>
+	                  </div>
+	                  <div class="fieldbox">
+	                     <div class="fieldboxleft ">Remarks</div>
+	                     <div class="fieldboxright remarks">NA</div>
+	                     <div class="clr"></div>
+	                  </div>
+	                 <!-- <div class="fieldbox">
+	                     <div><a class="redbtnnew" style="font-size:18px;" href="#"><i class="fas fa-trash-alt"></i></a>  </div>
+	                  </div>-->
+	               </div>
+	               <div class="tablebox">
+	                  <h4>Recent Transactions</h4>
+	                  <div class="table_wrap" id="flip-scroll">
+	                     <table width="100%">
+	                        <thead>
+	                           <tr>
+	                              <th width="36%" align="center" valign="middle">Installment Date</th>
+	                              <th width="37%" align="center" valign="middle">Amount (Rs.)</th>
+	                              <th width="27%" align="center" valign="middle">Status</th>
+	                           </tr>
+	                        </thead>
+	                        <tbody id="transDetails">
+
+	                        </tbody>
+	                     </table>
+	                  </div>
+	                  <div class="statmentD">
+	                  <!--   <a href="javascript://" onClick="dsment()" class="statementbtn hvr-btn">Download E-Statement</a>-->
+	                     <div id="fadests" class="black_overlaynew">
+	                        <div class="white_contentnew">
+	                           <div class="closeb"><a onClick="dsmentclose()" href="javascript://">X</a></div>
+	                           <div class="pop-contentkk">
+	                              <h2> Download E-Statement</h2>
+	                              <div class="fildbx"><span>Start* <input type="text" class="enachCal" id="sdate" value=""></span> &nbsp;&nbsp; <span>End* <input type="text" class="enachCal" id="edate" value=""></span></div>
+	                              <div class="pop-btn"><a href="javascript://" class="pop-overlay-btn hvr-btnw">Download</a></div>
+	                           </div>
+	                        </div>
+	                     </div>
+	                  </div>
+	               </div>
+	               <div class="clear"></div>
+	            </div>
+	            <div class="backbox">
+	               <div><a href="/content/enach/welcome/login/manage.html" class="form-btn hvr-btn">${properties.buttonText}</a></div>
+	            </div>
+	         </div>
+	      </div>
+	   </div>
+	</div>
+</sly>
+
+<sly data-sly-call="${clientlib.js @ categories='enach.details'}" />

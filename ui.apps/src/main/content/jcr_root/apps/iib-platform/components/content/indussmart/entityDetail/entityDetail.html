@@ -1,0 +1,33 @@
+<div data-sly-test="${wcmmode.edit}">
+   Configure Entity Detail Component
+</div>
+<sly data-sly-test="${!properties.disableComponent}">
+<div class="container">
+   	<div class="row align-items-center">
+         <div class="col-lg-12 col-md-12 col-sm-12 no-padding-lr text-center">
+            <div class="hd-plan">
+               <span class="text-st hd-text01">${properties.heading}</span>
+               <span class="hd-text02">${properties.subHeading @context='html'}</span>
+            </div>
+        </div>
+     </div>
+
+     <sly data-sly-test="${properties.description}">
+        <div class="row align-items-center">
+           <div class="col-lg-12 col-md-12 col-sm-12 no-padding-lr text-center">
+              <h4 class="h4-text">${properties.description}</h4>
+           </div>
+        </div>
+     </sly>
+
+     <sly data-sly-test="${properties.includeTeasers=='true'}">
+        <div>
+           <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12 no-padding-lr">
+                 <sly data-sly-resource="${'listTeasers' @ resourceType = 'iib-platform/components/content/common/listOfTeasers'}"/>
+              </div>
+           </div>
+        </div>
+     </sly>
+</div>
+</sly>

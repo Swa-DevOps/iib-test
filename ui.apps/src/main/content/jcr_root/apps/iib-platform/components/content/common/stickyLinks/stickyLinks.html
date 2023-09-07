@@ -1,0 +1,34 @@
+<div data-sly-test="${wcmmode.edit}">
+	Configure Sticky Links Component
+</div>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.all @ categories='iib-platform.sticky-links'}"/>
+<sly data-sly-test="${!properties.disableComponent}">
+<sly data-sly-use.model="com.iib.platform.models.common.StickyLinksModel">
+
+    <div id="sticky-links-${model.component.randomNumber}" class="sticky-links ${model.component.customStyleClass}">
+		<div class="sticky-links-box ${model.hideByDefault == 'true' ? '' : 'open'}">
+        	<div class="sticky-links-btn">
+            	<a class="custom-btn arrow-r">${model.buttonText}</a>
+        	</div>
+        	<div class="sticky-links"> 
+            	<ul>
+					<sly data-sly-list="${model.links}">
+                        <li>
+                            <a href="${item.url}?socialTag=${item.text}">
+                                <i>#</i>${item.text}<span></span>
+                            </a>
+                        </li>
+					</sly>
+					<li>
+						<a href="${model.viewAllLink}">
+							<i>${model.viewAllText}</i>
+						</a>
+					</li>
+        		</ul>
+        	</div>
+    	</div>
+	</div>
+</sly>
+</sly>

@@ -1,0 +1,23 @@
+<div data-sly-test="${wcmmode.edit}">
+   Configure Success Component
+</div>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+	 data-sly-call="${clientlib.css @ categories='indus-smart.successComp'}"/>
+
+<sly data-sly-call="${clientlib.js @ categories='indus-smart.helpMeSuccess'}"/>
+
+<sly data-sly-test="${!properties.disableComponent}">
+	<section class="full-section successComp">
+        <div class="container">
+            <div class="row align-items-center">
+                 <div class="col-lg-12 col-md-12 col-sm-12 no-padding-lr text-center">
+                    <div class="hd-plan">
+                       <span class="text-st d-block hd-text01">${properties.heading}</span>
+                       <p class="hd-text02 interactionId" data-success="${properties.successMessage}"> </p>
+                    </div>
+                </div>
+             </div>
+        </div>
+    </section>
+</sly>

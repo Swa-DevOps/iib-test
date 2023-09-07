@@ -1,0 +1,216 @@
+/* ---- Learn page style css start -----
+------------------------------------- */
+
+.mg-bottom-fifty {
+    margin-bottom: 50px;
+}
+
+.learn-sec-one {
+    background: #f3f3f4;
+}
+
+.learn-sec-one .hd-plan {
+    width: 500px;
+    margin: 0 auto 25px;
+    display: table;
+    position: relative;
+}
+
+.learn-sec-one .hd-plan::after {
+    content: "";
+   /* background: url(/content/dam/iibPlatform/indusSmart/images/arrow.png) -98px -11px; */
+    width: 8px;
+    height: 30px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    color: #000;
+}
+
+.learn-sec-one .hd-plan span {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.learn-sec-one .text-st {
+    font-family: 'Univers';
+    color: #fe6241;
+    font-size: 92px;
+    line-height: 106px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.learn-sec-one .hd-text02 {
+    font-size: 24px;
+    line-height: 26px;
+    font-weight: 500;
+}
+
+.learn-sec-one .card-title {
+    text-align: center;
+    line-height: 12px;
+    color: #fe6646;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.learn-sec-one .card {
+    border: none;
+}
+
+.learn-sec-two .card.card-large .card-body {
+    min-height: 92px;
+    padding-bottom: 0;
+}
+
+.learn-sec-two .card.card-large .card-body .card-title {
+    padding-bottom: 0;
+}
+
+.card-large .card-footer ul li:nth-child(2),
+.card-large .card-footer ul li:nth-child(3) {
+    float: right;
+}
+
+.learn-sec-two .card .card-body {
+    min-height: 166px;
+}
+
+.learn-sec-one .card-deck {
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+
+.learn-sec-one .card-footer {
+    background-color: #fff;
+    padding-top: 0px;
+}
+
+.learn-sec-one .card-img-top {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border: 1px solid #ccc;
+}
+
+.gray-btn {
+    display: inline-block;
+    background: #fff;
+    padding: 10px 25px;
+    border: 1px solid #ccc;
+    margin-bottom: 40px;
+    color: #000;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+@media (max-width:568px) {
+    .learn-sec-one .hd-plan span {
+        display: table-row-group;
+        vertical-align: middle;
+    }
+    .learn-sec-one .hd-plan::after {
+        display: none;
+    }
+    .learn-sec-one .card {
+        margin-bottom: 50px;
+    }
+    .learn-sec-one .card-deck {
+        padding: 0 10%;
+    }
+}
+
+
+/* plan section two start */
+
+.learn-sec-two {
+    background: #f3f3f4;
+    /* padding-top: 40px; */
+}
+
+.learn-sec-two .card-deck {
+    margin-top: 40px;
+    display: list-item;
+    /* margin-bottom: 90px; */
+}
+
+.learn-sec-two .card {
+    border-radius: 0;
+}
+
+.learn-sec-two .card-title {
+    font-family: 'Univers';
+    text-align: center;
+    font-size: 28px;
+    line-height: 32px;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding-bottom: 15px;
+}
+
+.learn-sec-two .card-footer .social-link {
+    font-size: 11px;
+}
+
+.learn-sec-two .card-img-top {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.learn-sec-two .card-deck .card-footer {
+    border: none;
+    background-color: #fff;
+}
+
+.learn-sec-two .red-rop {
+    position: absolute;
+    left: -11px;
+    top: 13px;
+}
+
+@media (max-width:1280px) {
+    .learn-sec-two .card.card-large .card-body {
+        height: 134px;
+    }
+    .learn-sec-two .card-title {
+        font-size: 24px;
+    }
+}
+
+@media (max-width:568px) {
+    .learn-sec-two .card-title {
+        padding-bottom: 0;
+    }
+    .learn-sec-two .card-body {
+        padding-bottom: 0;
+    }
+    .learn-sec-one .hd-plan {
+        width: 100%;
+        padding: 0 30px;
+    }
+    .learn-sec-two .card {
+        margin-bottom: 50px;
+    }
+    .learn-sec-two .card-deck {
+        padding: 0 10%;
+    }
+}
+
+@media (max-width:480px) {
+    .learn-sec-one .hd-text02 {
+        font-size: 4vw;
+        line-height: 20px;
+    }
+    .learn-sec-one .h4-text {
+        font-size: 3vw;
+    }
+    .learn-sec-one .text-st {
+        font-size: 18vw;
+    }
+    .learn-sec-two .card-title {
+        font-size: 7vw;
+    }
+}

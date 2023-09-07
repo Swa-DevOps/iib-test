@@ -1,0 +1,154 @@
+<div data-sly-test="${wcmmode.edit}">
+   Configure Confirm Personal Loan Details  Form Component
+</div>
+
+
+<div class="innerwork_wrap">
+   <div class="inner_wrap">
+      <div class="about2boxInner registerPL">
+         <div class="pagingwrap"><a href=""><i class="fas fa-angle-left"></i> ${properties.backHeading}</a></div>
+         <div data-sly-resource="${'enachPLBreadCrumb' @ resourceType = 'iib-platform/components/content/enachpl/eNachPLbreadcrumb'}"></div>
+         <div class="headingLine">${properties.personalDetailHeading}</div>
+         <div class="nach_details_wrap">
+            <div class="cointaner_details2 inputonlytxt">
+               <div class="formbox">
+                  <!--<div class="fieldbox">
+                     <div class="fieldboxleft req"><small>*</small>Required field</div>
+                     <div class="clr"></div>
+                  </div>-->
+                  <div class="fieldbox">
+                     <div class="fieldboxHeading hed_p20">${properties.basicDetails}<span><i class="fas fa-info"></i></span></div>
+                     <div class="clr"></div>
+                  </div>
+                  <div class="fieldbox">
+                     <div class="fieldboxleft">${properties.userName}<small>*</small></div>
+                     <div class="fieldboxright" id="userName"></div>
+                     <div class="clr"></div>
+                  </div>
+                  <!-- <div class="fieldbox">
+                     <div class="fieldboxleft">${properties.aadhaarVirtualId}<small>*</small></div>
+                     <div class="fieldboxright" id="aadharCard"></div>
+                     <div class="clr"></div>
+                  </div> -->
+                  <div class="fieldbox">
+                     <div class="fieldboxleft">${properties.loanAccountNumberHeading}<small>*</small></div>
+                     <div class="fieldboxright" id="loanNumber"></div>
+                     <div class="clr"></div>
+                  </div>
+                  <div class="fieldbox">
+                     <div class="fieldboxleft">${properties.accountType}<small>*</small></div>
+                     <div class="fieldboxright" id="bankAccountType">
+                     </div>
+                     <div class="clr"></div>
+                  </div>
+                  <div class="fieldbox">
+                     <div class="fieldboxleft">${properties.startDate}<small>*</small></div>
+                     <div class="fieldboxright" id="startDate"></div>
+                     <div class="clr"></div>
+                  </div>
+                  <div class="fieldbox">
+                     <div class="fieldboxleft">${properties.emiAmount}<small>*</small></div>
+                    <div class="fieldboxright">
+                        <p id="EMI_amount"></p>
+                     </div>
+                     <div class="clr"></div>
+                  </div>
+                  <div class="fieldbox">
+                     <div class="fieldboxleft">${properties.siAmount}<small>*</small></div>
+                    <div class="fieldboxright">
+                        <p id="SI_amount"></p>
+                     </div>
+                     <div class="clr"></div>
+                  </div>
+
+					<div class="fieldbox">
+                     <div class="fieldboxleft">${properties.repaymentAccountNumberHeading}<small>*</small></div>
+                     <div class="fieldboxright" id="Other_bank_account_number"></div>
+                     <div class="clr"></div>
+                  </div>
+                  <div class="fieldbox">
+                     <div class="fieldboxleft">${properties.bankNameHeading}<small>*</small></div>
+                     <div class="fieldboxright" id="repaymentBankName"></div>
+                     <div class="clr"></div>
+                  </div>
+                  <div class="fieldbox">
+                     <div class="fieldboxleft">${properties.bankIFSCcodeHeading}<small>*</small></div>
+                     <div class="fieldboxright" id="bankIFSCcode"></div>
+                     <div class="clr"></div>
+                  </div>
+
+                  <div class="fieldbox">
+                     <div class="fieldboxleft">${properties.transferFrequencyHeading}<small>*</small></div>
+                     <div class="fieldboxright" id="freqDropdown"></div>
+                     <div class="clr"></div>
+                  </div>
+				 <div class="fieldbox">
+                     <div class="fieldboxleft">${properties.purposeOfMandate}<small>*</small></div>
+                     <div class="fieldboxright" id="purposeOfMandate"></div>
+                     <div class="clr"></div>
+                  </div>	
+
+
+               </div>
+               <div class="clear"></div>
+            </div>
+            <div class="cointaner_details2 inputonlytxt">
+               <div class="formbox">
+                  <div class="fieldbox">
+                     <div class="fieldboxHeading hed_p20">${properties.repaymentDetails}</div>
+                     <div class="clr"></div>
+                  </div>
+				  	 <div class="fieldbox">
+                     <div class="fieldboxleft">${properties.corporateName}<small>*</small></div>
+                     <div class="fieldboxright" id="corporateName"></div>
+                     <div class="clr"></div>
+
+                     <div class="fieldbox">
+                     <div class="fieldboxleft">${properties.utilityNumber}<small>*</small></div>
+                     <div class="fieldboxright" id="utilityNumber"></div>
+                     <div class="clr"></div>
+                  </div>	
+
+                  <div class="fieldbox">
+                  <div class="fieldboxHeading hed_p20 pdtop-20">${properties.termCondHeading} </div>
+                     <div class="fieldboxBot">
+                       <label for="c">&nbsp; <span>${properties.checkbox1}</span> </label>
+                        <div class="clr"></div>
+                     </div>
+                     <div class="clr"></div>
+                  </div>
+
+                  <div class="clear"></div>
+               </div>
+               <div class="clear"></div>
+            </div>
+            <div class="inputonlytxt">
+               <div class="formbox">
+                  <div class="fieldbox">
+                     <div>
+                        <input name="" type="submit" id="backBtn" class="btnonlybox" value="${properties.back}"> 
+					    <input name="" type="submit" id="cancelBtn" class="btnonlybox" value="${properties.cancel}"> 
+                        <input name="" type="submit" id="proceedBtn" class="btnonlybox confirmbutton txtcapital" value="${properties.proceedtoPay}">
+
+						<!-- <input name="" type="submit" id="sucessBtn" class="btnonlybox" value="TEMP SUCCESS"> 
+                         <input name="" type="submit" id="faliureBtn" class="btnonlybox" value="TEMP FALIURE"> -->
+
+						<div data-sly-resource="${'footerLogo' @ resourceType = 'iib-platform/components/content/enachpl/footerLogo'}"></div>
+                     </div>
+                     <div class="clear"></div>
+                  </div>
+                  <div class="clear"></div>
+               </div>
+               <div class="clear"></div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+</div>
+
+      <sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" data-sly-call="${clientlib.js @ categories='indusind-platform.nrLeadForm'}" />                     
+
+<div data-sly-test="${!wcmmode.edit}">
+   <sly data-sly-call="${clientlib.js @ categories='enachpl.confirmpersonalDetailsForm'}"/>
+</div>

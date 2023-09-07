@@ -1,0 +1,96 @@
+<div data-sly-test="${wcmmode.edit}">
+   Configure List of Articles Component
+</div>
+
+<sly data-sly-test="${!properties.disableComponent}">
+   <sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"/>
+   
+   <sly data-sly-use.model="com.iib.platform.indussmart.models.ArticleListingModel">
+      <section class="full-section learn-sec-two">
+         <div class="container">
+            <div>
+               <div class="row justify-content-center">
+                  <div class="col-lg-12 col-md-10 col-sm-12 no-padding-lr">
+                     <div class="card-deck">
+                        <div class="row" id="autodiv">
+                        
+                           <sly data-sly-test="${model.articlesListingType=='manual'}">
+	                           <sly data-sly-list="${model.articleListItems}">
+	                           	  <sly data-sly-test="${item.title}">
+		                              <div class="col-lg-3 col-md-6 col-sm-6 mg-bottom-fifty">
+		                                 <div class="card">
+		                                    <div class="red-rop"><img src="${item.tagImagePath}"></div>
+		                                    <img class="card-img-top" src="${item.thumbnailImagePath}" alt="Card image cap">
+		                                    <div class="card-body">
+		                                       <a href="${item.pageUrl}">
+		                                          <h3 class="card-title"> ${item.title}</h3>
+		                                       </a>
+		                                    </div>
+		                                    <div class="card-footer text-center">
+		                                       <ul class="list-inline justify-content-center">
+		                                          <li class="list-inline-item">
+		                                             <a class="social-link" href="javascript:;"> ${item.formattedDate}</a>
+		                                          </li>
+		                                          <!-- <li class="list-inline-item">
+		                                             <a class="social-link" href="javascript:;"><i class="fa fa-hourglass-half"></i> ${item.readingTime}</a>
+		                                             </li> -->
+		                                          <li class="list-inline-item">
+		                                             <div class="socialShare">
+		                                                <a class="social-link socialBox pointer" href="javascript:;"><i class="fa fa-share-alt"></i> ${model.shareText}</a>
+		                                             </div>
+		                                          </li>
+		                                       </ul>
+		                                    </div>
+		                                 </div>
+		                              </div>
+	                              </sly>
+	                           </sly>
+                           </sly>
+                           
+                           <sly data-sly-test="${model.articlesListingType=='auto'}">
+                              <script id="autoScript" type="text/x-handlebars-template">
+                                 {{#each this}}
+                                 <div class="col-lg-3 col-md-6 col-sm-6 mg-bottom-fifty" >
+                                  <div class="card">
+                                     <div class="red-rop"><img src="{{tagImagePath}}"></div>
+                                     <img class="card-img-top" src="{{thumbnailImagePath}}" alt="Card image cap">
+                                     <div class="card-body">
+                                        <a href="{{pageUrl}}"><h3 class="card-title"> {{title}}</h3></a>
+                                     </div>
+                                     <div class="card-footer text-center">
+                                        <ul class="list-inline justify-content-center">
+                                           <li class="list-inline-item">
+                                              <a class="social-link" href="javascript:;"> {{formattedDate}}</a>
+                                           </li>
+                                 
+                                           <li class="list-inline-item">
+                                              <div class="socialShare">
+                                 				<a class="social-link socialBox pointer" href="javascript:;"><i class="fa fa-share-alt"></i> ${model.shareText @ context='text'}</a>
+                                 			  </div>
+                                           </li>
+                                        </ul>
+                                     </div>
+                                  </div>
+                                 </div>
+                                 {{/each}}
+                              </script>
+                           </sly>
+                           
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <sly data-sly-test="${model.articlesListingType=='auto'}">
+                  <div class="row justify-content-center">
+                     <div class="col-lg-12 col-xs-12 text-center">
+                        <a data-attr="${model.resultCount}" id="myButton" class="gray-btn btn-light-animate  text-uppercase" href="javascript:;">${model.loadMoreText}</a>
+                     </div>
+                  </div>
+               </sly>
+               <div id="divValues" data-articlesListingMode="${model.articlesListingType}" data-parentPath="${model.parentPagePath}"  style="display: none;">
+            </div>
+         </div>
+      </section>
+   </sly>
+   <sly data-sly-call="${clientlib.js @ categories='indus-smart.articlesListing'}"/>
+</sly>

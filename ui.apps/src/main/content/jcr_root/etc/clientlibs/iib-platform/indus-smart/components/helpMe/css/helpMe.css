@@ -1,0 +1,56 @@
+.tg-form .button.helpMeBtn::after {
+    display: block;
+    width: auto;
+    height: 2px;
+    margin-top: 2px;
+    background: #000;
+    content: "";
+    display: none;
+}
+ 
+.tg-form .button.helpMeBtn.disable {
+    display: inline-block;
+    color: #fff;
+    font-size: 26px;
+    font-weight: 500;
+    letter-spacing: 1.2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    -webkit-transition: all 0.25s;
+    transition: all 0.25s;
+    background: transparent;
+    float: left;
+    background: #ccc;
+    padding: 10px 15px;
+}
+ 
+ 
+.tg-form .button.helpMeBtn{
+    display: inline-block;
+    color: #fff;
+    font-size: 26px;
+    font-weight: 500;
+    letter-spacing: 1.2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    -webkit-transition: all 0.25s;
+    transition: all 0.25s;
+    background: transparent;
+    float: left;
+    cursor: pointer;
+    background-color: #fe6241;
+    padding: 10px 15px;
+}
+
+.tg-form .form-control {
+    width: 40%;
+    height: 50px;
+    border-width: 1px;
+    border-color: transparent transparent #fe6241 transparent;
+    border-radius: 0;
+    font-size: 40px;
+    font-weight: 200;
+    text-transform: uppercase;
+    color: #fe6241;
+    border-style: dashed;
+}

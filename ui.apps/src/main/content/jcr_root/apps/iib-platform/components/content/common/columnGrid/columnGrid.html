@@ -1,0 +1,19 @@
+<div data-sly-test="${wcmmode.edit}">
+	Configure Column Grid Component
+</div>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.all @ categories='iib-platform.column-grid'}"/>
+
+<sly data-sly-use.model="com.iib.platform.common.models.ColumnGridModel">
+	<div id="column-grid-${model.component.randomNumber}" class="column-grid ${model.component.customStyleClass}">
+		<div class="row" data-sly-test="${model.sectionHeading}">
+        	<h3>${model.sectionHeading}</h3>
+        </div>
+        <div class="row no-gutters" data-sly-list="${model.columnList}">
+			<div class="col">
+				<div data-sly-resource="${@path=item, resourceType='wcm/foundation/components/parsys'}"></div> 
+            </div>
+        </div>
+    </sly>
+</div>

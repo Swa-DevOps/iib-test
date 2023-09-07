@@ -1,0 +1,59 @@
+<div data-sly-test="${wcmmode.edit}">
+   Configure Registration PL Component
+</div>
+
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"/>
+
+<div class="innerwork_wrap">
+   <div class="inner_wrap">
+      <div class="about2boxInner registerPL">
+         <div class="pagingwrap"><a href="${properties.backButtonUrl}"><i class="fas fa-angle-left"></i> ${properties.backButtonText}</a></div>
+         <div data-sly-resource="${'enachPLBreadCrumb' @ resourceType = 'iib-platform/components/content/enachpl/eNachPLbreadcrumb'}"></div>
+         <div class="headingLine">e-NACH Registration for PL </div>
+         <div class="nach_details_wrap">
+            <div class="inputonlytxt">
+               <div class="formbox">
+                  <div class="fieldbox">
+                     <div class="fieldboxleft req"><small>*</small>${properties.requiredFieldText}</div>
+                     <div class="clr"></div>
+                  </div>
+                  <div class="fieldbox">
+                     <div class="fieldboxleft">${properties.loanAmountLabel}<small>*</small></div>
+                     <div class="fieldboxright"><input type="password" id="loanAmount" maxlength="12" class="enachofferInput"></div>
+                     <div class="clr"></div>
+                  </div>
+                  <div class="fieldbox">
+                     <div class="fieldboxleft">${properties.reEnterloanAmountLabel}<small>*</small></div>
+                     <div class="fieldboxright loanNumber"><input type="text" maxlength="12" class="enachofferInput" id="loanAccountNumber"></div>
+                     <div class="clr"></div>
+                  </div>
+                  <div class="fieldbox">
+                     <div class="fieldboxleft">&nbsp;</div>
+             		 <div class="g-recaptcha fieldboxright captchaimg" data-sitekey="${properties.captchaSiteKey}" id="g-recaptcha-response"></div>
+                     <div class="clr"></div>
+                  </div>
+                  <div class="fieldbox">
+                     <div class="fieldboxleft">&nbsp;</div>
+                     <div class="fieldboxright"></div>
+                     <div class="clr"></div>
+                  </div>
+                  <div class="fieldbox">
+                     <div class="fieldboxleft">&nbsp;</div>
+                     <div class=""><input name="" type="submit" class="btnonlybox confirmbutton" id="continueBtn" value="Continue"></div>
+                     <div class="clr"></div>
+                  </div>
+                  <div class="fieldbox">
+                     <div class="fieldboxleft"> &nbsp;</div>
+                     <div class="fieldboxright">${properties.otpMessage}</div>
+                     <div class="clr"></div>
+                  </div>
+               </div>
+               <div class="clear"></div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<sly data-sly-call="${clientlib.all @ categories='enachpl.registrationPl'}"/>

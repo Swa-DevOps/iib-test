@@ -1,0 +1,15 @@
+<div data-sly-test="${wcmmode.edit}">
+   Configure List of E-Nach Component
+</div>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"/>
+	<sly data-sly-use.model="com.iib.platform.enach.models.ListOfEnachModel">
+	   <div class="about2box_cont" data-sly-list="${model.enachItems}">
+	      <div class="twobox">
+	         <p>${item.description}</p>
+	         <a href="javascript:;" data-landingUrl="${item.buttonUrl}" class="hvr-btn manageBtn-${itemList.count} buttonUrlDiv">${item.buttonText}</a>
+	      </div>
+	   </div>
+	</sly>
+	
+<sly data-sly-call="${clientlib.all @ categories='enach.welcome'}"/>

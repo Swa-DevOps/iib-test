@@ -1,0 +1,77 @@
+<div data-sly-test="${wcmmode.edit}">
+   Configure Footer Component
+</div>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+   data-sly-call="${clientlib.all @ categories='indus-smart.footer'}"/>
+
+<sly data-sly-test="${!properties.disableComponent}">
+   <sly data-sly-use.model="com.iib.platform.indussmart.models.FooterModel">
+      <div>
+         <footer class="full-section">
+            <!--social Shared buttons in right side satrt -->
+            <div class="socialGallery">
+               <div class="socialToolBox">
+                  <a class="facebook" shareLink="http://www.facebook.com/sharer.php?u=" href="" target="_blank"><i class="fa fa-facebook"></i></a>
+                  <a class="google" href="" shareLink="https://plus.google.com/share?url=" target="_blank"><i class="fa fa-google-plus"></i></a>
+                  <a class="instagram" href="http://www.instagram.com" target="_blank" ><i class="fa fa-instagram"></i></a>
+                  <a class="linkedin" href="" shareLink="http://www.linkedin.com/shareArticle?mini=true&amp;url=" target="_blank"><i class="fa fa-linkedin"></i></a>
+                  <a class="twitter" href="" shareLink="https://twitter.com/share?url=" target="_blank"><i class="fa fa-twitter"></i></a>
+                  <a class="youtube" href="http://www.youtube.com" target="_blank"><i class="fa fa-youtube"></i></a>
+                  <a class="cross" href="javascript:;"><i class="fa fa-times"></i></a>
+               </div>
+            </div>
+            <!-- End Social Buttons  -->
+            <div class="container-fluid">
+               <div class="row">
+                  <div class="col-lg-12 thirty-padding-lr twenty-sm-pd">
+                     <div class="footer">
+                        <div class="row">
+                           <div class="col-lg-2 col-md-1 col-sm-12">
+                              <sly data-sly-test="${model.includeLogo == 'true'}">
+                                 <div class="tg-social-box foo-logo">
+                                    <img width="70px" src="${model.brandLogoImage}" alt="${model.brandLogoAltText}">
+                                 </div>
+                              </sly>
+                           </div>
+                           <div class="col-lg-10 col-md-11 col-sm-12">
+                              <div class="row">
+                                 <div class="col-md-10 col-lg-10 col-sm-12 col-xs-12">
+                                    <div class="tg-social-box foo-link">
+                                       <sly data-sly-test="${model.includeLinks}" data-sly-resource="${'listofLinks-1' @ resourceType='iib-platform/components/content/common/listOfLinks'}"></sly>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-2 col-sm-12 col-xs-12 col-lg-2">
+                                    <div class="tg-social-box foo-social">
+                                       <sly data-sly-test="${model.includeSocialLinks}" data-sly-resource="${'listofLinks-2' @ resourceType='iib-platform/components/content/common/listOfLinks'}"></sly>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+                     <div class="row">
+                           <div class="col-lg-12 col-md-12 col-sm-12">
+                              <div class="row">
+                                 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
+                                    <div class="tg-social-box foo-copyright">
+                                       <ul class="list-inline">
+                                          <li class="list-inline-item">
+                                             <p>${model.footerText}</p>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </footer>
+         <!-- SCROLL UP -->
+   		 <a id="scroll-up" class="waves"><i class="fa fa-angle-up"></i></a>
+      </div>
+   </sly>
+</sly>

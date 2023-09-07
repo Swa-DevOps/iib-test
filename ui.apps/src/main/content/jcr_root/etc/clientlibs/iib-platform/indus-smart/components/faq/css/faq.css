@@ -1,0 +1,145 @@
+/*-------- paln layout start ------
+---------------------------------*/
+
+
+/* paln section one */
+
+.faq-override-list .accordion-widget .accordion-widget-wrapper .accordion-widget-label {
+    font-family: univers;
+    font-weight: 100;
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.faq-override-list .accordion-widget .accordion-widget-wrapper .accordion-widget-section .accordion-widget-section-content h4 {
+    position: relative;
+    padding-left: 20px;
+    font-family: univers;
+    font-weight: 300;
+    font-size: 16px;
+    color: #222 !important;
+}
+
+.faq-override-list .accordion-widget .accordion-widget-wrapper .accordion-widget-section .accordion-widget-section-content h4:after {
+    content: "+";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #111;
+    left: 0;
+    line-height: 15px;
+    text-align: center;
+    display: inline-block;
+    top: 0;
+    margin-top: 4px;
+    font-size: 12px;
+    color: #fff;
+}
+.accordion-widget .accordion-widget-wrapper#accordion-widget-right-arrow .accordion-widget-label:after{
+	display: none;
+}
+.faq-override-list .accordion-widget .accordion-widget-wrapper .accordion-widget-section .accordion-widget-section-content h3 {
+    font-size: 22px;
+    font-weight: 300;
+    color: #444;
+    font-family: univers;
+}
+
+.faq-override-list .accordion-widget .accordion-widget-wrapper .accordion-widget-section .accordion-widget-section-content p {
+    font-size: 12px;
+    color: #222 !important;
+}
+
+.faq-override-list .accordion-widget .accordion-widget-wrapper .accordion-widget-section .accordion-widget-section-content ul {
+    margin-top: 15px;
+}
+
+.faq-override-list .accordion-widget .accordion-widget-wrapper .accordion-widget-section .accordion-widget-section-content ul>li {
+    list-style: upper-roman;
+    margin-left: 20px;
+    font-size: 12px;
+    line-height: 20px;
+    margin-top: 10px;
+}
+
+.faq-override-list .accordion-widget .accordion-widget-wrapper .accordion-widget-section .accordion-widget-section-content ul>li>ul>li {
+    list-style: lower-roman;
+}
+
+.faq-override-list .accordion-widget .accordion-widget-wrapper .accordion-widget-section .accordion-widget-section-content ul>li>ul>li>ul>li {
+    list-style: lower-latin;
+}
+
+.text-st {
+	font-family: 'Univers';
+    color: #fe6241;
+    font-size: 150px;
+    line-height: 250px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.hd-text02 {
+    font-size: 24px;
+    line-height: 26px;
+    font-weight: 500;
+}
+
+.faq-img {
+    display: inline-block;
+}
+
+.faq-override {
+    background: #e7e7e7;
+    padding-top: 50px;
+    padding-bottom: 0px;
+}
+@media (max-width:1200px) {
+    .text-st {
+        font-size: 150px;
+        line-height: 220px;
+    }
+}
+@media (max-width: 1024px){
+    .text-st {
+        font-size: 92px;
+        line-height: 139px;
+    }
+}
+@media (max-width:768px) {
+    .faq-override .sm-text-center {
+        text-align: center !important;
+    }
+    .faq-override .faq-img {
+        margin-top: 40px;
+    }
+    .container {
+        margin-right: auto;
+        margin-left: auto;
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+    .text-st {
+        font-size: 140px;
+        line-height: 142px;
+    }
+}
+
+@media (max-width:480px) {
+    .hd-text02 {
+        font-size: 4vw;
+        line-height: 20px;
+    }
+    .h4-text {
+        font-size: 3vw;
+    }
+    .text-st {
+        font-size: 30vw;
+    }
+    .plan-sec-two .card-title {
+        font-size: 7vw;
+    }
+    .accordion-widget-container {
+        padding: 0 !important;
+    }
+}

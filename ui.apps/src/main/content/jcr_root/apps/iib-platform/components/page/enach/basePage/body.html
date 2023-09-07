@@ -1,0 +1,46 @@
+<template data-sly-template.body="${ @ page}">
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+	 data-sly-call="${clientlib.all @ categories='indus-smart.pageLoader'}"/>
+
+    <body class="author-mode">
+        <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-568FL2R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    	<sly data-sly-test="${wcmmode.edit}">
+        	<div class="container-fluid">
+        </sly>
+    	<sly data-sly-test="${!wcmmode.edit}">
+            <div class="se-pre-con" style="display: none;"></div>
+        	<div class="pre-loader"></div>
+    		<div data-sly-resource="${'alertPopup' @ resourceType='iib-platform/components/content/enach/alertPopup'}"></div>
+			<div data-sly-resource="${'alertPopupYesNo' @ resourceType='iib-platform/components/content/enach/alertPopupYesNo'}"></div
+            <div class="mainbg">
+               <div id="wrapper">
+                  <div class="main_wrap">
+                     <div class="BgContainerBanner"></div>
+                     <div class="topContainer">
+                        <div class="topInner"></div>
+                        <div class="top-design"></div>
+                        <div class="headerContainer">
+        </sly>
+        <div class="clearfix">
+	        <div class="overlay">
+	 			<div id="loading-img"></div>
+			</div>
+		</div>
+	    <sly data-sly-use.header="header.html" data-sly-call="${header.header @ page = page}"/>
+	    <sly data-sly-include="content.html"/>
+	    <sly data-sly-use.footer="footer.html" data-sly-call="${footer.footer @ page = page}"/>
+        <sly data-sly-test="${!wcmmode.edit}">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+        </sly>
+		<sly data-sly-test="${wcmmode.edit}">
+	    	</div>
+        </sly>
+    </body>
+</template>

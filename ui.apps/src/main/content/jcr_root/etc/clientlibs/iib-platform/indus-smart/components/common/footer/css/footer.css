@@ -1,0 +1,89 @@
+/* --- footer start ---- */
+
+footer {
+    position: relative;
+    border-top: 1px solid #ccc !important;
+    z-index: 91;
+    background: #fff;
+}
+
+.tg-social-box.foo-copyright {
+    text-align: center;
+}
+
+.footer {
+    margin-top: 20px;
+}
+
+.tg-social-box.foo-social {
+    text-align: left;
+}
+
+.tg-social-box.foo-link {
+    text-align: left;
+}
+
+footer .tg-social-box p {
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.tg-social-box.foo-link a {
+    color: #000;
+    margin-right: 25px;
+    font-weight: 800;
+    text-decoration: underline;
+    padding: 0 10px;
+}
+
+footer .tg-social-box {
+    border: none;
+}
+
+footer .tg-social-box.foo-logo {
+    text-align: left;
+    padding: 2px 0;
+}
+
+.foo-copyright {
+
+        padding: 8px 0;
+
+
+/***********************************************************************************
+*  + SCROLL UP
+***********************************************************************************/
+
+#scroll-up {
+    position: fixed;
+    right: 50px;
+    bottom: 65px;
+    z-index: 8030;
+    display: none;
+    width: 46px;
+    height: 46px;
+    font-size: 24px;
+    line-height: 42px;
+    cursor: pointer;
+    -webkit-transition: all .25s;
+    transition: all .25s;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 50%;
+    background-color: #000;
+}
+
+#scroll-up:hover {
+    box-shadow: 0 4px 7px 0 rgba(0, 0, 0, .16), 0 3px 12px 0 rgba(0, 0, 0, .12);
+}
+
+@media (max-width:767px) {
+    #scroll-up {
+        right: 20px;
+        bottom: 20px;
+    }
+}
+
+
+}

@@ -1,0 +1,62 @@
+<div data-sly-test="${wcmmode.edit}">
+   Configure ENach PL Sorry Component
+</div>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+   data-sly-call="${clientlib.css @ categories='enachpl.sorry'}"/>
+
+<div class="innerwork_wrap">
+   <div class="inner_wrap">
+     <!-- <div class="about2boxInner">
+         <div class="pagingwrap"><a href="${properties.backButtonUrl}"><i class="fas fa-angle-left"></i> ${properties.backButtonText}</a></div>
+         <div data-sly-resource="${'enachPLBreadCrumb' @ resourceType = 'iib-platform/components/content/enachpl/eNachPLbreadcrumb'}"></div>
+      </div>-->
+      <div class="borderboxcenter">
+         <div class="textcenter sucessbox">
+            <div class="errorimg"><span><strong>X</strong></span></div>
+            <h2 class="redcolor">${properties.sorryTitle}</h2>
+            <h4>${properties.sorryMessage}<span id="mandateReason">XXXX.</span></h4>
+            <div class="sucessbox-details">
+               <h5>For clarifications please write to xxxxxx@xxxx.xx or call xxxxxxxxxxx</h5>
+               <!--<div class="detail-con">
+                  <span>Name</span>               
+                  	<font class="userName">John Deo</font>   
+                  <div class="clr"></div>
+               </div>
+               <div class="detail-con">
+                  <span>Transaction Reference Number</span>   
+                  	<font class="bankrefNo">6453</font>     
+                  <div class="clr"></div>
+               </div>
+               <div class="detail-con">
+                  <span>Billdesk Reference Number</span>    
+                  	<font class="refNo">12345</font>      
+                  <div class="clr"></div>
+               </div>
+               <div class="detail-con">
+                  <span>Amount</span>             
+                  	<font class="amt">1.0</font>      
+                  <div class="clr"></div>
+               </div>
+               <div class="detail-con">
+                  <span>Payment Mode</span>           
+                  	<font>NA</font>       
+                  <div class="clr"></div>
+               </div>-->
+               <!--<div class="detail-con note">
+                  <em><strong>Note:</strong> Billdesk shall share an online response of success/failuare with the merchant.<br>The Thank you/Sorry page is recommended to be displayed by the merchant.</em>
+                  </div>--> 
+            </div>
+            <div class="mrgtp">
+				<div data-sly-resource="${'footerLogo' @ resourceType = 'iib-platform/components/content/enachpl/footerLogo'}"></div>
+                <!--<img src="${properties.srcPath}" width="120" height="29">-->
+
+                </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<div data-sly-test="${!wcmmode.edit}">
+   <sly data-sly-call="${clientlib.js @ categories='enachpl.sorry'}"/>
+</div>

@@ -1,0 +1,14 @@
+<div data-sly-test="${wcmmode.edit}">
+	Configure Flyout Menu Component
+</div>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.all @ categories='iib-platform.flyout-menu'}"/>
+<sly data-sly-test="${!properties.disableComponent}">
+<sly data-sly-use.model="com.iib.platform.models.common.FlyoutMenuModel"
+	 data-sly-use.flyoutTemplate="flyoutTemplate.html">
+     <div id="flyout-menu-${model.component.randomNumber}" class="flyout-menu ${model.component.customStyleClass}">
+		<sly data-sly-call="${flyoutTemplate.flyoutTemplate @ flyoutMenu=model.flyoutMenu}"/>
+     </div>
+</sly>
+</sly>

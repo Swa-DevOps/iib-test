@@ -1,0 +1,12 @@
+<div data-sly-test="${wcmmode.edit}">
+	Configure Overlay Component
+</div>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.all @ categories='re-platform.overlay'}"/>
+
+<sly data-sly-use.model="com.re.aem.web.platform.models.common.OverlayModel">
+	<div id="overlay-${properties.randomNumber}" class="overlay">
+		<sly data-sly-resource="${@path=model.wcmComponent.id, resourceType=model.wcmComponent.path}"></sly>
+    </div>
+</sly>

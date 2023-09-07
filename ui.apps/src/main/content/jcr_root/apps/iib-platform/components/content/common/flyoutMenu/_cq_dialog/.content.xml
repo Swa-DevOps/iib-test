@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:description="Flyout Menu Component Dialog"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Flyout Menu Component"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/layouts/tabs"
+            type="nav"/>
+        <items jcr:primaryType="nt:unstructured">
+            <config
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Configurations"
+                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <includeQuickLinks
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                defaultChecked="{Boolean}false"
+                                name="./includeQuicklinks"
+                                text="Include Quicklinks"
+                                uncheckedValue="{Boolean}false"
+                                value="{Boolean}true"/>
+                            <includeTeasers
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                defaultChecked="{Boolean}false"
+                                name="./includeTeasers"
+                                text="Include Teasers"
+                                uncheckedValue="{Boolean}false"
+                                value="{Boolean}true"/>
+                        </items>
+                    </column>
+                </items>
+            </config>
+            <flyoutQuicklinks
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Flyout Quicklinks"
+                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <quicklinksMode
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/select"
+                                fieldDescription="Select Quicklinks Listing Mode - Manual or Automated"
+                                fieldLabel="Quicklinks Mode"
+                                name="./quicklinksMode">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <option1
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Manual List"
+                                        value="manual-list"/>
+                                    <option2
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Auto List"
+                                        value="auto-list"/>
+                                </items>
+                            </quicklinksMode>
+                            <flyoutParentPagePath
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                fieldDescription="Select path for a parent page to fetch all sub-pages"
+                                fieldLabel="Auto - Select Parent Page Path"
+                                name="./flyoutParentPagePath"
+                                rootPath="/content/royal-enfield"/>
+                            <iterationLevel
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/select"
+                                fieldDescription="Select iteration level or depth"
+                                fieldLabel="Iteration Level"
+                                name="./iterationLevel">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <option1
+                                        jcr:primaryType="nt:unstructured"
+                                        text="One"
+                                        value="1"/>
+                                    <option2
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Two"
+                                        value="2"/>
+                                </items>
+                            </iterationLevel>
+                            <navigationItems
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/multifield"
+                                class="full-width"
+                                eaem-nested=""
+                                fieldDescription="Click '+' to add a new page"
+                                fieldLabel="Manual - Add Navigation Items">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/form/fieldset"
+                                    acs-commons-nested=""
+                                    name="./flyoutNavItems">
+                                    <layout
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                                        method="absolute"/>
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <text
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                    fieldDescription="Text for the Link"
+                                                    fieldLabel="Text"
+                                                    name="./text"/>
+                                                <url
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                                    fieldDescription="URL for the Link (External or Internal)"
+                                                    fieldLabel="URL"
+                                                    name="./url"
+                                                    rootPath="/content/royal-enfield"/>
+                                                <subFlyoutPagePath
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                                    fieldDescription="Select Page Path for the respective Sub Flyout Menu"
+                                                    fieldLabel="Sub-Flyout Page Path"
+                                                    name="./subFlyoutPagePath"
+                                                    rootPath="/content/royal-enfield"/>
+                                            </items>
+                                        </column>
+                                    </items>
+                                </field>
+                            </navigationItems>
+                        </items>
+                    </column>
+                </items>
+            </flyoutQuicklinks>
+            <flyoutTeaserItems
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Flyout Teaser Items"
+                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <teaserMode
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/select"
+                                fieldDescription="Select Teaser Listing Mode - Manual or Automated"
+                                fieldLabel="Teaser Mode"
+                                name="./teaserMode">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <option1
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Manual List"
+                                        value="manual-list"/>
+                                    <option2
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Auto List"
+                                        value="auto-list"/>
+                                </items>
+                            </teaserMode>
+                            <teaserParentPagePath
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                fieldDescription="Select path for a parent page to fetch all sub-pages"
+                                fieldLabel="Auto - Select Parent Page Path"
+                                name="./teaserParentPagePath"
+                                rootPath="/content"/>
+                            <teaserItems
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/multifield"
+                                class="full-width"
+                                eaem-nested=""
+                                fieldDescription="Click '+' to add a new page"
+                                fieldLabel="Manual - Add Teaser Items">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/form/fieldset"
+                                    acs-commons-nested=""
+                                    name="./flyoutTeaserItems">
+                                    <layout
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                                        method="absolute"/>
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <teaserPagePath
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                                    fieldDescription="Fields will be picked from select page properties, else manual entries below will override respective fields"
+                                                    fieldLabel="Teaser Page Path"
+                                                    name="./teaserPagePath"
+                                                    rootPath="/content"/>
+                                                <imagePath
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                                    fieldLabel="Image"
+                                                    name="./imagePath"
+                                                    rootPath="/content/dam"/>
+                                                <imageAltText
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                    fieldDescription="Alt Text for Teaser Image"
+                                                    fieldLabel="Image Alt Text"
+                                                    name="./imageAltText"/>
+                                                <title
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                    fieldDescription="Title or Heading for the Teaser"
+                                                    fieldLabel="Teaser"
+                                                    name="./title"/>
+                                                <description
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                    fieldDescription="Description or Sub Heading for Teaser"
+                                                    fieldLabel="Description"
+                                                    name="./description"/>
+                                                <ctaText
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                    fieldDescription="Text for the CTA"
+                                                    fieldLabel="CTA Text"
+                                                    name="./ctaText"/>
+                                                <ctaLink
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                                    fieldDescription="URL for the CTA (External or Internal)"
+                                                    fieldLabel="CTA URL"
+                                                    name="./ctaLink"
+                                                    rootPath="/content/indusind"/>
+                                            </items>
+                                        </column>
+                                    </items>
+                                </field>
+                            </teaserItems>
+                        </items>
+                    </column>
+                </items>
+            </flyoutTeaserItems>
+            <view
+                jcr:primaryType="nt:unstructured"
+                jcr:title="View"
+                sling:resourceType="granite/ui/components/foundation/include"
+                path="iib-platform/components/content/common/dialogTabs/view"/>
+        </items>
+    </content>
+</jcr:root>

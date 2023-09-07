@@ -1,0 +1,300 @@
+@charset "utf-8";
+/* CSS Document */
+body, article, aside, details, figcaption, figure, footer, div, header, menu, nav, section, h1, h2, h3, h4, h5, h6, p, ul, li, form{ margin:0; padding:0;  border:0;  -webkit-text-size-adjust: 100%; text-size-adjust: 100%; font-family: 'Lato', sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-size:13px; color:#666; }
+
+ul, li{ list-style:none;}
+*:focus{outline:none;}
+a, input{text-decoration:none; border:0; -webkit-transition:all 0.2s ease-out 0s; -moz-transition:all 0.2s ease-out 0s; -o-transition:all 0.2s ease-out 0s; transition:all 0.2s ease-out 0s;}
+a:hover{ -webkit-transition:all 0.2s ease-out 0s; -moz-transition:all 0.2s ease-out 0s; -o-transition:all 0.2s ease-out 0s; transition:all 0.2s ease-out 0s;}
+.clear, .clr{clear:both;}
+.fl{float:left}
+.fr{float:right}
+.scale{max-width:100%; height:auto; width:auto\9;}
+.textcenter{ text-align:center;}
+.redcolor{ color:#c93636;}
+.show480{ display:none;}
+
+.mobilever { display:none !important;}
+.mainbg{ background: url(/content/dam/iibPlatform/enach/images/main-bg.jpg) repeat-x; width:100%; position:relative}
+#wrapper {width: 100%;}
+.BgContainerBanner {width: 100%; background:url(/content/dam/iibPlatform/enach/images/personal-banner3.jpg); height: 462px; position: absolute; top:0;}
+.topContainer {margin: 0 auto; width: 100%;}
+.topContainer .logo {float: left}
+.topInner {width: 100%;	background: url(/content/dam/iibPlatform/enach/images/top-bg.png) center top no-repeat; height: 462px; position: absolute; overflow: hidden; top:0;}
+.top-design {width: 100%; height: 462px; background: url(/content/dam/iibPlatform/enach/images/top-design.png) center top no-repeat; position:absolute; top:0;}
+.headerContainer{width: 1003px;	margin: 0 auto;	position: relative;}
+
+.hder{background-color:#af4842; padding:15px 15px 10px 15px; display:none; position:relative; z-index:1001}
+.hder .logoenach{float:left; width:80px; height:auto;}
+.hder .mobicon{ float:right; width:25px; height:auto; cursor:pointer; font-size: 17px; color: #fff;}
+.hder .mobicon a{ color:#fff;}
+
+.benifitsofwrapP {font-size: 13px; color: #af4842; font-weight: bold; padding-bottom: 5px;}
+.bannerinner{ position:relative;}
+.bannerinner .bannertxt{ position:absolute; width:50%; left:15px; top:20%;}
+.bannerinner .bannertxt h1{padding-bottom: 5px; font-family: 'Open Sans'; font-size: 26px; color: #fff; font-weight: 600; display: block; margin-bottom: 5px;}
+.bannerinner .bannertxt p{padding-bottom: 20px; font-family: 'Open Sans'; font-size: 13px; color: #fff;}
+.bannerinner .bannertxt a{}
+.welcomeright{ width:96% !important;}
+.welcomeright h1{ text-align:right; float:right;}
+.bannerinner img{ width:100%; height:auto;}
+
+.bannerinner1{ position:relative;}
+.bannerinner1 .bannertxt{ position:absolute; width:50%; left:15px; top:20%;}
+.bannerinner1 .bannertxt h1{padding-bottom: 5px; font-family: 'Open Sans'; font-size: 26px; color: #fff; font-weight: 600; display: block; margin-bottom: 5px;}
+.bannerinner1 .bannertxt p{padding-bottom: 20px; font-family: 'Open Sans'; font-size: 13px; color: #fff;}
+
+.innerwork_wrap{ background-color:#FFF;}
+.inner_wrap{padding:12px;}
+.about2box_cont{ display:flex; width:100%;}
+.about2box_cont .twobox{ width:50%; display:flex;flex-direction:column; border:12px solid #fff; box-sizing:border-box; background:url(/content/dam/iibPlatform/enach/images/about-box-bg.jpg); text-align:center; vertical-align:middle; padding:35px 55px;}
+.about2box_cont .twobox p{font-family: 'Open Sans'; font-size: 13px; color: #454545; display:block; margin-bottom: auto;}
+.about2box_cont .twobox a{font-family:'Open Sans'; font-weight:600; font-size:13px;  margin-top:25px;  position: relative;left: 50%;transform: translateX(-50%);width: 188px;}
+.about2boxInner{ padding:15px;}
+.simpletxt{}
+.simpletxt p{ padding-bottom:20px; font-family: 'Open Sans'; font-size: 13px; color: #454545;}
+.Benefits_of_wrap{ padding-bottom:0;}
+.Benefits_of_wrap h2{padding-bottom:10px; font-family: 'Open Sans'; font-size:26px; color: #af4842; font-weight:600;}
+.Benefits_of_wrap p{font-family: 'Open Sans'; font-size: 13px; color: #454545; padding-bottom:10px;}
+.Benefits_of_wrap .cointener_ben{ padding-bottom:0px;}
+.Benefits_of_wrap .cointener_ben .fourbox{ float:left; width:45%; padding-right:5%; padding-bottom:20px;}
+.Benefits_of_wrap .cointener_ben .fourbox .imgbox{ float:left; width:35%;}
+.Benefits_of_wrap .cointener_ben .fourbox .imgbox img{ border:3px solid #ededed;}
+.Benefits_of_wrap .cointener_ben .fourbox .textbox{ float:right; font-family: 'Open Sans'; font-size: 13px; color: #454545; width:60%;}
+.Benefits_of_wrap .cointener_ben .fourbox .textbox h4{ font-size:15px; color:#af4842; font-weight:500; padding-bottom:5px;}
+.Benefits_of_wrap .cointener_ben .fourbox .textbox p{ padding-bottom:0px;}
+.offer_enach{}
+.offer_enach li{ list-style:decimal; font-size:13px; font-weight:bold; margin-left:15px;} 
+.offer_enach li h5{ font-size:15px; padding-bottom:5px;}
+.offer_enach li p{ font-weight: normal;}
+.imgcentre {width:100%}
+
+.btnonlybox{color:#af4842; position:relative; text-transform: uppercase; background-color:#fff; padding:8px 15px; display:inline-block; border:1px solid #af4842; font-weight:600; cursor:pointer; margin:5px 0;}
+.btnonlybox:hover{color:#fff; background-color:#af4842; }
+
+
+
+.hvr-btn{-webkit-transform: perspective(1px) translateZ(0); transform: perspective(1px) translateZ(0); color:#fff; position:relative; text-transform: uppercase; background-color:#af4842; padding:8px 15px; display:inline-block; border:0px; }
+.hvr-btn:before {content:""; position:absolute; z-index:-1; top:0; left:0; right:0; bottom:0; background:#7b332f; -webkit-transform:scaleY(0); transform:scaleY(0); -webkit-transform-origin:50% 100%; transform-origin:50% 100%; -webkit-transition-duration:0.3s;
+  transition-duration: 0.3s;}
+.hvr-btn:hover:before, .hvr-btn:focus:before, .hvr-btn:active:before{-webkit-transform: scaleY(1); transform: scaleY(1);}
+.forexwidget {position: fixed; right: 0; top: 140px; z-index: 10;}
+
+.hvr-btnw{-webkit-transform: perspective(1px) translateZ(0); transform: perspective(1px) translateZ(0); color:#af4842; position:relative; text-transform: uppercase; background-color:#fff; padding:8px 15px; display:inline-block; border:0px; }
+.hvr-btnw:before {content:""; position:absolute; z-index:-1; top:0; left:0; right:0; bottom:0; background:#7b332f; -webkit-transform:scaleY(0); transform:scaleY(0); -webkit-transform-origin:50% 100%; transform-origin:50% 100%; -webkit-transition-duration:0.3s;
+  transition-duration: 0.3s;}
+.hvr-btnw:hover{ color:#fff;}
+.hvr-btnw:hover:before, .hvr-btnw:focus:before, .hvr-btnw:active:before{-webkit-transform: scaleY(1); transform: scaleY(1); color:#fff;}
+
+
+
+/************ OTP ************/
+.formboxcenter{ width:30%; margin:10% auto; padding:25px 50px; border:10px solid #af4842; background-color:#f4f4f4;}
+.Otp100-form {width: 100%;}
+.Otp100-form-title {font-size:13px; color: #333333; line-height: 1.2; text-align: center; width: 100%; display: block; padding-bottom: 25px;}
+.wrap-input100 {position: relative; width: 100%; z-index: 1; margin-bottom: 10px;}
+.input100 {font-size: 13px; line-height:40px; color: #666666;  display: block; width: 100%; background:none; height: 40px; padding: 0 10px; border:2px solid #af4842; box-sizing: border-box;}
+.inputMobile100 {font-size: 13px; line-height:40px; color: #666666;  display: block; width: 100%; background:none; height: 40px; padding: 0 20px; border:2px solid #af4842; box-sizing: border-box;}
+.input50 {font-size: 13px; color: #666666; background:none; position:relative;top : 28px; padding-left: 5px;}
+.container-login100-form-btn {width: 100%; display: -webkit-box; display: -webkit-flex; display: -moz-box; display: -ms-flexbox; display: flex; flex-wrap: wrap; justify-content: center; padding-top: 20px;}
+.form-btn { font-size:13px; font-weight:600; padding:7px 30px; cursor:pointer;}
+.headingLine{padding-bottom:15px;  border-bottom:1px solid #cfcfcf; display:flex; margin-bottom:15px;}
+.headingLine .title{font-family: 'Open Sans'; font-size:26px; color: #af4842; font-weight:600;}
+.headingLine .page_logo { text-align: right;flex-grow: 1;}
+.OtptextBox{ display:block; text-align:center; padding:20px 0 0;}
+.OtptextBox a{ display:inline-block; margin:0 10px;}
+.OtptextBox a.sendotpblk{ font-size:12px; color:#666; text-decoration:underline;}
+.OtptextBox a.sendotpblk:hover{ text-decoration:none;}
+.OtptextBox .sendotpred{font-size:13px; color:#af4842;}
+
+/************ Error ************/
+.borderboxcenter{ width:50%; margin:10% auto; padding:35px 25px; border:1px solid #cfcfcf;}
+.errorimg{ font-size:45px; text-align:center; margin-bottom:15px;}
+.errorimg span{ width:115px; height:115px; background-color:#c93636; display:inline-block; line-height:115px; box-sizing:border-box; color:#fff; border-radius:50%; -moz-border-radius:50%; -webkit-border-radius:50%;}
+.errorboxcenter h4{ font:600 14px/26px 'Open Sans', Arial, Helvetica, sans-serif; color:#333; padding-bottom:12px;}
+.borderboxcenter .homebtn{font:600 16px/26px 'Open Sans', Arial, Helvetica, sans-serif; color:#c93636; padding:12px 0 0; display:inline-block;}
+.borderboxcenter .homebtn:hover{ color:#333;}
+.sucessimg{font-size:45px; text-align:center; margin-bottom:15px;}
+.sucessimg span{ width:115px; height:115px; background-color:#31af91; display:inline-block; line-height:115px; box-sizing:border-box; color:#fff; border-radius:50%; -moz-border-radius:50%; -webkit-border-radius:50%;}
+.sucessbox h3{ font:600 15px/26px 'Open Sans', Arial, Helvetica, sans-serif; padding-bottom:12px;}
+.sucessbox h4{ font:400 13px/26px 'Open Sans', Arial, Helvetica, sans-serif; color:#333; padding-bottom:5px;}
+
+/************E-Nach Details****************/
+.nach_details_wrap{ padding-bottom:25px;}
+.cointaner_details{ padding-bottom:20px; border-bottom:1px solid #cfcfcf; margin-bottom:20px;}
+.cointaner_details .formbox{ width:55%; float:left;}
+.backbox{ display:block; text-align:right;}
+.fieldbox{ padding:5px 0;}
+.fieldboxleft{ width:40%; float:left; text-align:left; font-size:14px; line-height:40px;}
+
+.tooltip {
+    position: relative;
+    
+}
+/*.fieldboxleft span { width:18px; height:18px; margin-left:7px; background-color: #af4842; display: inline-block; box-sizing: border-box; color: #fff; border-radius: 50%; -moz-border-radius: 50%; -webkit-border-radius: 50%; text-align:center;  line-height:18px; font-size:9px; color:#fff; }*/
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #af4842;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px; font-size:15px;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #af4842 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.fieldboxleft span{ font-size:18px; line-height:normal !important; font-weight:normal; color:#F00;}
+.fieldboxright{ width:60%; float:left; text-align:left; font-size:14px; line-height: 28px;}
+.fieldboxright input{ width:93%; border:1px solid #cfcfcf; font-size:13px; padding:10px; position:relative;}
+.fieldboxright textarea{ width:93%; border:1px solid #d4d2d2; padding:4px 9px; line-height:17px !important; font-family:Arial, Helvetica, sans-serif; font-size:13px;}
+.fieldboxright select{ width:97.5%; border:1px solid #d4d2d2; padding:4px 9px; line-height:17px; overflow: hidden; -webkit-appearance: none; -moz-appearance: none; -ms-appearance: none; -o-appearance: none; cursor:pointer; appearance: none; text-indent: 0.01px; float:left; text-overflow: ''; padding-right:22px; background: url(/content/dam/iibPlatform/enach/images/arrow_size.png) no-repeat scroll 98% 9px;
+  @media (-webkit-min-device-pixel-ratio: 2),}
+.inputonlytxt .fieldboxleft, .inputonlytxt .fieldboxright{ line-height:22px;}
+.fieldboxright .year, .fieldboxright .month, .fieldboxright .day{ float:left;}
+.fieldboxright .year{ width:70px; margin-right:5px;}
+.fieldboxright .month{ width:90px; margin-right:5px;}
+.fieldboxright .day{ width:70px;}
+.iconSelect { background-color:#fff !important; background:#fff url(/content/dam/iibPlatform/enach/images/selectboxarrow.png) !important; background-repeat:no-repeat !important; background-position:right 7px top 50%  !important; background-size:9px !important; }
+.vid a{ color:#000; font-size:11px; text-decoration:underline;}
+.vid a:hover{ text-decoration:none;}
+.inputonlytxt{ position:relative;}
+.ccode{ position:absolute;  right:0; top:10px;}
+.mobright{ display:none; cursor:pointer;}
+
+.cointaner_details .tablebox{ width:40%; float:right; text-align:right;}
+.cointaner_details .tablebox h4{ text-align:left; color:#af4842; font-size:14px; padding-bottom:10px; font-weight:500;}
+.table_wrap{ width:100%; overflow:hidden; overflow-x:auto; text-align:left; padding-bottom:10px;}
+#flip-scroll table { width: 100%; border-collapse: collapse; border-spacing: 0; border:1px solid #af4842;}
+#flip-scroll th,
+#flip-scroll td { margin: 0; vertical-align:middle; padding:15px 10px; border:1px solid #af4842; font-size:13px; font-weight:normal;}
+/*#flip-scroll tbody tr.dark { background-color:#e0e0e0;}*/
+#flip-scroll th{background-color:#af4842; font-size:13px; font-weight:normal; color:#fff;}
+#flip-scroll td{ background-color:#f8f8f8; }
+#flip-scroll td:hover{ background-color:#ededed; }
+#flip-scroll tr:hover{ background-color:#f8f8f8 !important;}
+.remark{ width:115px !important; display:block;}
+.redbtn{ color:#af4842;}
+.statementbtn{ text-align:center; display:block; padding:12px 0;}
+#flip-scrollnew table { width: 100%; border-collapse: collapse; border-spacing: 0; border:1px solid #afafaf;}
+#flip-scrollnew th,
+#flip-scrollnew td { margin: 0; vertical-align:middle; padding:10px 5px; border:1px solid #afafaf; font-size:12px; font-weight:normal;}
+/*#flip-scroll tbody tr.dark { background-color:#e0e0e0;}*/
+#flip-scrollnew th{background-color:#af4842; font-size:12px; font-weight:normal; color:#fff; white-space: nowrap; }
+#flip-scrollnew td:hover{ background-color:#ededed; }
+#flip-scrollnew tr:hover{ background-color:#f8f8f8 !important;}
+#flip-scrollnew tr td:nth-child(1),#flip-scrollnew tr td:nth-child(11){ white-space: nowrap; text-align:left;}
+#flip-scrollnew tr td:nth-child(10){ width:100px; }
+#flip-scrollnew a{ color:#af4842; text-decoration:underline;}
+#flip-scrollnew a:hover{ text-decoration:none;}
+.redbtnnew{ font-size:14px; margin:0 3px; text-decoration:none; color:#af4842;}
+.redbtnnew:hover{ color:#333 !important;}
+
+.overlay3 {height: 100%; width: 0; position: fixed; top: 0; left:0; background-color: rgba(0,0,0,1); overflow-y: auto; z-index:1000; overflow-x: hidden; text-align: center; opacity:0; transition: opacity 0.2s;}
+.homelink{position:absolute; display:none; top:47px; z-index:1002; width:100%; text-align:right; background:#fff; font:600 14px/26px 'Open Sans', Arial, Helvetica, sans-serif;}
+.homelink a{color:#af4842; padding:8px 10px 8px 0; display:block}
+
+.manageenachmob_wrap{ display:none;}
+.manageenachmob_wrap .btnbx{ display:block; margin-bottom:20px;}
+.manageenachmob_wrap .btnbx a{ display:block; background-color:#f4f4f4; padding:10px 20px; color:#af4842; -webkit-transition:all 0.2s ease-out 0s; -moz-transition:all 0.2s ease-out 0s; -o-transition:all 0.2s ease-out 0s; transition:all 0.2s ease-out 0s;}
+.manageenachmob_wrap .btnbx a span{ float:right; margin-right:0px; -webkit-transition:all 0.2s ease-out 0s; -moz-transition:all 0.2s ease-out 0s; -o-transition:all 0.2s ease-out 0s; transition:all 0.2s ease-out 0s;}
+.manageenachmob_wrap .btnbx a:hover{ background-color:#eaeaea;}
+.manageenachmob_wrap .btnbx a:hover span{ margin-right:-8px; -webkit-transition:all 0.2s ease-out 0s; -moz-transition:all 0.2s ease-out 0s; -o-transition:all 0.2s ease-out 0s; transition:all 0.2s ease-out 0s;}
+.manageenachmob_wrap .btnbx .remarktxt{ padding:5px 20px;}
+
+.enachmob_slider{ padding:10px 0; margin: 0 auto; width: 95%;}
+.enachmob_slider .item{ border:1px solid #cfcfcf; box-sizing: border-box !important; width:99%;}
+.enachmob_slider h4{font:600 14px/26px 'Open Sans', Arial, Helvetica, sans-serif; color:#af4842; padding:4px 10px; background-color:#f4f4f4;}
+.enachmob_slider .tabledata{}
+.enachmob_slider .tabledata .twocolm{ border-bottom:1px solid #cfcfcf; border-top:1px solid #cfcfcf;}
+.enachmob_slider .tabledata .twocolm .rowbox{ width:50%; box-sizing:border-box; padding:4px 10px; float:left; font:14px/26px 'Open Sans', Arial, Helvetica, sans-serif; color:#777;}
+.enachmob_slider .tabledata .twocolm .rowbox font{ color:green; padding-left:10px;}
+.enachmob_slider .tabledata .singalclm{ display:block}
+.enachmob_slider .tabledata .singalclm .rowbox{ width:100%; box-sizing:border-box; padding:4px 10px; float:left; font:13px/20px 'Open Sans', Arial, Helvetica, sans-serif; color:#777;}
+.enachmob_slider .tabledata .singalclm .rowbox span{ float:right; text-align:right; color:#000; width:65%;}
+.editbtnbx a{ text-align:right; float:right !important;}
+.enachmob_slider .tabledata .txt{ padding:5px 10px;}
+
+
+/* ################### ksing ######################## */
+.enachofferimg { width:100%; }
+.enachofferReferral { display:block; margin-top:20px; }
+.enachofferReferral p { width:40%; float:left; text-align:right; line-height:24px; color:#454545;  }
+.enachofferReferral input { width:140px; height:22px; float:left; margin:0 0 0 20px; border:solid 1px #dadada;  line-height:24px; }
+.confirmbutton { background-color: #af4842;  color:#fff; margin-right:10px; }
+.fieldboxleft small { color:#af4842; }
+.enachofferInput { width:215px !important; padding:5px 10px !important; background:#fff; }
+.enachofferSelect { width:235px !important; padding:5px 10px !important; background-color:#fff !important; background:url(/content/dam/iibPlatform/enach/images/selectboxarrow.png) !important; background-repeat:no-repeat !important; background-position:right 10px top 10px  !important; }
+.enachofferCal { background-color:#fff !important; background:url(/content/dam/iibPlatform/enach/images/clc-icon2.png) !important; background-repeat:no-repeat !important; background-position:right 4px top 4px !important; }
+.fieldboxHeading { display:block; clear:both; color: #af4842; font-size:16px; font-weight:bolder; border-top: 1px solid #af4842; padding: 10px 0; margin-top: 10px;}
+.fieldboxHeadingwoborder { display:block; clear:both; color: #af4842; font-size:16px; font-weight:bolder; }
+.fieldboxHeading span { width:18px; height:18px; margin-left:7px; background-color: #af4842; display: inline-block; box-sizing: border-box; color: #fff; border-radius: 50%; -moz-border-radius: 50%; -webkit-border-radius: 50%; text-align:center;  line-height:18px; font-size:9px; color:#fff; }
+.fieldboxBot { margin-top:10px; display:block; clear:both; color: #454545; font-size:14px;  }
+.fieldboxBot strong { color:#af4842; font-weight:500; }
+
+
+/*** Anuj ***/
+.black_overlay {position: fixed; top: 0%; left: 0%; right: 0%; bottom: 0%; width: 100% !important; width: 100%; height: 100% !important; height:100%;background-color: #000 !important; background-color: #000; z-index: 9999; -moz-opacity: 0.80; opacity: 0.5; filter: alpha(opacity=30); }
+.white_content { background:#ededed; display: block; position: fixed; top: 10%; left: 0; right: 0; width: 500px;  height: auto; padding: 0px;margin: 0 auto; border:5px #ababab solid; z-index: 10001; overflow: hidden; }
+
+.statmentD{ position:relative;}
+.black_overlaynew {position:; display:none;}
+.white_contentnew { background:#af4842; display: block; position: relative; top:0; left: 0; right: 0; width: 100%;  height: auto; padding: 0px;margin: 0 auto; z-index: 10001; overflow: hidden; }
+
+.pop-content{ padding: 25px 10%; float:left;}
+.pop-content h2{ font-size:18px;  text-align:center; color:#af4843; margin:15px 0px;}
+.pop-btn{width:250px; margin:15px auto; text-align:center;}
+.pop-overlay-btn a{ text-decoration:line-through; color:#FFF;}  	
+.proceed-div{ width:100%; float:left; }
+.proceed-div p{ font-size:12px;}
+.proceed-div b{ font-size:12px;}
+.left-proceed{ width:15%; float:left;}
+.left-proceed img{ max-width:80%; }	
+.right-proceed{ width:85%; float:left;}	
+.pop-content1{ padding: 25px 10%; text-align:center;}
+.pop-content1 h2{ font-size:18px;  text-align:center; color:#af4843; margin:15px 0px;}
+.fildbx{ padding:10px 0;}
+.fildbx input{ border:1px solid #999; padding:4px;}
+.enachCal { background-color:#fff !important; background:url(/content/dam/iibPlatform/enach/images/clc-icon2.png) !important; background-repeat:no-repeat !important; background-position:right 4px top 4px !important; }
+
+.pop-contentkk .fildbx{ color:#fff;}
+.pop-contentkk .fildbx input{ width:35%; background-color:#FFF !important;}
+
+
+.white_contentnew h2{ display:none;}
+.white_contentnew .pop-contentkk{ color:#fff; padding:15px;}
+
+.fildbxnew {padding: 10px 0; width: 295px; margin: 0 auto;}
+.fieldboxleft1{ width:45px; float:left; text-align:left; font-size:14px; line-height:26px; color:#fff; text-align:right;margin-right:8px;}
+.fieldboxleft1 span{ font-size:18px; line-height:normal !important; font-weight:normal; color:#F00; }
+.fieldboxright1{ width:225px; float:left; text-align:left; font-size:14px; line-height: 28px;}
+.fieldboxright1 select{ width:97.5%; border:1px solid #d4d2d2; padding:4px 9px; line-height:17px; overflow: hidden; -webkit-appearance: none; -moz-appearance: none; -ms-appearance: none; -o-appearance: none; cursor:pointer; appearance: none; text-indent: 0.01px; float:left; text-overflow: ''; padding-right:22px; background: url(/content/dam/iibPlatform/enach/images/arrow_size.png) no-repeat scroll 98% 9px;
+  @media (-webkit-min-device-pixel-ratio: 2),}
+.fieldboxright1 .year, .fieldboxright1 .month, .fieldboxright1 .day{ float:left;}
+.fieldboxright1 .year{ width:70px; margin-right:-2px;}
+.fieldboxright1 .month{ width:90px; margin-right:-3px;}
+.fieldboxright1 .day{ width:70px;}
+.closeb{ display:none;}
+
+.awesomplete > input {
+    display: block;
+}

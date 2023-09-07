@@ -1,0 +1,249 @@
+<div data-sly-test="${wcmmode.edit}">
+    Configure Create E-nach Form Component
+ </div>
+
+ <sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"/>
+
+ <sly data-sly-use.model="com.iib.platform.cfdenach.models.CreateEnachModel">
+     <div class="innerwork_wrap">
+        <div class="inner_wrap">
+           <div class="about2boxInner">
+
+              <div class="pagingwrap"><a href="${model.backButtonUrl}"><i class="fas fa-angle-left"></i> ${properties.backHeading}</a></div>
+              <div class="tablebox ccode mobilever" ><!--<img src="${properties.imagePath}" class="enachofferimg">--></div>
+              <div class="headingLine">
+              	<div class="title">${properties.eNachHeading}</div>
+              	<div class="page_logo"><img src="/content/dam/iibPlatform/cfdenach/images/indus-logo.png" class="d-inline-block"> </div>
+              </div>
+              <div class="nach_details_wrap">
+                 <div class="cointaner_details inputonlytxt">
+                    <form class="formbox" id="createform" autocomplete="off">
+
+                    <div class="fieldbox">
+                          <div class="fieldboxHeadingwoborder">Your Deal No to be used for CFD</div>
+                          <div class="clr"></div>
+                       </div>
+
+					 <div class="fieldbox">
+
+                          <div class="fieldboxleft creditAccountLabel">${properties.creditAccountHeading}<small>*</small></div>
+                          <div class="fieldboxright">
+                             <input style="text-transform: uppercase;" type="text" name="accountNo" class="enachofferInput accountNo">
+                          </div>
+                          <div class="clr"></div>
+                       </div>
+
+                   	 <div class="fieldbox">
+                          <div class="fieldboxleft customerEmailLabel">Registered Email ID</div>
+
+                          <div class="fieldboxright"><input type="text" name="customerEmail" class="enachofferInput custEmail"></div>
+                          <div class="fieldboxleft customerEmailLabel"><small>We will use this Email for all correspondence </small></div>
+
+                          <div class="clr"></div>
+                       </div>
+						  <div class="tablebox ccode desktopver" >
+                          <!--<img src="${properties.imagePath}" class="enachofferimg">-->
+                       </div>
+                       <div class="fieldbox">
+                          <div class="fieldboxHeading1">${properties.debitDetails} <span id="editMode"><a href="#" id="editA">Click To Edit </a></span><!--<span><i class="fas fa-exclamation"></i></span>--></div>
+                          <div class="clr"></div>
+                       </div>
+
+                       <!--W/o Edit Section start-->
+                              <div id="woeditSection" class="fieldbox"> 
+                       <div class="fieldbox">
+                          <div class="fieldboxleft customerNameLabel">${properties.accNameHeading}<small>*</small></div>
+                          <div class="fieldboxright"><input style="text-transform: uppercase;" type="text" name="customerName" class="enachofferInput customerName"></div>
+                          <div class="clr"></div>
+                       </div>
+
+                       <div class="fieldbox">
+                          <div class="fieldboxleft bankNameLabel">${properties.bankNameHeading}<small>*</small></div>
+                          <div class="fieldboxright"><input style="text-transform: uppercase;" type="text" name="destinationBank" class="enachofferInput bankName"></div>
+                          <div class="clr"></div>
+                       </div>
+
+
+                        <div class="fieldbox">
+                          <div class="fieldboxleft ifscLabel">${properties.bankIFSCcodeHeading}<small>*</small></div>
+                          <div class="fieldboxright"><input style="text-transform: uppercase;" type="text" name="destinationBankId" maxlength="11" class="enachofferInput" autocomplete="off" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : ((event.charCode >= 48 && event.charCode <= 57)||(event.charCode >= 65 && event.charCode <= 90)||(event.charCode >= 97 && event.charCode <= 122))"></div>
+                          <div class="clr"></div>
+                       </div>
+                       <div class="fieldbox">
+                          <div class="fieldboxleft accountNumberLabel">${properties.accountNumber}<small>*</small></div>
+                          <div class="fieldboxright"><input type="text" id="accountNumber" maxlength="34" name="accountNumber" class="enachofferInput accountNumber"></div>
+                          <div class="clr"></div>
+                       </div>
+                       </div>
+                        <!--W/o Edit Section end-->
+
+                        <div id="editSection" class="fieldbox" style="display:none">                   <!--Edit Section start-->
+                       <div class="fieldbox">
+                          <div class="fieldboxleft customerNameLabel">${properties.accNameHeading}<small>*</small></div>
+                          <div class="fieldboxright"><input style="text-transform: uppercase;" type="text" name="ecustomerName" class="enachofferInput ecustomerName" autocomplete="off"></div>
+                          <div class="clr"></div>
+                       </div>
+
+                       <div class="fieldbox">
+                          <div class="fieldboxleft bankNameLabel">${properties.bankNameHeading}<small>*</small></div>
+                          <div class="fieldboxright"><input style="text-transform: uppercase;" type="text" id="awesomeHu" name="edestinationBank" class="enachofferInput ebankName"></div>
+             		<!-- <div class="bankLabel"><small>Currently ICICI Bank, HDFC Bank, AXIS Bank ,YES Bank, Kotak Mahindra Bank are available</small></div>-->
+                         <div class="clr"></div>
+                       </div>
+
+
+                        <div class="fieldbox">
+                          <div class="fieldboxleft ifscLabel">${properties.bankIFSCcodeHeading}<small>*</small></div>
+                          <div class="fieldboxright"><input autocomplete="off" style="text-transform: uppercase;" type="text" name="edestinationBankId" maxlength="11" class="enachofferInput" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : ((event.charCode >= 48 && event.charCode <= 57)||(event.charCode >= 65 && event.charCode <= 90)||(event.charCode >= 97 && event.charCode <= 122))"></div>
+                          <div class="clr"></div>
+                       </div>
+                       <div class="fieldbox">
+                          <div class="fieldboxleft accountNumberLabel">${properties.accountNumber}<small>*</small></div>
+                          <div class="fieldboxright"><input autocomplete="off" type="text" id="eaccountNumber" maxlength="34" name="eaccountNumber" class="enachofferInput eaccountNumber" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : ((event.charCode >= 48 && event.charCode <= 57)||(event.charCode >= 65 && event.charCode <= 90)||(event.charCode >= 97 && event.charCode <= 122))"></div>
+                          <div class="clr"></div>
+                       </div>
+</div>
+                    <!--Edit Section end-->
+
+
+
+
+
+                     <!--  <div class="fieldbox">
+                          <div class="fieldboxleft confirmAccountLabel">${properties.confirmAccountNumberHeading}<small>*</small></div>
+                          <div class="fieldboxright"><input type="text" name="customerAccountNo" maxlength="34" class="enachofferInput confirmAccountNo"></div>
+                          <div class="clr"></div>
+                       </div>-->
+
+						<div class="fieldbox">
+                          <div class="fieldboxHeading">Details of Recurring transfer <!--<span><i class="fas fa-exclamation"></i></span>--></div>
+                          <div class="clr"></div>
+                       </div>
+
+                       <div class="fieldbox">
+                          <div class="fieldboxleft emiAmountLabel">${properties.emiamountToTransferHeading}<small>*</small></div>
+                          <div class="fieldboxright"><input type="text" name="emi_maximum_amount" class="enachofferInput maximum_amount" ></div>
+                          <div class="clr"></div>
+                       </div>
+                        <div class="fieldbox">
+                          <div class="fieldboxleft maximumAmountLabel">${properties.amountToTransferHeading}<small>*</small></div>
+                          <div class="fieldboxright"><input type="text" name="maximum_amount" class="enachofferInput maximum_amount"></div>
+                          <div class="clr"></div>
+                       </div>
+                        <div class="fieldbox">
+                         <div class="fieldboxleft transferFreqLabel">${properties.transferFrequencyHeading}<small>*</small></div>
+                           <div class="fieldboxright"><input type="text" name="transferFrequencyText" class="enachofferInput transferFrequencyText"></div>
+                          <div class="clr"></div>
+                       </div>
+                       <div class="fieldbox" style="display:none">
+                          <div class="fieldboxleft transferFreqLabel">${properties.transferFrequencyHeading}<small>*</small></div>
+                          <div class="fieldboxright">
+                             <select class="enachofferSelect transferFrequency" data-sly-list="${model.listItems}">
+                                <option value="${item.value}">${item.text}</option>
+                             </select>
+                          </div>
+                          <div class="clr"></div>
+                       </div>
+                       <div class="fieldbox">
+                          <div class="fieldboxleft startDateLabel">${properties.startDate}<small>*</small></div>
+
+
+
+
+
+
+
+                             <div class="fieldboxright">
+                             <input type="text" name="startDate" id="sdate" class="enachofferInput enachofferCal startDate">
+ 			              </div>
+					<div class="clr"></div>
+
+                       </div>
+
+						<div class="fieldbox">
+                          <div class="fieldboxleft startDateLabel">Select For</div>
+
+                             <div class="fieldboxleft">
+                              <label for="ucancel">
+                               <input type="checkbox" name="untilCancel" id="ucancel" class=" enachofferCal untilcancel" checked><small> ${properties.untilCancel}</small></label>
+                                    </div>
+
+
+						<div class="clr"></div>
+
+                       </div>
+
+                           <div class="fieldbox" id="eDate" style="display:none">
+                          <div class="fieldboxleft endDateLabel">${properties.endDate}<small>*</small></div>
+                          <div class="fieldboxright">
+                             <input type="text" name="endDate" id="edate" class="enachofferInput enachofferCal endDate" disabled>
+                          </div>
+                          <div class="clr"></div>
+                       </div>
+                       <div class="fieldbox" style="display:none">
+                          <div class="fieldboxleft totalAmountLabel">${properties.totalAmount}<small>*</small></div>
+                          <div class="fieldboxright"><input type="text" id="totalAmount" class="enachofferInput totalAmount" disabled></div>
+                          <div class="clr"></div>
+                       </div>
+                       <div class="fieldbox" style="display:none">
+                          <div class="fieldboxleft totalInstallmentsLabel">${properties.totalInstallments}<small>*</small></div>
+                          <div class="fieldboxright"><input type="text" id="totalInstallments" class="enachofferInput totalInstallments" disabled></div>
+                          <div class="clr"></div>
+                       </div>
+                      <!-- <div class="fieldbox">
+                          <div class="fieldboxleft tooltip aadharLabel">${properties.aadhaarVirtualId}<small>*</small> <span class="tooltiptext">Tooltip text</span></div>
+                          <div class="fieldboxright">
+                             <input type="text" name="aadharId" class="enachofferInput aadharId">
+                             <div class="vid"><a href="https://resident.uidai.gov.in/web/resident/vidgeneration" target="_blank">${properties.generateVID}</a></div>
+                          </div>
+                          <div class="clr"></div>
+                       </div>-->
+
+                       <div class="fieldbox">
+                          <div class="fieldboxHeading">Referral Code (for branch staff only) <!--<span><i class="fas fa-exclamation"></i>--></span></div>
+                          <div class="clr"></div>
+                       </div>
+
+                       <div class="fieldbox">
+                          <div class="fieldboxleft referralCodeLabel">${properties.referralCode}</div>
+                          <div class="fieldboxright"><input style="text-transform: uppercase;" type="text" name="" class="enachofferInput">
+                          </div>
+                          <div class="clr"></div>
+                       </div>
+                       <div class="tablebox ccode desktopver" >
+                         <!-- <img src="${properties.imagePath}" class="enachofferimg">-->
+                       </div>
+                    </form>
+                    <div class="clear"></div>
+                 </div>
+
+                 <div class="cointaner_details inputonlytxt" style="border-bottom:none;">
+                    <div class="formbox">
+                       <div class="fieldbox">
+                          <div>
+                             <input name="" type="submit" class="btnonlybox confirmbutton" value="${properties.confirm}">
+                             <a href="${model.cancelButtonUrl}"><input name="" type="submit" class="btnonlybox" value="${properties.cancel}"></a>
+                          </div>
+                          <div class="clear"></div>
+                       </div>
+                       <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                 </div>
+                 <div class="cointaner_details inputonlytxt" style="border-bottom:none;">
+                    <div class="formbox">
+                       <div class="fieldbox">
+                          <div class="fieldboxleft"><small>*</small>Mandatory Fields</div>
+                          <div class="clear"></div>
+                       </div>
+                       <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+ </sly>
+
+ <sly data-sly-call="${clientlib.js @ categories='cfd-enach.createForm'}"/>

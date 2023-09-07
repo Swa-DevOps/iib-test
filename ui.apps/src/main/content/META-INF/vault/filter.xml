@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+	<filter root="/apps/iib-platform" />
+
+	<filter root="/apps/sling/servlet/errorhandler" />
+
+
+	<filter root="/conf/iib-platform" mode="merge" />
+
+
+	<filter root="/etc/clientlibs/iib-platform" />
+
+
+</workspaceFilter>

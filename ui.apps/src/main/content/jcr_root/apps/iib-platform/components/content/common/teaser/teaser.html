@@ -1,0 +1,27 @@
+<div data-sly-test="${wcmmode.edit}">
+	Configure Teaser Component
+</div>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"/>
+<sly data-sly-test="${!properties.disableComponent}">
+<sly data-sly-use.model="com.iib.platform.models.common.TeaserModel">
+	<div id="teaser-${model.component.randomNumber}" class="${model.component.customStyleClass}">
+	    <div>
+	        <div class="col">
+	            <div> 
+	                <a href="${model.link}" target="${model.ctaOpenInNewWindow == 'true' ? '_blank' : ''}">
+                    	<img src="${model.image.srcPath}" alt="${model.image.altText}">
+                        <div>
+                            <div>
+                                <h3>${model.title}</h3>
+                                <p>${model.description}</p>
+                                <button class="custom-btn bor arrow-r">${model.ctaText}</button>
+                            </div>
+                        </div>
+                   	</a>
+	            </div>
+	        </div>
+	    </div>
+	</div>	
+</sly>
+</sly>

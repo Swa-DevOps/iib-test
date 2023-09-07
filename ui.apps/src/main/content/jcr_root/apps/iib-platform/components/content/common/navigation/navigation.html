@@ -1,0 +1,114 @@
+<div data-sly-test="${wcmmode.edit}">
+	Configure Navigation Component
+</div>
+
+<sly data-sly-test="${!wcmmode.edit}">
+    <sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+         data-sly-call="${clientlib.all @ categories='indus-smart.navbar'}"/>
+</sly>
+<sly data-sly-test="${!properties.disableComponent}">
+<sly data-sly-use.model="com.iib.platform.common.models.NavigationModel">
+
+	<div id="navigation-${model.component.randomNumber}">
+	   <!-- BEGIN MAIN WRAPPER -->
+	   <div class="morph-main-wrapper">
+	      <div class="morph-main-wrapper-inner">
+	         <div class="morph-main">
+	            <!-- BEGIN HEADING CONTENT -->
+	            <div class="morph-heading-wrapper">
+	               <div class="morph-heading-inner">
+	                  <div class="tg-menue">
+	                     <!-- BEGIN MAIN MENU BUTTON -->
+	                     <div class="morph-main-menu-button-wrapper">
+	                        <!-- BEGIN MENU BUTTON LABEL (if one is entered) -->
+	                        <div class="morph-menu-button-label">
+	                           ${model.hamburgerMenuText} 
+	                        </div>
+	                        <!-- END MENU BUTTON LABEL (if one is entered) -->
+	                        <div class="morph-main-menu-button">
+	                           <div class="morph-main-menu-button-middle"></div>
+	                        </div>
+	                     </div>
+	                     <!-- END MAIN MENU BUTTON -->
+	                  </div>
+	                  <!-- BEGIN HEADING TEXT -->
+	                  <div class="morph-heading-text" style="display:none">
+	                     Ashen Lopez 
+	                  </div>
+	                  <!-- END HEADING TEXT -->
+	                  <!-- BEGIN SUBHEADING TEXT -->
+	                  <div class="morph-subheading-text" style="display:none">
+	                     Placeholder Holdings Inc. 
+	                  </div>
+	                  <!-- END SUBHEADING TEXT -->
+	                  <!-- BEGIN SECONDARY MENU BUTTON -->
+	                  <div class="morph-secondary-menu-button" style="display:none">
+	                     <!-- BEGIN SECONDARY MENU -->
+	                     <div class="morph-secondary-menu-wrapper">
+	                        <div class="morph-by-bonfire-secondary">
+	                           <ul id="menu-secondary" class="menu">
+	                              <li id="menu-item-5" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5"><a href="#"><i class="fa fa-instagram"></i>Instagram</a></li>
+	                              <li id="menu-item-6" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6"><a href="#"><i class="fa fa-twitter"></i>Twitter and more</a></li>
+	                              <li id="menu-item-7" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7"><a href="#">View profile</a></li>
+	                           </ul>
+	                        </div>
+	                     </div>
+	                     <!-- END SECONDARY MENU -->
+	                     <div class="morph-secondary-button" style="display:none">
+	                        <div class="morph-secondary-button-inner"></div>
+	                     </div>
+	                  </div>
+	                  <!-- END SECONDARY MENU BUTTON -->
+	               </div>
+	            </div>
+	            <!-- END HEADING CONTENT -->
+	            <!-- BEGIN HEADING BACKGROUND OVERLAY -->
+	            <div class="morph-heading-overlay"></div>
+	            <!-- END HEADING BACKGROUND OVERLAY -->
+	            <!-- BEGIN HEADING IMAGE -->
+	            <div class="morph-heading-image"></div>
+	            <!-- END HEADING IMAGE -->
+	            <!-- BEGIN MAIN MENU + WIDGETS -->
+	            <div class="morph-menu-wrapper">
+	               <!-- BEGIN MAIN MENU -->
+	               <div class="morph-by-bonfire">
+	                  <ul id="menu-primary" class="menu" data-sly-list="${model.listItems}">
+	                     <li id="menu-item-${itemList.count}" class="menu-item menu-item-type-custom menu-item-object-custom">
+	                        <a href="${item.url}"> ${item.text}
+	                           <div class="morph-menu-item-description"></div>
+	                        </a>
+	                     </li>	                     
+	                     <!-- <li id="menu-item-11" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="#">Multi-level navigation<div class="morph-menu-item-description"></div></a>
+	                        <ul class="sub-menu">
+	                            <li id="menu-item-12" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="#">Add to any theme<div class="morph-menu-item-description"></div></a>
+	                                <ul class="sub-menu">
+	                                    <li id="menu-item-19" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="#">Widget area included<div class="morph-menu-item-description"></div></a></li>
+	                                    <li id="menu-item-18" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="#">Meaningful updates<div class="morph-menu-item-description"></div></a></li>
+	                                    <li id="menu-item-10" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="#">500+ icons<div class="morph-menu-item-description"></div></a></li>
+	                                </ul>
+	                            </li>
+	                        </ul>
+	                        </li> -->
+	                     <!-- <li id="menu-item-13" class="border menu-item menu-item-type-custom menu-item-object-custom"><a href="#">Works everywhere<div class="morph-menu-item-description">Morph has been thoroughly tested and works beautifully on desktop as well as touch devices.</div></a></li> -->
+	                     <!-- <li id="menu-item-14" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="#"><i class="fa fa-android"></i>Android<div class="morph-menu-item-description"></div></a></li>
+	                        <li id="menu-item-46" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="#"><i class="fa fa-apple"></i>Apple<div class="morph-menu-item-description"></div></a></li>
+	                        <li id="menu-item-47" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="#"><i class="fa fa-windows"></i>Windows<div class="morph-menu-item-description"></div></a></li> -->
+	                  </ul>
+	               </div>
+	               <!-- END MAIN MENU -->
+	            </div>
+	            <!-- END MAIN MENU + WIDGETS -->
+	         </div>
+	      </div>
+	   </div>
+	   <!-- END MAIN WRAPPER -->
+	   <!-- BEGIN MAIN BACKGROUND -->
+	   <div class="morph-main-background">
+	   </div>
+	   <!-- END MAIN BACKGROUND -->
+	   <!-- BEGIN BACKGROUND OVERLAY (when menu open) -->
+	   <div class="morph-background-overlay"></div>
+	   <!-- END BACKGROUND OVERLAY (when menu open) -->
+	</div>
+</sly>
+</sly>

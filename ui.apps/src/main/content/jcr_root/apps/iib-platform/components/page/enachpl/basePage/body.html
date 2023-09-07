@@ -1,0 +1,32 @@
+<template data-sly-template.body="${ @ page}">
+    <body class="author-mode">
+    <sly data-sly-test="${wcmmode.edit}">
+        	<div class="container-fluid">
+        </sly>
+    	<sly data-sly-test="${!wcmmode.edit}">
+        	<div class="pre-loader"></div>
+    		<div data-sly-resource="${'alertPopup' @ resourceType='iib-platform/components/content/enachpl/alertPopup'}"></div>
+            <div class="mainbg">
+               <div id="wrapper">
+                  <div class="main_wrap">
+                     <div class="BgContainerBanner"></div>
+                     <div class="topContainer">
+                        <div class="topInner"></div>
+                        <div class="top-design"></div>
+                        <div class="headerContainer">
+        </sly>
+	    <sly data-sly-use.header="header.html" data-sly-call="${header.header @ page = page}"/>
+	    <sly data-sly-include="content.html"/>
+	    <sly data-sly-use.footer="footer.html" data-sly-call="${footer.footer @ page = page}"/>
+        <sly data-sly-test="${!wcmmode.edit}">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+        </sly>
+		<sly data-sly-test="${wcmmode.edit}">
+	    	</div>
+        </sly>
+    </body>
+</template>

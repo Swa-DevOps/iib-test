@@ -1,0 +1,13 @@
+/* FAQ OPEN */
+.faq-override-list .accordion-widget-zoom-out .accordion-widget-wrapper .accordion-widget-section {
+    opacity: 1 !important;
+    visibility: visible !important;
+    -webkit-transform: scale(1) !important;
+    -moz-transform: scale(1) !important;
+    transform: scale(1) !important;
+    max-height: 1000px !important;
+    -webkit-transition: all 0.8s ease-in-out !important;
+    -moz-transition: all 0.8s ease-in-out !important;
+    transition: all 0.8s ease-in-out !important;
+
+}

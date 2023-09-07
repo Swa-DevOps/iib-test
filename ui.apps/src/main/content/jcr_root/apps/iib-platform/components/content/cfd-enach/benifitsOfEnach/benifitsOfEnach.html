@@ -1,0 +1,18 @@
+<div data-sly-test="${wcmmode.edit}">
+   Configure Benefits Component
+</div>
+
+<sly data-sly-use.model="com.iib.platform.cfdenach.models.BenifitsOfEnachModel">
+   <h2>${model.title}</h2>
+   <p>${model.description}</p>
+   <div class="cointener_ben" data-sly-list="${model.benifitItems}">
+      <div class="fourbox" data-sly-test="${item.image}"> 
+		<div class="imgbox"><img src="${item.image}" width="371" height="247" class="scale"></div>
+         <div class="textbox">
+            <h4>${item.heading}</h4>
+            <p>${item.subHeading}</p>
+         </div>
+         <div class="clear"></div>
+      </div>
+   </div>
+</sly>

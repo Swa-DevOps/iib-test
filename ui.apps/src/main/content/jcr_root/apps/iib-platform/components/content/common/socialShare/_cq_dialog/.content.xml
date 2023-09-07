@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:description="Social Share Component Dialog"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Social Share Component"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/layouts/tabs"
+            type="nav"/>
+        <items jcr:primaryType="nt:unstructured">
+            <config
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Configurations"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <columns
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <includeFacebookLike
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                defaultChecked="{Boolean}false"
+                                name="./includeFacebookLike"
+                                text="Include Facebook Like"
+                                uncheckedValue="{Boolean}false"
+                                value="{Boolean}true"/>
+                            <includeFacebookShare
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                defaultChecked="{Boolean}false"
+                                name="./fbButton"
+                                text="Facebook"
+                                uncheckedValue="{Boolean}false"
+                                value="{Boolean}true"/>
+                            <twitterButton
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                defaultChecked="{Boolean}false"
+                                name="./twitterButton"
+                                text="Twitter"
+                                uncheckedValue="{Boolean}false"
+                                value="{Boolean}true"/>
+                            <twitterHashTag
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Enter the hashtags separated by commas"
+                                hidden="{Boolean}true"
+                                name="./twitterhashtag"/>
+                            <twitterFollowButton
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                defaultChecked="{Boolean}false"
+                                name="./twitterFollowButton"
+                                text="Twitter Follow "
+                                uncheckedValue="{Boolean}false"
+                                value="{Boolean}true"/>
+                            <twitterFollow
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                class="abc"
+                                fieldLabel="Twitter Follow"
+                                hidden="true"
+                                name="./twitterfollow"
+                                showhidetargetvalue="true"/>
+                            <pinterest
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                defaultChecked="{Boolean}false"
+                                name="./pinterest"
+                                text="Pinterest"
+                                uncheckedValue="{Boolean}false"
+                                value="{Boolean}true"/>
+                            <googlePlus
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                defaultChecked="{Boolean}false"
+                                name="./googlePlus"
+                                text="Google+"
+                                uncheckedValue="{Boolean}false"
+                                value="{Boolean}true"/>
+                            <includeLinkedInShare
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                defaultChecked="{Boolean}false"
+                                name="./linkedIn"
+                                text="LinkedIn"
+                                uncheckedValue="{Boolean}false"
+                                value="{Boolean}true"/>
+                            <email
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                defaultChecked="{Boolean}false"
+                                name="./email"
+                                text="Email"
+                                uncheckedValue="{Boolean}false"
+                                value="{Boolean}true"/>
+                        </items>
+                    </columns>
+                </items>
+            </config>
+            <view
+                jcr:primaryType="nt:unstructured"
+                jcr:title="View"
+                sling:resourceType="granite/ui/components/foundation/include"
+                path="iib-platform/components/content/common/dialogTabs/view"/>
+        </items>
+    </content>
+</jcr:root>

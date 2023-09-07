@@ -1,0 +1,83 @@
+ CREATE TABLE `cfdenachssosessiondetails` (
+  `session` varchar(50) NOT NULL,
+  `mobileno` varchar(15) DEFAULT NULL,
+  `emailid` varchar(50) DEFAULT NULL,
+  `cifid` varchar(50) DEFAULT NULL,
+  `accountno` varchar(50) DEFAULT NULL,
+  `detcustomername` varchar(100) DEFAULT NULL,
+  `detcustomerbank` varchar(100) DEFAULT NULL,
+  `detcustomerifsc` varchar(15) DEFAULT NULL,
+  `detcustomeracc` varchar(45) DEFAULT NULL,
+  `startdate` varchar(15) DEFAULT NULL,
+  `enddate` varchar(15) DEFAULT NULL,
+  `frequency` varchar(15) DEFAULT NULL,
+  `emiamount` varchar(15) DEFAULT NULL,
+  `createdate` date DEFAULT NULL,
+  `enachresult` text,
+  `result` varchar(10) DEFAULT NULL,
+  `redirecturl` varchar(500) DEFAULT NULL,
+  `clickedit` varchar(10) DEFAULT 'no',
+  `refno` varchar(50) DEFAULT NULL,
+  `autopayfactor` varchar(10) DEFAULT '1',
+  `appid` varchar(45) DEFAULT NULL,
+  `createdtime` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `modifieddate` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`session`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ;
+
+
+
+ cfdenachcreatedet | CREATE TABLE `cfdenachcreatedet` (
+  `destinationBank` varchar(200) DEFAULT NULL,
+  `maximum_amount` varchar(200) DEFAULT NULL,
+  `mobileNo` varchar(200) NOT NULL,
+  `customerName` varchar(200) DEFAULT NULL,
+  `startDate` varchar(50) DEFAULT NULL,
+  `referralCode` varchar(50) DEFAULT NULL,
+  `step` varchar(45) DEFAULT NULL,
+  `refno` varchar(200) DEFAULT NULL,
+  `appid` varchar(45) DEFAULT NULL,
+  `urnno` varchar(50) DEFAULT NULL,
+  `aadharNo` varchar(50) DEFAULT NULL,
+  `totalInstallments` varchar(50) DEFAULT NULL,
+  `emiAmount` varchar(50) DEFAULT NULL,
+  `accountNo` varchar(200) DEFAULT NULL,
+  `endDate` varchar(50) DEFAULT NULL,
+  `transferFrequency` varchar(200) DEFAULT NULL,
+  `customerAccountNo` varchar(200) DEFAULT NULL,
+  `destinationBankId` varchar(200) DEFAULT NULL,
+  `requestid` varchar(255) NOT NULL,
+  `digistatus` varchar(50) DEFAULT NULL,
+  `digireferenceid` varchar(255) DEFAULT NULL,
+  `digiresponse` varchar(255) DEFAULT NULL,
+  `schedulestatus` varchar(50) DEFAULT NULL,
+  `scheduleupdate` varchar(50) DEFAULT 'false',
+  `fluxstatus` varchar(50) DEFAULT NULL,
+  `fluxMessage` varchar(50) DEFAULT NULL,
+  `custmomeremail` varchar(200) DEFAULT NULL,
+  `uniqueKey` varchar(25) DEFAULT NULL,
+  `sessionid` varchar(100) DEFAULT NULL,
+  `created_date` datetime DEFAULT CURRENT_TIMESTAMP,
+  `updated_date` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`requestid`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 |
+
+
+ CREATE TABLE `cfdenachmandate` (
+  `mobileno` char(20) NOT NULL,
+  `otpno` char(10) DEFAULT NULL,
+  `updatetime` datetime DEFAULT NULL,
+  `mandatedata` longtext,
+  `cifdetails` longtext,
+  `session` varchar(50) DEFAULT NULL,
+  `uniqueKey` varchar(25) DEFAULT NULL,
+  `uniqueKeyDob` varchar(25) DEFAULT NULL,
+  `otpDobCall` int DEFAULT '0',
+  `noofCalls` int NOT NULL DEFAULT '0',
+  `created_date` datetime DEFAULT CURRENT_TIMESTAMP,
+  `updated_date` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `step` varchar(45) DEFAULT 'otpgenerated'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 |
+
+
+-----------

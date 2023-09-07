@@ -1,0 +1,332 @@
+/* navbar menue css start*/
+
+.morph-header-bar {
+    -webkit-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.5);
+}
+
+.morph-heading-wrapper,
+.morph-heading-overlay,
+.morph-heading-image {
+    position: absolute;
+    width: 100%;
+    height: 60px !important;
+    margin: 0;
+    padding: 0;
+}
+
+.morph-menu-wrapper {
+    top: 60px;
+}
+
+.morph-heading-wrapper {
+    border: unset;
+}
+
+.morph-heading-overlay {
+    background-color: #fff;
+}
+
+
+/* menu button label */
+
+.morph-menu-button-label {
+    color: #000;
+}
+
+
+/* custom menu button speed */
+
+.morph-main-menu-button:after,
+.morph-main-menu-button:before,
+.morph-main-menu-button div.morph-main-menu-button-middle:before,
+.morph-menu-button-three-alt:after,
+.morph-menu-button-three-alt:before,
+.morph-menu-button-three-alt div.morph-menu-button-three-alt-middle:before,
+.morph-menu-button-four:after,
+.morph-menu-button-four:before,
+.morph-menu-button-four div.morph-menu-button-four-middle:before,
+.morph-menu-button-four div.morph-menu-button-four-middle:after {
+    -webkit-transition: all s ease !important;
+    -moz-transition: all s ease !important;
+    transition: all s ease !important;
+}
+
+
+/* secondary menu button hover */
+
+.morph-secondary-button:hover .morph-secondary-button-inner,
+.morph-secondary-button:hover .morph-secondary-button-inner::before,
+.morph-secondary-button:hover .morph-secondary-button-inner::after {
+    background-color: #A0A0A0;
+}
+
+
+/* menu item hovers */
+
+.morph-by-bonfire ul li.full-item-arrow-hover>a,
+.morph-by-bonfire ul li a:hover {
+    color: #55565C;
+}
+
+.morph-by-bonfire ul li.full-item-arrow-hover>a i,
+.morph-by-bonfire a:hover i {
+    color: #55565C;
+}
+
+.morph-by-bonfire ul.sub-menu li.full-item-arrow-hover>a,
+.morph-by-bonfire ul.sub-menu li a:hover {
+    color: #77787C;
+}
+
+
+/* sub-menu arrow hover */
+
+.full-item-arrow-hover>.morph-sub-arrow .morph-sub-arrow-inner::before,
+.full-item-arrow-hover>.morph-sub-arrow .morph-sub-arrow-inner::after,
+.morph-sub-arrow:hover .morph-sub-arrow-inner::before,
+.morph-sub-arrow:hover .morph-sub-arrow-inner::after {
+    background-color: #888;
+}
+
+
+/* flyout speed */
+
+.morph-menu-wrapper,
+.morph-main-background,
+.morph-main-wrapper {
+    -webkit-transition: all s ease !important;
+    -moz-transition: all s ease !important;
+    transition: all s ease !important;
+}
+
+.morph-menu-wrapper-active .morph-by-bonfire ul li a {
+    -webkit-transition-duration: s !important;
+    -moz-transition-duration: s !important;
+    transition-duration: s !important;
+}
+
+
+/* custom width */
+
+.morph-menu-wrapper,
+.morph-main-background,
+.morph-main-wrapper {
+    width: px;
+    max-width: 100%;
+}
+
+.morph-main-wrapper,
+.morph-main-background {
+    -webkit-transform: translateX(-310px);
+    -moz-transform: translateX(-310px);
+    transform: translateX(-310px);
+}
+
+.morph-main-wrapper-right,
+.morph-main-background-right {
+    -webkit-transform: translateX(310px);
+    -moz-transform: translateX(310px);
+    transform: translateX(310px);
+}
+
+
+/* menu button animations (-/X) */
+
+
+/* top bar animation (3 lines) */
+
+.morph-menu-active .morph-main-menu-button:before {
+    margin: 2px 0 0 0;
+    transform: translateY(4px) rotate(45deg);
+    -moz-transform: translateY(4px) rotate(45deg);
+    -ms-transform: translateY(4px) rotate(45deg);
+    -webkit-transform: translateY(4px) rotate(45deg);
+}
+
+
+/* bottom bar animation (3 lines) */
+
+.morph-menu-active .morph-main-menu-button:after {
+    transform: translateY(-5px) rotate(-45deg);
+    -moz-transform: translateY(-5px) rotate(-45deg);
+    -ms-transform: translateY(-5px) rotate(-45deg);
+    -webkit-transform: translateY(-5px) rotate(-45deg);
+}
+
+
+/* middle bar fade out (3 lines) */
+
+.morph-menu-active div.morph-main-menu-button-middle:before {
+    opacity: 0;
+    -webkit-transition: all .15s ease;
+    -moz-transition: all .15s ease;
+    -ms-transition: all .15s ease;
+    transition: all .15s ease;
+}
+
+
+/* top bar animation (alternate 3 lines) */
+
+.morph-menu-active .morph-menu-button-three-alt:before {
+    width: 24px;
+    margin-right: 7px;
+    transform: translateY(6px) rotate(45deg);
+    -moz-transform: translateY(6px) rotate(45deg);
+    -webkit-transform: translateY(6px) rotate(45deg);
+}
+
+
+/* bottom bar animation (alternate 3 lines) */
+
+.morph-menu-active .morph-menu-button-three-alt:after {
+    width: 24px;
+    margin: 8px 0 0 0px;
+    transform: translateY(-10px) rotate(-45deg);
+    -moz-transform: translateY(-10px) rotate(-45deg);
+    -webkit-transform: translateY(-10px) rotate(-45deg);
+}
+
+
+/* middle bar fade out (alternate 3 lines) */
+
+.morph-menu-active div.morph-menu-button-three-alt-middle:before {
+    opacity: 0;
+    -webkit-transition: all .15s ease;
+    -moz-transition: all .15s ease;
+    transition: all .15s ease;
+}
+
+
+/* top bar animation (alternate 4 lines) */
+
+.morph-menu-active .morph-menu-button-four:before {
+    width: 11px;
+    transform: translateY(3px) translateX(-1px) rotate(45deg);
+    -moz-transform: translateY(3px) translateX(-1px) rotate(45deg);
+    -webkit-transform: translateY(3px) translateX(-1px) rotate(45deg);
+}
+
+
+/* middle bar #1 animation (alternate 4 lines) */
+
+.morph-menu-active .morph-menu-button-four div.morph-menu-button-four-middle:before {
+    width: 11px;
+    transform: translateY(-3px) translateX(11px) rotate(-45deg);
+    -moz-transform: translateY(-3px) translateX(11px) rotate(-45deg);
+    -webkit-transform: translateY(-3px) translateX(11px) rotate(-45deg);
+}
+
+
+/* middle bar #2 animation (alternate 4 lines) */
+
+.morph-menu-active .morph-menu-button-four div.morph-menu-button-four-middle:after {
+    width: 11px;
+    transform: translateY(3px) translateX(-1px) rotate(-45deg);
+    -moz-transform: translateY(3px) translateX(-1px) rotate(-45deg);
+    -webkit-transform: translateY(3px) translateX(-1px) rotate(-45deg);
+}
+
+
+/* bottom bar animation (alternate 4 lines) */
+
+.morph-menu-active .morph-menu-button-four:after {
+    width: 11px;
+    transform: translateY(-3px) translateX(11px) rotate(45deg);
+    -moz-transform: translateY(-3px) translateX(11px) rotate(45deg);
+    -webkit-transform: translateY(-3px) translateX(11px) rotate(45deg);
+}
+
+
+/* custom heading height */
+
+.morph-heading-wrapper,
+.morph-heading-overlay,
+.morph-heading-image {
+    height: px;
+}
+
+.morph-menu-wrapper {
+    top: px;
+}
+
+
+/* heading overlay opacity */
+
+.morph-heading-overlay {
+    opacity: ;
+}
+
+
+/* heading image */
+
+.morph-heading-image {
+    background-image: url(wp-content/uploads/2015/12/ashen.jpg);
+}
+
+
+/* heading image pattern */
+
+
+/* thin button variations */
+
+
+/* hide morph between resolutions */
+
+@media ( min-width:px) and (max-width:px) {
+    .morph-logo-wrapper,
+    .morph-header-bar,
+    .morph-main-menu-button-wrapper,
+    .morph-main-wrapper,
+    .morph-main-background,
+    .morph-background-overlay {
+        display: none;
+    }
+    body {
+        margin-top: 0;
+    }
+}
+
+.slidex {
+    /* display: inline; */
+    /* left: 174px; */
+    transform: translateX(228px);
+    position: relative;
+    -webkit-animation-name: slidenav;
+    animation-name: slidenav;
+    -webkit-animation-duration: .7s;
+    animation-duration: .7s;
+    -webkit-animation-timing-function: ease;
+    animation-timing-function: ease;
+    /* -webkit-animation-iteration-count: 1; */
+    /* animation-iteration-count: 1; */
+}
+
+@-webkit-keyframes slidenav {
+    0% {
+        -webkit-transform: translateX(0px);
+    }
+    /* 40% {
+        -webkit-transform: translateX(50px);
+    } */
+    100% {
+        -webkit-transform: translateX(228px);
+    }
+}
+
+@keyframes slidenav {
+    0% {
+        transform: translateX(0px);
+    }
+    /* 40% {
+        transform: translateX(50px);
+    } */
+    100% {
+        transform: translateX(228px);
+    }
+}
+
+
+/* -------navbar menue css end --------
+--------------------------------------*/

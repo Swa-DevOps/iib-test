@@ -1,0 +1,1614 @@
+@font-face {
+    font-family: 'Lato';
+    src: url("/etc/scripts/indusaadharseeding/fonts/Lato Regular.eot");
+    src: url("/etc/scripts/indusaadharseeding/fonts/Lato Regular.eot?#iefix") format("embedded-opentype"), url("/etc/scripts/indusaadharseeding/fonts/Lato Regular.woff2") format("woff2"), url("/etc/scripts/indusaadharseeding/fonts/Lato Regular.woff") format("woff"), url("/etc/scripts/indusaadharseeding/fonts/Lato Regular.svg#Lato Regular") format("svg");
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-2044
+}
+
+@font-face {
+    font-family: 'LatoLight';
+    src: url("/etc/scripts/indusaadharseeding/fonts/o Light.eot");
+    src: url("/etc/scripts/indusaadharseeding/fonts/o Light.eot?#iefix") format("embedded-opentype"), url("/etc/scripts/indusaadharseeding/fonts/o Light.woff2") format("woff2"), url("/etc/scripts/indusaadharseeding/fonts/o Light.woff") format("woff"), url("/etc/scripts/indusaadharseeding/fonts/o Light.svg#o Light") format("svg");
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-02DC
+}
+
+@font-face {
+    font-family: 'rupee_foradian1-webfont';
+    src: url("/etc/scripts/indusaadharseeding/fonts/rupee_foradian1-webfont.eot");
+    src: url("/etc/scripts/indusaadharseeding/fonts/rupee_foradian1-webfont.eot?#iefix") format("embedded-opentype"), url("/etc/scripts/indusaadharseeding/fonts/rupee_foradian1-webfont.woff") format("woff"), url("/etc/scripts/indusaadharseeding/fonts/rupee_foradian1-webfont.ttf") format("truetype"), url("/etc/scripts/indusaadharseeding/fonts/rupee_foradian1-webfont.svg#rupee_foradian1-webfont") format("svg");
+    font-weight: normal;
+    font-style: normal
+}
+
+body,
+p,
+input,
+button,
+textarea {
+    font-family: "Lato"
+}
+
+a {
+    color: white
+}
+
+p,
+input,
+textarea,
+button,
+a,
+li,
+label,
+.cc,
+.placeholder {
+    font-size: 2rem;
+    line-height: 1.2;
+    font-family: "LatoLight"
+}
+
+input {
+    color: #c6aaaa
+}
+
+p,
+a {
+    color: white
+}
+
+html {
+    font-size: 62.5%
+}
+
+body {
+    font-family: "Lato";
+    color: white;
+    overflow: hidden
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    list-style: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    border: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    -ms-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased
+}
+
+a {
+    text-decoration: none;
+    outline: 0
+}
+
+a:hover {
+    text-decoration: none
+}
+
+img {
+    border: 0;
+    max-width: 100%
+}
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%
+}
+
+p,
+.ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding-bottom: 5px
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1;
+    font-weight: normal
+}
+
+h1 {
+    font-size: 3.5rem
+}
+
+h2 {
+    font-size: 2.5rem
+}
+
+h3 {
+    font-size: 2.2rem
+}
+
+h4 {
+    font-size: 2rem
+}
+
+h5 {
+    font-size: 1.8rem
+}
+
+h6 {
+    font-size: 1.6rem
+}
+
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+    font-size: inherit;
+    text-decoration: underline
+}
+
+table,
+table tr td,
+table tr th {
+    border: 0
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+.clear {
+    clear: both
+}
+
+input,
+textarea {
+    outline: 0;
+    font-family: "LatoLight"
+}
+
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+section,
+summary,
+mark {
+    float: left;
+    width: 100%
+}
+
+.fl {
+    float: left
+}
+
+.fr {
+    float: right
+}
+
+input[type=submit],
+input[type=button],
+button[type=submit] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer
+}
+
+body {
+    background: url(/content/dam/indusind/IndusaadharSeeding/bg_desktop.jpg) center top no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    background-size: cover;
+    min-height: 100vh
+}
+
+.wrapper,
+.sectionPadding {
+    width: 100%;
+    float: left
+}
+
+.container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 36px 40px 20px
+}
+
+.container:after {
+    content: "";
+    width: 100%;
+    clear: both;
+    display: block
+}
+
+.container.full {
+    max-width: 100%;
+    padding-right: 0;
+    padding-left: 0
+}
+
+.container.fullPad {
+    max-width: 100%
+}
+
+.ul li {
+    padding-left: 20px;
+    position: relative
+}
+
+.ul li:before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background: white;
+    display: block;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 7px
+}
+
+section {
+    min-height: 100px;
+    float: left;
+    width: 100%
+}
+
+.sectionPadding {
+    padding-top: 84px;
+}
+
+.placeholder {
+    z-index: 1;
+    position: absolute;
+    color: white;
+    overflow: hidden;
+    top: 31px;
+    -webkit-transition: .3s all;
+    -moz-transition: .3s all;
+    -ms-transition: .3s all;
+    -o-transition: .3s all;
+    transition: .3s all
+}
+
+.placeholder.active {
+    top: 0;
+    font-style: normal;
+    font-family: "Lato"
+}
+
+.placeholder+input {
+    position: relative;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0) !important
+}
+
+.fieldBox {
+    width: 33.33%;
+    float: left;
+    padding: 30px 50px 20px 50px;
+    position: relative
+}
+
+.fieldBox.requiredField .placeholder:after,
+.fieldBox.requiredField label:after {
+    content: "*";
+    color: inherit
+}
+
+.fieldBox.disabledField .selectedValue,
+.fieldBox .disabledField .selectedValue {
+    color: #c6aaaa
+}
+
+.fieldBox.wid100 {
+    width: 100%
+}
+
+.fieldBox label {
+    position: absolute
+}
+
+.fieldBox .btn {
+    margin-top: 0
+}
+
+.inputBox,
+.textareaBox {
+    width: 33.33%;
+    padding: 30px 10px 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    width: 100%;
+    position: relative;
+    clear: both
+}
+
+.inputBox.otpInput {
+    border-bottom: 1px solid #ccc
+}
+
+.inputBox:after,
+.textareaBox:after {
+    content: "";
+    width: 0;
+    height: 1px;
+    background: #e3892d;
+    display: block;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    -webkit-transition: .5s all;
+    -moz-transition: .5s all;
+    -ms-transition: .5s all;
+    -o-transition: .5s all;
+    transition: .5s all
+}
+
+.inputBox.focused:after,
+.textareaBox.focused:after {
+    width: 100%
+}
+
+.inputBox input,
+.inputBox textarea,
+.textareaBox input,
+.textareaBox textarea {
+    background: transparent;
+    width: 100%;
+    resize: none
+}
+
+.inputBox .cc,
+.textareaBox .cc {
+    position: absolute;
+    left: 0;
+    top: 30px;
+    display: none
+}
+
+.inputBox .cc~input,
+.textareaBox .cc~input {
+    padding-left: 35px;
+    padding-right: 35px
+}
+
+.isValid .inputBox:after,
+.isValid .textareaBox:after,
+.isValid .selectBox:after {
+    width: 100%;
+    background: rgba(118, 227, 45, 0.8)
+}
+
+.rs {
+    font-family: 'rupee_foradian1-webfont';
+    font-weight: normal
+}
+
+.textareaBox textarea {
+    height: 50px
+}
+
+.selectBox {
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 30px 10px 7px 0
+}
+
+.selectBox:after {
+    content: "";
+    width: 0;
+    height: 1px;
+    background: #666;
+    display: block;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    -webkit-transition: .5s all;
+    -moz-transition: .5s all;
+    -ms-transition: .5s all;
+    -o-transition: .5s all;
+    transition: .5s all
+}
+
+.selectBox.focused:after {
+    width: 100%
+}
+
+.selectBox .selectedValue {
+    font-size: 1.8rem;
+    position: relative;
+    z-index: 1;
+    line-height: 1.2
+}
+
+.selectBox .selectedValue:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border: 6px solid #ccc;
+    border-color: #ccc transparent transparent;
+    right: 0;
+    top: 50%;
+    position: absolute
+}
+
+.selectBox select {
+    width: 100%;
+    opacity: 0;
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    height: 100%
+}
+
+.btn {
+    background: #fff;
+    color: #7a2a2a;
+    font-size: 2rem;
+    padding: 20px 90px;
+    margin-top: 15px;
+    text-transform: uppercase;
+    text-align: center;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    border-radius: 30px
+}
+
+.btn {
+    -webkit-transform: perspective(1px) translateZ(0);
+    -moz-transform: perspective(1px) translateZ(0);
+    -ms-transform: perspective(1px) translateZ(0);
+    -o-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0)
+}
+
+.btn:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #e3892d;
+    -webkit-transform: scaleY(0);
+    -moz-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    -o-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transition: .3s all;
+    -moz-transition: .3s all;
+    -ms-transition: .3s all;
+    -o-transition: .3s all;
+    transition: .3s all;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    border-radius: 30px
+}
+
+.btn.center {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%)
+}
+
+.checkBox {
+    float: left;
+    position: relative;
+    padding-bottom: 10px
+}
+
+.checkBox input[type="checkbox"] {
+    display: none
+}
+
+.checkBox input[type="checkbox"]+label {
+    padding-left: 26px;
+    line-height: 18px;
+    position: relative;
+    float: left;
+    width: 100%;
+    cursor: pointer
+}
+
+.checkBox input[type="checkbox"]+label:before {
+    height: 16px;
+    width: 16px;
+    line-height: 16px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 1px solid white;
+    content: "";
+    display: block;
+    text-align: center;
+    font-size: .7em
+}
+
+.checkBox input[type="checkbox"]:checked+label:before {
+    content: "\2713";
+    color: #fff;
+    font-weight: bold
+}
+
+.radioBox {
+    padding-top: 30px;
+    float: left;
+    width: 100%
+}
+
+.radioBox .radio {
+    float: left;
+    width: 100%
+}
+
+.radioBox input[type="radio"],
+.invalidOtp {
+    display: none
+}
+
+.radioBox input[type="radio"]+label {
+    padding-left: 26px;
+    line-height: 16px;
+    position: relative;
+    color: white;
+    float: left;
+    cursor: pointer;
+    padding-right: 10px;
+    width: auto
+}
+
+.radioBox input[type="radio"]+label:before,
+.radioBox input[type="radio"]+label:after {
+    height: 16px;
+    width: 16px;
+    line-height: 16px;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 1px solid white;
+    display: block;
+    text-align: center;
+    font-size: inherit;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%
+}
+
+.radioBox input[type="radio"]:checked+label:after {
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    left: 8px;
+    top: 8px;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    margin: 1px 0 0 1px
+}
+
+header {
+    z-index: 100;
+    position: fixed;
+    -webkit-transition: .5s background;
+    -moz-transition: .5s background;
+    -ms-transition: .5s background;
+    -o-transition: .5s background;
+    /*transition: .5s background*/
+}
+
+header.scrolled {
+    background: #4b0e0e
+}
+
+.wrapper,
+header+section {
+    padding-top: 84px
+}
+
+.thankYouStyle {
+    padding-top: 0;
+}
+
+header .otherLinks {
+    float: right
+}
+
+header .otherLinks li {
+    position: relative;
+    float: left;
+    margin-left: 15px
+}
+
+header .otherLinks li a {
+    min-width: 25px;
+    min-height: 25px;
+    float: left;
+    position: relative;
+    padding-left: 30px
+}
+
+header .otherLinks li a:before {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 25px;
+    background: url(/content/dam/indusind/IndusaadharSeeding/sprite.png) no-repeat 0 0;
+    position: absolute;
+    left: 0;
+    top: 0
+}
+
+header .otherLinks li.home a:before {
+    background: url(/content/dam/indusind/IndusaadharSeeding/sprite.png) no-repeat 0 2px
+}
+
+header .otherLinks li.phone a:before {
+    background: url(/content/dam/indusind/IndusaadharSeeding/sprite.png) no-repeat -31px 2px
+}
+
+.lBoxOpen {
+    overflow: scroll;
+    position: fixed;
+    width: 100%
+}
+
+.lBoxMaster {
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 998;
+    display: none;
+    background: rgba(0, 0, 0, 0.8) none repeat scroll 0 0
+}
+
+.lBox {
+    cursor: default;
+    max-width: 1024px;
+    width: 90%;
+    background: #fff;
+    position: relative;
+    float: left;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    display: block;
+    z-index: 2;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    border-radius: 10px
+}
+
+.lBox .hiddenContent {
+    display: block
+}
+
+.lBox .close,
+.lBox .closeRedirection {
+    font-family: "Lato";
+    color: #666;
+    padding: 15px;
+    font-size: 2rem;
+    background: #fff;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    border-radius: 10px
+}
+
+.lBox .closeRedirection a {
+    color: #000;
+    text-decoration: none;
+}
+
+.lBox .container {
+    padding: 40px 30px 20px;
+    margin-bottom: 0
+}
+
+#otpForm .container {
+    position: relative
+}
+
+.otpOverlay {
+    background: rgba(0, 0, 0, .5);
+    display: none;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.hiddenContent {
+    display: none
+}
+
+.error,
+.invalidOtp {
+    color: #e3892d;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    margin-top: 6px;
+    opacity: 0;
+    -webkit-transition: .3s all;
+    -moz-transition: .3s all;
+    -ms-transition: .3s all;
+    -o-transition: .3s all;
+    transition: .3s all;
+    text-transform: Capitalize
+}
+
+.invalidOtp {
+    top: 100%;
+    opacity: 1;
+    font-size: 1.1rem
+}
+
+.error-field * {
+    border-color: #f00
+}
+
+.error-field .error {
+    top: 100%;
+    opacity: 1;
+    font-size: 1.1rem
+}
+
+.error-field:after {
+    width: 100%;
+    background-color: #f00
+}
+
+.loader {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999
+}
+
+.loader div {
+    width: 100%;
+    height: 4px;
+    background: #ccc;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.loader div span {
+    background: #000;
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 100%;
+    -webkit-transition: .3s all;
+    -moz-transition: .3s all;
+    -ms-transition: .3s all;
+    -o-transition: .3s all;
+    transition: .3s all
+}
+
+.bannerCarousel {
+    float: left;
+    text-align: center
+}
+
+.bannerCarousel .item {
+    width: 100%;
+    float: left
+}
+
+.text-center {
+    text-align: center
+}
+
+#aadharCardreg .fieldBox {
+    width: 50%
+}
+
+#aadharCardreg .fieldBox:after {
+    content: '';
+    position: relative;
+    clear: both;
+    display: block
+}
+
+#aadharCardreg .fieldBox.center {
+    float: none;
+    margin: 0 auto
+}
+
+#aadharCardreg .fieldBox label {
+    position: relative;
+    margin-bottom: 5px;
+    display: block
+}
+
+#aadharCardreg #holderDetails1 {
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+    display: none
+}
+
+#aadharCardreg #holderDetails1 .inputBox {
+    float: left;
+    width: 46%;
+    margin-right: 10px;
+    clear: none
+}
+
+#aadharCardreg #holderDetails2 {
+    float: left;
+    width: 100%;
+    display: none
+}
+
+#aadharCardreg #holderDetails2 .inputBox {
+    float: left;
+    width: 46%;
+    margin-right: 10px;
+    clear: none
+}
+
+.ui-datepicker {
+    width: 20em !important;
+    font-size: 9px !important;
+    font-family: arial !important
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+    font-size: 1.4em;
+    color: black !important
+}
+
+.datepickerInput {
+    position: relative
+}
+
+.datepickerInput img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 99
+}
+
+.radio span {
+    font-size: 1.8em
+}
+
+.radioBox .checkMark input[type="radio"]:checked+label:after {
+    background-image: url(/content/dam/indusind/IndusaadharSeeding/checkmark.png);
+    background-position: 0 0;
+    width: 20px;
+    height: 20px
+}
+
+a.btn {
+    padding: 20px 60px;
+    margin-right: 20px
+}
+
+a.btn.center {
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%)
+}
+
+.btn {
+    float: left
+}
+
+.headData {
+    padding-bottom: 10px
+}
+
+.headData h1,
+.titleName {
+    color: #e3892d;
+    text-align: center;
+}
+
+.headData h2 {
+    color: #be5b38
+}
+
+.fontLight {
+    font-family: "LatoLight" !important
+}
+
+.fontDefault {
+    font-family: "Lato" !important
+}
+
+.payType .radio {
+    padding-bottom: 20px
+}
+
+.payType .inputBox {
+    padding-top: 0
+}
+
+.payType .inputBox .placeholder {
+    top: 0
+}
+
+.payType .inputBox .cc {
+    top: 3px
+}
+
+#otAmt.inputBox {
+    -webkit-transition: .3s all;
+    -moz-transition: .3s all;
+    -ms-transition: .3s all;
+    -o-transition: .3s all;
+    transition: .3s all;
+    position: relative
+}
+
+#otAmt.inputBox.disabledField {
+    opacity: 0;
+    margin-left: -20px
+}
+
+.holderDetails .inputBox {
+    -webkit-transition: .3s all;
+    -moz-transition: .3s all;
+    -ms-transition: .3s all;
+    -o-transition: .3s all;
+    transition: .3s all;
+    position: relative
+}
+
+.holderDetails .inputBox.disabledField {
+    opacity: 0;
+    margin-left: -20px
+}
+
+.lBox {
+    text-align: center;
+    max-width: 480px
+}
+
+.lBox p {
+    color: #7a2a2a;
+    font-size: 2rem;
+    padding-bottom: 10px
+}
+
+.lBox .otp {
+    font-size: 3rem;
+    font-family: "Lato";
+    padding-bottom: 10px;
+    position: relative;
+    text-align: center
+}
+
+#otpForm .fieldBox {
+    width: 100%;
+    padding: 0
+}
+
+.otpInput {
+    boder-bottom: 1px solid #ccc
+}
+
+.lBox .otpNumberStyle {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: -moz-linear-gradient(left, rgba(218, 211, 211, 0) 0, #c9c9c9 50%, rgba(218, 211, 211, 0) 100%);
+    background: -webkit-linear-gradient(left, rgba(218, 211, 211, 0) 0, #c9c9c9 50%, rgba(218, 211, 211, 0) 100%);
+    background: linear-gradient(to right, rgba(218, 211, 211, 0) 0, #c9c9c9 50%, rgba(218, 211, 211, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00dad3d3', endColorstr='#00dad3d3', GradientType=1)
+}
+
+.lBox .btn {
+    background: #7a2a2a;
+    color: #fff;
+    clear: both
+}
+
+.lBox .resendOTP {
+    color: #7a2a2a;
+    clear: both;
+    display: block;
+    padding-top: 10px;
+    width: 136px;
+    margin: 5px auto;
+    background: 0
+}
+
+.lBox .resendOTP:before {
+    content: "";
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    background: url(/content/dam/indusind/IndusaadharSeeding/sprite.png) no-repeat -56px 0;
+    margin-bottom: -5px;
+    margin-right: 5px
+}
+
+.thankYou {
+    max-width: 1024px;
+    float: left;
+    position: relative;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%)
+}
+
+.thankYou h1 {
+    padding-bottom: 20px
+}
+
+.thankYou .status {
+    width: 90px;
+    height: 90px;
+    display: block;
+    background: #fff;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    margin-bottom: 20px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%
+}
+
+.thankYou .status:before {
+    content: "";
+    width: 45px;
+    height: 40px;
+    background: url(/content/dam/indusind/IndusaadharSeeding/sprite.png) no-repeat -55px -30px;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%)
+}
+
+.thankYou .status.success:before {
+    background-position: -55px -30px
+}
+
+.thankYou .status.failed:before {
+    background-position: 0 -30px
+}
+
+.nonTouch a:hover {
+    color: #e3892d
+}
+
+.nonTouch .owl-video-play-icon {
+    -webkit-transition: .3s all;
+    -moz-transition: .3s all;
+    -ms-transition: .3s all;
+    -o-transition: .3s all;
+    transition: .3s all
+}
+
+.nonTouch .owl-video-play-icon:hover {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+    -moz-transform: translate(-50%, -50%) scale(1);
+    -ms-transform: translate(-50%, -50%) scale(1);
+    -o-transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1)
+}
+
+.nonTouch .btn:hover,
+.nonTouch .btn:focus,
+.nonTouch .btn:active {
+    color: #fff
+}
+
+.nonTouch .btn:hover:before,
+.nonTouch .btn:focus:before,
+.nonTouch .btn:active:before {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1)
+}
+
+#ui-datepicker-div a {
+    font-family: arial
+}
+
+#ui-datepicker-div .ui-datepicker-header a,
+#ui-datepicker-div .ui-datepicker-header a span {
+    font-size: inherit;
+    line-height: normal
+}
+
+.lBox .descText {
+    font-size: 1.7rem
+}
+
+.captchaBox .inputBox,
+.catchaContainer,
+.Refresh-btn-Cmt {
+    float: left;
+    text-align: left
+}
+
+.captchaBox .inputBox {
+    width: 45%
+}
+
+.catchaContainer {
+    width: 55%
+}
+
+.Refresh-btn-Cmt {
+    margin: 3px 0 0 10px;
+    cursor: pointer
+}
+
+.captcha_image {
+    width: 140px;
+    float: left;
+    text-align: center
+}
+
+.catchaContainer {
+    padding: 26px 0 0 10px
+}
+
+.btnStrct input {
+    background: url(/etc/scripts/desktop/images/redbuttonRept.png) left top repeat-x;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -ms-border-radius: 3px;
+    text-decoration: none;
+    color: #FFFFFF;
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 6px 10px 7px 10px;
+    border: none;
+    cursor: pointer;
+    width: 61px;
+}
+
+.ui-widget-header {
+    background: inherit !important
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+    color: inherit;
+     !important
+}
+
+.ui-datepicker select.ui-datepicker-month,
+.ui-datepicker select.ui-datepicker-year {
+    height: auto;
+     !important;
+    width: auto !important;
+    margin: 0 5px 0 0
+}
+
+.generalPopup {
+    display: none;
+}
+
+/* loader css start*/
+#loader {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    z-index: 1000;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    animation: 1s linear 0s normal none infinite running spin;
+    border-color: #555 #f3f3f3 #f3f3f3;
+    border-image: none;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 5px;
+    height: 50px;
+    width: 50px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* loader css end*/
+.tncOpenPopup {
+    color: #fff !important;
+}
+
+.tnCPopup .container ul li,
+.tnCPopup .container ol li {
+    color: #000;
+    font-size: 12px;
+    text-align: left;
+    padding-bottom: 2px;
+}
+
+.tnCPopup .container ol li {
+    list-style: decimal;
+}
+
+.tnCPopup .container ol li ul {
+    padding-left: 20px;
+}
+
+.tnCPopup .container ul li {
+    list-style: disc;
+}
+
+.tnCPopup .lBox {
+    max-width: 600px;
+}
+
+#aadharCardreg .fieldBox label.fontLight,
+.tncOpenPopup {
+    display: inline;
+    width: auto;
+}
+
+.tncOpenPopup {
+    text-decoration: underline;
+    line-height: 16px;
+    margin-left: 5px;
+    color: #000;
+}
+
+.closeRedirection {
+    display: none;
+}
+
+.btnmargin {
+    margin-bottom: 15px;
+}
+
+.linkText {
+    clear: both;
+    color: #bc3f3d;
+    font-size: 14px;
+    display: block;
+    text-decoration: underline;
+    font-weight: bold;
+    visibility: hidden;
+}
+
+.linkText1 {
+    text-align: center;
+    color: #e3892d;
+    font-size: 16px;
+    clear: both;
+    display: block;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.headData h3 {
+    font-size: 1.8rem;
+    margin-top: 15px;
+}
+
+.tnCPopup p {
+    font-size: 12px;
+    color: #000;
+    text-align: left;
+}
+
+
+/*For Aadhar Multi*/
+.formBox .aadharmulti {
+    display: block
+}
+
+.formBox .aadharmulti:nth-child(2) {
+    display: block
+}
+
+.formBox .plusSign {
+    background: url(/content/dam/indusind/desktop/aadharmulti-add.png) no-repeat;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+}
+
+.formBox .negativeSign {
+    background: url(/content/dam/indusind/desktop/aadharmulti-remove.png) no-repeat;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+}
+
+.fileInput {
+    position: fixed;
+    top: -1000px;
+    font-size: 0;
+    opacity: 0;
+}
+
+.uploadBtn label.btn {
+    padding: 10px 5px;
+    font-size: 1.3rem;
+    text-align: left;
+}
+
+.uploadBtn label.btn,
+label.btn::before {
+    border-radius: 5px;
+}
+
+.fieldBox.requiredField label.btn::after {
+    content: "";
+}
+
+.uploadBtn label.btn div.error {
+    display: none !important;
+}
+
+.tblAadhaar {
+    border-top: 1px solid #b6b6b6;
+    width: 100%;
+    margin: 5px 0 15px 0;
+}
+
+.tblAadhaar tr th {
+    background-color: #e3892d;
+    color: #fff;
+    text-align: left;
+    border-right: 1px solid #b6b6b6;
+    border-bottom: 1px solid #b6b6b6;
+    padding: 10px;
+    text-align: center;
+}
+
+.aadharStatusBox .tblAadhaar tr th {
+    background-color: #9b2c2c;
+}
+
+.tblAadhaar tr th:first-child,
+.tblAadhaar tr td:first-child {
+    border-left: 1px solid #b6b6b6;
+}
+
+.tblAadhaar tr td {
+    border-right: 1px solid #b6b6b6;
+    border-bottom: 1px solid #b6b6b6;
+    padding: 10px;
+}
+
+.tblAadhaar tr th,
+.tblAadhaar tr td {
+    font-size: 1.4rem;
+    color: white;
+}
+
+.overlay {
+    z-index: 999;
+    overflow: hidden;
+}
+
+.offlineBox,
+.showCheck {
+    display: none;
+}
+
+.uploadBtn {
+    margin: 30px 0 20px 0;
+    clear: both;
+    float: left;
+    width: 100%;
+}
+
+.uploadBtn .fieldBox {
+    width: 100%;
+    padding: 0;
+    text-align: left
+}
+
+.uploadBtn .otp {
+    float: left;
+    width: 80%;
+    border-bottom: 1px solid #ccc;
+    font-size: 2.5em;
+    line-height: 20px;
+    padding: 0;
+    line-height: 20px;
+    height: 37px;
+}
+
+.lBox .uploadFileInput.btn {
+    clear: none;
+    float: left;
+    width: 90px;
+    margin: 0 0 0 10px;
+}
+
+.plusAlign {
+    text-align: center;
+    color: #e3892d;
+}
+
+.fieldBox.showCheck {
+    padding-top: 10px;
+}
+
+.plusSign.disabled {
+    opacity: 0.2;
+    cursor: default;
+}
+
+.btn.popbtn {
+    padding: 3px 24px;
+    width: 129px;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+.btn.popbtn:before {
+    border-radius: 5px;
+}
+
+.descText .fieldBox {
+    width: 50%
+}
+
+.descText .fieldBox.center {
+    transform: translate(-50%);
+    left: 50%;
+}
+
+.noteText {
+    font-size: 15px;
+    float: left;
+    padding: 18px 0 0 25px;
+    color: #e3892d;
+    font-weight: bold;
+}
+
+.noteText a {
+    text-decoration: underline;
+    font-size: 15px;
+}
+
+#UploadForm .error {
+    font-size: 12px;
+}
+
+.orLabel {
+    float: left;
+    padding: 30px 30px 0 30px;
+    font-weight: bold;
+}
+
+#aadhaarStatus .radioBox {
+    float: left;
+    width: 40%;
+}
+
+.radioAadhaar {
+    padding-left: 35px;
+}
+
+#aadhaarStatus .accountBox .radioBox {
+    float: left;
+    width: auto;
+}
+
+.tblAadhaarSav,
+.tblAadhaarCurr {
+    width: 80%;
+    text-align: center;
+    margin: 30px auto 20px auto;
+}
+
+.fieldBox.noBpadding {
+    padding-bottom: 0;
+}
+
+.fieldBox.noTpadding {
+    padding-top: 0;
+}
+
+.ui-datepicker-calendar {
+    color: black;
+}

@@ -1,0 +1,61 @@
+<div data-sly-test="${wcmmode.edit}">
+   Configure Banner Component
+</div>
+<sly data-sly-test="${!properties.disableComponent}">
+<sly data-sly-use.model="com.iib.platform.common.models.BannerModel">
+
+   <sly data-sly-test="${model.viewType=='page-equity'|| model.viewType=='page-calculater'}">
+      <section class="full-section page-header ${model.viewType}" style="background-image: url(${model.banner.backgroundImage.srcPath @ context='styleString'})">
+         <div class="container">
+            <div>
+               <div class="row align-items-center">
+                  <div class="col-lg-12 col-md-12 col-sm-12 no-padding-lr text-${model.banner.contentAlign}">
+                     <sly data-sly-test ="${model.banner.heading}">
+                        <div class="hd-plan">
+                           <h2>${model.banner.heading}</h2>
+                           <p>${model.banner.description}</p>
+                        </div>
+                     </sly>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+   </sly>
+
+   <sly data-sly-test="${model.viewType=='faq-override'}">
+      <section class="full-section plan-sec-one faq-override">
+         <div class="container">
+            <div>
+               <div class="row">
+                  <div class="col-md-6">
+                     <div class="row align-items-center">
+                        <div class="col-lg-12 col-md-12 col-sm-12 no-padding-lr text-left sm-text-center">
+                           <h1><span class="text-st hd-text01 wow fadeInUp" data-wow-delay="0.1s">${model.banner.heading}</span></h1>
+                        </div>
+                     </div>
+                     <div class="row align-items-center">
+                        <div class="col-lg-12 col-md-12 col-sm-12 no-padding-lr text-left sm-text-center">
+                           <h4 class="h4-text  wow fadeInUp" data-wow-delay="0.1s">${model.banner.description}</h4>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="row">
+                        <div class="row align-items-center">
+                           <div class="col-lg-12 col-md-12 col-sm-12 sixty-padding-lr">
+                              <div class="faq-img">
+                                 <img src="${model.banner.backgroundImage.srcPath}" alt="${model.banner.backgroundImageAltText}">
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+   </sly>
+
+</sly>
+</sly>

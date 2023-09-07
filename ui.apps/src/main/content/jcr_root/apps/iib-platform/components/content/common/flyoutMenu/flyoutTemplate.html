@@ -1,0 +1,64 @@
+<template data-sly-template.flyoutTemplate="${ @ flyoutMenu }">
+
+    <ul class="nav-secondary">
+   		<li>
+    		<div class="row no-gutters">
+
+    			<div data-sly-test="${flyoutMenu.includeQuicklinks == 'true'}" class="col-xl-3 col-md-3">
+    		    	<div class="quick-links">
+    		           	<ul data-sly-list="${flyoutMenu.flyoutMenuList}">
+    		               	<li class="${item.isCurrent == 'true' ? 'current-item' : ''}">
+                               	<a class="${itemList.count==1 ? 'active' : ''}" href="${item.url}">${item.text}</a>
+                            </li>
+						</ul>
+    	           	</div>
+   		        </div>
+
+    		    <sly data-sly-test="${flyoutMenu.includeTeasers == 'true'}">                                
+                	<div class="col-xl-9 col-md-9" data-sly-test="${flyoutMenu.teaserViewMode == 'grid'}">
+    		        	<div class="dropdown-list">
+    		            	<div class="row no-gutters" data-sly-list="${flyoutMenu.teaserList}">
+
+                                <div class="col-xl-4 col-md-6 col-sm-12">
+    		                    	<div class="product-image-card">
+    		                        	<a href="${item.teaserCTALink}">
+                                        	<img class="img-responsive" src="${item.imagePath}" alt="${item.imageAltText}">
+    		                                <div class="product-image-caption">
+    		                                	<div class="product-image-txt">
+    		                                    	<h3>${item.title}</h3>
+    		                                        <p>${item.description}</p>
+    		                                         <button class="custom-btn bor arrow-r clr-w">${item.ctaText}</button>
+    		                                    </div>
+    		                                </div>
+                                        </a>
+    		                       </div>
+    		                    </div>
+
+							</div>
+    		          	</div> 
+    				</div>
+
+					<sly data-sly-test="${flyoutMenu.teaserViewMode == 'tile'}">
+                    	<sly data-sly-list="${flyoutMenu.teaserList}">
+                            <div class="${flyoutMenu.teaserStyleClasses}">
+                                <div class="product-image-card">
+                                    <a href="${item.teaserCTALink}">
+                                    	<img class="img-responsive" src="${item.imagePath}" alt="${item.imageAltText}">
+                                    	<div class="product-image-caption">
+                                        	<div class="product-image-txt">
+                                            	<h3>${item.title}</h3>
+                                            	<p>${item.description}</p>
+                                            	<button class="custom-btn bor arrow-r clr-w">${item.ctaText}</button>
+                                        	</div>
+                                    	</div>
+                                    </a> 
+                                </div> 
+                            </div>
+                        </sly>
+					</sly>
+
+				</sly>
+            </div>
+        </li>
+    </ul>
+</template>

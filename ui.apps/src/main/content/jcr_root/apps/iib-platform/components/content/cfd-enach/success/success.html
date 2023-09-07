@@ -1,0 +1,21 @@
+<div data-sly-test="${wcmmode.edit}">
+   Configure ENach Success Component
+</div>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
+	<div class="innerwork_wrap">
+	   <div class="inner_wrap">
+	      <div class="about2boxInner">
+	         <div class="pagingwrap"><a href=""><i class="fas fa-angle-left"></i> ${properties.backTextfield}</a></div>
+	      </div>
+	      <div class="borderboxcenter">
+	         <div class="textcenter sucessbox">
+	            <div class="sucessimg"><span><i class="fas fa-check"></i></span></div>
+	            <h3 class="redcolor">${properties.textArea}</h3>
+	            <h4>${properties.paraTextArea}</h4>
+	            <div id="ssohide1"><a href="/content/cfdenach/welcome.html" class="homebtn">${properties.textfield}</a></div>
+	         </div>
+	      </div>
+	   </div>
+	</div>
+<sly data-sly-call="${clientlib.js @ categories='cfd-enach.success'}"/>

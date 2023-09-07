@@ -1,0 +1,101 @@
+<div data-sly-test="${wcmmode.edit}">
+	Configure Header Component
+</div>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.all @ categories='indus-smart.header'}"/> 
+<sly data-sly-call="${clientlib.all @ categories='indus-smart.navbar'}"/>
+
+<sly data-sly-test="${!properties.disableComponent}">
+<sly data-sly-use.model="com.iib.platform.indussmart.models.HeaderModel">
+
+   <div>
+      <header id="header" class="">
+         <div class="top-navbar">
+            <div class="container-fluid">
+               <div class="row">
+                  <div class="col-12">
+                     <div class="row">
+                        <div class="col-lg-2 tg-nav-brand">
+                           <div class="tg-navbar-brand">
+                              <nav class="navbar navbar-light">
+                                 <sly data-sly-test="${model.includeLogoIcon == 'true'}">
+                                   <a class="navbar-brand" href="${model.logoIconUrl}">
+                                   		<img src=" ${model.logoIcon}" width="120" class="d-inline-block align-top" alt="${model.logoIconAltText}">
+                                   </a>
+                                </sly>
+                              </nav>
+                           </div>
+                        </div>
+                        <div class="col-lg-8 tg-nav-news no-padding-lr">
+                           <!-- <div class="tg-news-box">
+                              <ul class="list-inline">
+                                 <li class="list-inline-item"><a class="small-link text-uppercase" href="javascript:;">Latest News</a></li>
+                                 <li class="list-inline-item"><a class="dottet-link" href="javascript:;">Induslnd Bank Pvt Ltd.</a></li>
+                                 <li class="list-inline-item"><span class="bse">BSE (Live)</span></li>
+                                 <li class="list-inline-item"><span class="bse-inr">&#x20b9;1919</span></li>
+                                 <li class="list-inline-item"><span class="bse"><i class="fa fa-long-arrow-up arrow-up"></i><span>19.19 (0.30%)</span></span>
+                                 </li>
+                                 <li class="list-inline-item"><a class="small-link read-more text-uppercase" href="javascript:;">Read More</a></li>
+                              </ul>
+                           </div> -->
+                        </div>
+                        <div class="col-lg-2 indus-brand no-padding-lr">
+                           <sly data-sly-test="${model.includeLogo == 'true'}">
+                              <a href="${model.brandLogoUrl}" class="indus-logo navbar-brand">
+                                 <img src="${model.brandLogoImage}" class="d-inline-block align-top" alt="${model.brandLogoAltText}">
+                              </a>
+                           </sly>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div id="header-sticky" class="middle-navbar">
+            <div class="container-fluid">
+               <div class="row">
+                  <div class="col-12">
+                     <div class="row">
+                        <div class="col-lg-1 tg-meue-box no-padding-lr">
+                           <div class="tg-menue">
+
+                              <sly data-sly-test="${model.includeNavigation == 'true'}">
+                                 <!-- BEGIN MAIN MENU BUTTON -->
+                                 <div class="morph-main-menu-button-wrapper">
+                                    <!-- BEGIN MENU BUTTON LABEL (if one is entered) -->
+                                    <div class="morph-menu-button-label">
+                                       Menu 
+                                    </div>
+                                    <!-- END MENU BUTTON LABEL (if one is entered) -->
+                                    <div class="morph-main-menu-button">
+                                       <div class="morph-main-menu-button-middle"></div>
+                                    </div>
+                                 </div>
+                              </sly>
+                              <!-- END MAIN MENU BUTTON -->
+
+                           </div>
+                        </div>
+                        <div class="col-lg-9 tg-search no-padding-lr" style="display:inherit">
+                           <div class="tg-navbar-search">
+                               <div data-sly-test="${model.includeLogin == 'true'}" data-sly-resource="${'login' @ resourceType='iib-platform/components/content/indussmart/login'}"></div>
+
+                              <div data-sly-test="${model.includeSearch == 'true'}" data-sly-resource="${'searchInput' @ resourceType='iib-platform/components/content/indussmart/searchInput'}"></div>
+                           </div>
+                        </div>
+                        <div class="col-lg-2 tg-soical no-padding-lr">
+                           <div class="tg-social-box">
+                              <sly data-sly-test="${model.includeListOfLinks == 'true'}" data-sly-resource="${'listOfLinks' @ resourceType='iib-platform/components/content/indussmart/listOfLinks'}"></sly>  
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+   </div>   
+
+</sly>
+</sly>

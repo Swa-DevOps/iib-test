@@ -1,0 +1,7 @@
+#base=css
+
+accordion-widget-structure.css
+accordion-widget-settings.css
+accordion-widget-theme.css
+accordion-widget-animations.css
+accordion-widget-responsive.css

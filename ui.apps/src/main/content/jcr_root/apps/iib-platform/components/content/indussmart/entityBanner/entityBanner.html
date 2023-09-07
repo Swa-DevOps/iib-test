@@ -1,0 +1,73 @@
+<div data-sly-test="${wcmmode.edit}">
+   Configure Entity Banner Component
+</div>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"/>
+
+	<sly data-sly-test="${!properties.disableComponent}">
+	   <sly data-sly-use.model="com.iib.platform.indussmart.models.EntityBannerModel">
+	   
+	      <section class="full-section">
+	         <div class="container-fluid">
+	            <div class="row">
+	               <div class="col-lg-7 col-md-7 col-sm-12 no-padding-lr border-bottom">
+	                  <div class="hd-carousel wow fadeInUp" data-wow-delay="0.2s">
+	                     ${model.sectionHeading}
+	                  </div>
+	                  <div class="carousel-container">
+	                     <div class="carousel-home" data-sly-list="${model.bannerList}">
+	                        <div>
+	                           <div class="carousel-item wow fadeInUp" data-wow-delay="0.2s">
+	                              <a href="${item.ctaUrl}" target="${item.openInNewWindow == 'true' ? '_blank' : ''}">
+	                                 <div class="service-box style-1">
+	                                    <i class="service-text-lg">${item.title}</i>
+	                                    <div class="service-box-content">
+	                                       <p>${item.summary @ context = 'html'}</p>
+	                                    </div>
+	                                    <div class="service-btn">${item.ctaText}</div>
+	                                 </div>
+	                              </a>
+	                           </div>
+	                        </div>
+	                     </div>
+	                  </div>
+	                  <sly data-sly-test="${model.scrollToNext}">
+		                  <div class="scroll-down">
+		                     <a id="next-section" class="" href="#down"><img class="faa-bounce animated" src="${model.image.srcPath}" alt="${model.image.imageAltText}"></a>
+		                  </div>
+	                  </sly>
+	               </div>
+	               <div class="col-lg-5 col-md-5 col-sm-12 no-padding-lr">
+	                  <div class="carosoul_video" data-sly-list="${model.bannerVideoItems}">
+	                     <div>
+	                        <div class="item-priveiw">
+	                           <div class="item-preview-thumb" style="background-image:url(${item.backgroundImagePath @ context= 'text'});" onclick="tprsvdeosw('${item.heading @ context='text'}', '${item.backgroundVideoPath @ context='text'}')">
+	                              <span class="lg-play-btn">
+	                                 <img class="wow fadeInUp" data-wow-delay="0.1s" src="${item.videoIconImage}">
+	                                 <h4 class="priview-caption wow fadeInUp" data-wow-delay="0.2s">${item.heading} </h4>
+	                              </span>
+	                           </div>
+	                        </div>
+	                     </div>
+	                  </div>
+	               </div>
+	            </div>
+	         </div>
+	         
+	         <div id="gettouchform" class="getin_touchpop" style="display:none;">
+	            <div id="gtformhid" class="contact_form">
+	               <span class="popclose sprite" onClick="gettouch_hide()"></span>
+	               <div class="getpophdr">
+	                  <h1 id="head"></h1>
+	               </div>
+	               <div class="rgt_pg_cnct">
+	                  <iframe allowfullscreen src="" frameborder="0" id="video" allowfullscreen></iframe>
+	               </div>
+	            </div>
+	         </div>
+	      </section>
+	      
+	   </sly>
+	</sly>
+
+<sly data-sly-call="${clientlib.all @ categories='indus-smart.entityBanner'}"/>
